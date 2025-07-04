@@ -21,27 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Install docker on Ubuntu Server" />
+<meta property="og:title" content="VS Code Server installation guide" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Installation" />
-<meta property="og:description" content="Installation" />
-<link rel="canonical" href="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" />
-<meta property="og:url" content="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" />
+<meta name="description" content="Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface." />
+<meta property="og:description" content="Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/code-server-installation-guide/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/code-server-installation-guide/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2024-07-15T11:57:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Install docker on Ubuntu Server" />
+<meta property="twitter:title" content="VS Code Server installation guide" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Installation","url":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/","@type":"BlogPosting","headline":"Install docker on Ubuntu Server","dateModified":"2024-07-15T11:57:00+05:30","datePublished":"2024-07-15T11:57:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface.","url":"https://blogs.mrasif.in/posts/code-server-installation-guide/","@type":"BlogPosting","headline":"VS Code Server installation guide","dateModified":"2024-07-15T11:57:00+05:30","datePublished":"2024-07-15T11:57:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/code-server-installation-guide/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Install docker on Ubuntu Server | Asif Mohammad Mollah
+  <title>VS Code Server installation guide | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -463,7 +463,7 @@
       
 
       
-        <span>Install docker on Ubuntu Server</span>
+        <span>VS Code Server installation guide</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -519,7 +519,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Install docker on Ubuntu Server</h1>
+      <h1 data-toc-skip>VS Code Server installation guide</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -570,7 +570,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="341 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="511 words">2 min</span>
 
 
           <!-- page views -->
@@ -584,118 +584,205 @@
 
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         
-          <h4 id="installation">Installation</h4>
+          <p>Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface.</p>
 
-<ul>
-  <li>Update apt package</li>
-</ul>
+<h3 id="installation-via-github-releases">Installation Via GitHub releases</h3>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
-<span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Add Docker’s official GPG key:</li>
-</ul>
+<ol>
+  <li>Go to temp directory and create a directory named code-server.</li>
+</ol>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings
-<span class="nb">sudo </span>curl <span class="nt">-fsSL</span> https://download.docker.com/linux/ubuntu/gpg <span class="nt">-o</span> /etc/apt/keyrings/docker.asc
-<span class="nb">sudo chmod </span>a+r /etc/apt/keyrings/docker.asc
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> /tmp
+<span class="nb">mkdir </span>code-server
+<span class="nb">cd </span>code-server
 </pre></td></tr></tbody></table></code></div></div>
 
-<ul>
-  <li>Add the repository to Apt sources:</li>
-</ul>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk-"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>Download compatible binaries of code server.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>wget https://github.com/coder/code-server/releases/download/v4.23.1/code-server-4.23.1-linux-amd64.tar.gz
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--0"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>Extract tarball.</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">tar</span> <span class="nt">-zxvf</span> code-server-4.23.1-linux-amd64.tar.gz
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--1"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>Copy extracted directory to <code class="language-plaintext highlighter-rouge">/usr/lib</code> and create symblink.</li>
+</ol>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="nb">echo</span> <span class="se">\</span>
-  <span class="s2">"deb [arch=</span><span class="si">$(</span>dpkg <span class="nt">--print-architecture</span><span class="si">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu </span><span class="se">\</span><span class="s2">
-  </span><span class="si">$(</span><span class="nb">.</span> /etc/os-release <span class="o">&amp;&amp;</span> <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$VERSION_CODENAME</span><span class="s2">"</span><span class="si">)</span><span class="s2"> stable"</span> | <span class="se">\</span>
-  <span class="nb">sudo tee</span> /etc/apt/sources.list.d/docker.list <span class="o">&gt;</span> /dev/null
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo cp</span> <span class="nt">-r</span> code-server-4.23.1-linux-amd64 /usr/lib/code-server
+<span class="nb">sudo ln</span> <span class="nt">-s</span> /usr/lib/code-server/code-server /usr/bin/code-server
 </pre></td></tr></tbody></table></code></div></div>
 
-<ul>
-  <li>Update apt package</li>
-</ul>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--2"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>Create a directory to store data:</li>
+</ol>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo mkdir</span> /var/lib/code-server
 </pre></td></tr></tbody></table></code></div></div>
 
-<ul>
-  <li>Installing docker</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Add user to the docker group</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>See running containers</li>
-</ul>
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--3"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>Cleaning up</li>
+</ol>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3
-</pre></td><td class="rouge-code"><pre>docker ps
-<span class="c"># Or</span>
-docker ps <span class="nt">-a</span>
+</pre></td><td class="rouge-code"><pre><span class="nb">cd</span> /tmp
+<span class="nb">rm</span> <span class="nt">-rf</span> code-server
 </pre></td></tr></tbody></table></code></div></div>
 
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--4"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<h3 id="installation-using-package-manager">Installation using package manager</h3>
+
+<ol>
+  <li>Install</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>wget https://github.com/coder/code-server/releases/download/v4.23.1/code-server_4.23.1_amd64.deb
+<span class="nb">sudo </span>dpkg <span class="nt">-i</span> code-server_4.23.1_amd64.deb
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--5"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<ol>
+  <li>See installation directory</li>
+</ol>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>whereis code-server
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--6"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<h3 id="now-create-a-service-to-manage-it-better">Now create a service to manage it better:</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>vim /lib/systemd/system/code-server.service
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--7"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<p>Add following code inside this file.</p>
+
+<pre><code class="language-INI">[Unit]
+Description=code-server
+After=nginx.service
+[Service]
+User=&lt;username&gt;
+Type=simple
+Environment="&lt;password-of-your-system&gt;" "HOME=&lt;path-of-your-home-dir&gt;" "VSCODE_PROXY_URI=&lt;proxy-port-uri&gt;"
+ExecStart=/usr/bin/code-server --bind-addr=0.0.0.0:8080 --user-data-dir /var/lib/code-server "Welcome to VS Code IDE" --auth password --app-name "VS Code IDE" --welcome-text "Welcome to VS Code IDE"
+Restart=always
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+
+<div class="highlight highlight-source-ini notranslate position-relative overflow-auto" dir="auto" id="bkmrk--8"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<h3 id="managing-service">Managing service</h3>
+
 <ul>
-  <li>Create docker network</li>
+  <li>To start service</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker network create <span class="nt">--subnet</span><span class="o">=</span>10.10.0.0/16 <span class="nt">--gateway</span><span class="o">=</span>10.10.0.1 subnet1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl start code-server
 </pre></td></tr></tbody></table></code></div></div>
 
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--9"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<p>Or</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>service code-server start
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--10"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>See docker container IP</li>
+  <li>To stop service</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker inspect &lt;containerid|name&gt; | <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'"IPAddress": '</span> <span class="s1">'{print $2}'</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'[,"]'</span> <span class="s1">'{print $2}'</span> | <span class="nb">sed</span> <span class="s1">'/^$/d'</span>
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl stop code-server
 </pre></td></tr></tbody></table></code></div></div>
 
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--11"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<p>Or</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>service code-server stop
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--12"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>See docker volume</li>
+  <li>To check service status</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker volume <span class="nb">ls</span>
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl status code-server
 </pre></td></tr></tbody></table></code></div></div>
 
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--13"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<p>Or</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>service code-server status
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--14"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>See docker images</li>
+  <li>To enable service</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker images
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl <span class="nb">enable </span>code-server
 </pre></td></tr></tbody></table></code></div></div>
 
-<h4 id="enable-docker-for-remote-access">Enable Docker for remote access</h4>
-
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--15"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>Install nginx</li>
-  <li>Create <code class="language-plaintext highlighter-rouge">nginx</code> config <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available/docker</code></li>
+  <li>To disable service</li>
 </ul>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl disable code-server
+</pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk-nginx-config-for-exp"><div class="zeroclipboard-container">- ##### <svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>Nginx Config for exposing to outside:
+
+</div></div>
+<p>File <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available/code.pvt.one</code></p>
 
 <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -712,100 +799,136 @@ docker ps <span class="nt">-a</span>
 13
 14
 15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
 </pre></td><td class="rouge-code"><pre><span class="k">server</span> <span class="p">{</span>
-    <span class="kn">listen</span> <span class="mi">2375</span><span class="p">;</span> <span class="c1"># Or 2376 for HTTPS</span>
-    <span class="kn">server_name</span> <span class="s">_</span><span class="p">;</span> <span class="c1"># Or domain name</span>
+        <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+        <span class="kn">listen</span> <span class="s">[::]:80</span><span class="p">;</span>
 
-    <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
-        <span class="kn">proxy_pass</span> <span class="s">http://unix:/var/run/docker.sock:</span><span class="nv">$request_uri</span><span class="p">;</span>
-        <span class="kn">proxy_http_version</span> <span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
-        <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">""</span><span class="p">;</span> <span class="c1"># Clear Connection header for new connections</span>
+        <span class="kn">root</span> <span class="n">/var/www/html</span><span class="p">;</span>
 
-        <span class="c1"># Required for Docker's "hijacked" connections (e.g., docker attach, docker exec)</span>
-        <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
-        <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">"upgrade"</span><span class="p">;</span>
-        <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$http_host</span><span class="p">;</span> <span class="c1"># Pass original host header</span>
-    <span class="p">}</span>
+        <span class="c1"># Add index.php to the list if you are using PHP</span>
+        <span class="kn">index</span> <span class="s">index.html</span> <span class="s">index.htm</span> <span class="s">index.nginx-debian.html</span><span class="p">;</span>
+
+        <span class="kn">server_name</span> <span class="s">code.pvt.one</span><span class="p">;</span>
+
+        <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+                <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+                <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+                <span class="kn">proxy_pass</span> <span class="s">http://127.0.0.1:3535</span><span class="p">;</span> <span class="c1">#change app port</span>
+                <span class="kn">proxy_http_version</span> <span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+                <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
+                <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">"upgrade"</span><span class="p">;</span>
+        <span class="p">}</span>
+
+        <span class="kn">location</span> <span class="p">~</span> <span class="sr">/proxy/(\d+)/(.*)</span> <span class="p">{</span>
+                <span class="kn">proxy_pass</span> <span class="s">http://localhost:</span><span class="nv">$1</span><span class="n">/</span><span class="nv">$2</span><span class="p">;</span>
+                <span class="kn">proxy_http_version</span> <span class="mi">1</span><span class="s">.1</span><span class="p">;</span>
+                <span class="kn">proxy_set_header</span> <span class="s">Upgrade</span> <span class="nv">$http_upgrade</span><span class="p">;</span>
+                <span class="kn">proxy_set_header</span> <span class="s">Connection</span> <span class="s">"upgrade"</span><span class="p">;</span>
+        <span class="p">}</span>
+
 <span class="p">}</span>
 </pre></td></tr></tbody></table></code></div></div>
 
+<h3 id="proxy-port-based-url-will-be-like-this">Proxy Port based URL will be like this</h3>
+
 <ul>
-  <li>Linked it to <code class="language-plaintext highlighter-rouge">sites-enabled</code></li>
+  <li>Subdomain based proxy</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo ln</span> <span class="nt">-s</span> /etc/nginx/sites-available/docker /etc/nginx/sites-enabled/
+</pre></td><td class="rouge-code"><pre>https://.proxy.example.com
 </pre></td></tr></tbody></table></code></div></div>
 
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--17"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>Add <code class="language-plaintext highlighter-rouge">nginx</code> to docker group</li>
+  <li>Path based proxy</li>
 </ul>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker www-data
+</pre></td><td class="rouge-code"><pre>https://example.com/proxy/
 </pre></td></tr></tbody></table></code></div></div>
+
+<div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto" id="bkmrk--18"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
+<h3 id="nginx-configuration">Nginx Configuration</h3>
 
 <ul>
-  <li>Test <code class="language-plaintext highlighter-rouge">nginx</code> config</li>
+  <li>Subdomain based proxy</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
-</pre></td></tr></tbody></table></code></div></div>
+<pre><code class="language-Nginx"># Map the port from the server name to the backend address
+map $port $backend {
+    default 127.0.0.1:$port;
+}
 
+# NGINX server block
+server {
+    listen 443 ssl;
+    server_name ~^(?&lt;port&gt;\d+)\.proxy\.example\.com$;
+
+
+    ssl_certificate /etc/letsencrypt/live/proxy.example.com/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/proxy.example.com/privkey.pem;
+
+    location / {
+        # Proxy the request to the backend determined by the server name
+        proxy_pass http://$backend;
+
+        # Forward all headers from client request to backend server
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # Forward all other headers dynamically
+        proxy_pass_request_headers on;
+
+        # It will allow web socket as well
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+    }
+}
+</code></pre>
+
+<div class="highlight highlight-source-ini notranslate position-relative overflow-auto" dir="auto" id="bkmrk--19"><div class="zeroclipboard-container"><svg aria-hidden="true" class="octicon octicon-copy js-clipboard-copy-icon" data-view-component="true" height="16" version="1.1" viewbox="0 0 16 16" width="16"></svg>
+</div></div>
 <ul>
-  <li>Restart <code class="language-plaintext highlighter-rouge">nginx</code></li>
+  <li>Path based proxy</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl restart nginx
-</pre></td></tr></tbody></table></code></div></div>
+<pre><code class="language-Nginx">server {
+        listen 80 default_server;
+        listen [::]:80 default_server;
 
-<ul>
-  <li>Docker url will be -</li>
-</ul>
+        root /var/www/html;
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>tcp://0.0.0.0:2375
-</pre></td></tr></tbody></table></code></div></div>
+        # Add index.php to the list if you are using PHP
+        index index.html index.htm index.nginx-debian.html;
 
-<h4 id="using-remote-docker">Using remote docker</h4>
+        server_name _;
 
-<ul>
-  <li>See docker context</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker context <span class="nb">ls</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create docker context</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>docker context create &lt;context-name&gt; <span class="nt">--description</span> <span class="s2">"Context Description"</span> <span class="nt">--docker</span> <span class="s2">"host=ssh://server-url-or-ip"</span>
-
-<span class="c"># Example</span>
-docker context create ninja <span class="nt">--description</span> <span class="s2">"Docker on HomeLab"</span> <span class="nt">--docker</span> <span class="s2">"host=ssh://myhomelab.netbird.io"</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Use docker context</li>
-</ul>
-
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre>docker context use &lt;context-name&gt;
-
-<span class="c"># Example</span>
-docker context use ninja
-</pre></td></tr></tbody></table></code></div></div>
+        location ~ /proxy/(\d+)/(.*) {
+                proxy_pass http://localhost:$1/$2;
+                proxy_http_version 1.1;
+                proxy_set_header Upgrade $http_upgrade;
+                proxy_set_header Connection "upgrade";
+        }
+}
+</code></pre>
 
         
       </div>
@@ -826,14 +949,11 @@ docker context use ninja
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/ubuntu/"
-            class="post-tag no-text-decoration" >ubuntu</a>
+          <a href="/tags/vscode/"
+            class="post-tag no-text-decoration" >VSCode</a>
           
           <a href="/tags/linux/"
             class="post-tag no-text-decoration" >linux</a>
-          
-          <a href="/tags/docker/"
-            class="post-tag no-text-decoration" >docker</a>
           
           <a href="/tags/installation/"
             class="post-tag no-text-decoration" >installation</a>
@@ -862,19 +982,19 @@ docker context use ninja
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Install docker on Ubuntu Server - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=VS Code Server installation guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/code-server-installation-guide/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Install docker on Ubuntu Server - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=VS Code Server installation guide - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/code-server-installation-guide/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Install docker on Ubuntu Server - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=VS Code Server installation guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/code-server-installation-guide/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1078,6 +1198,11 @@ docker context use ninja
   </div> <!-- .access -->
 
   
+    <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+      <span class="pl-3 pt-2 mb-2">Contents</span>
+      <nav id="toc" data-toggle="toc"></nav>
+    </div>
+  
 
 </div> <!-- #panel-wrapper -->
 
@@ -1116,20 +1241,20 @@ docker context use ninja
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
 
 
 
@@ -1144,11 +1269,11 @@ docker context use ninja
   
     
     
+      
+      
+    
   
     
-    
-      
-      
     
   
 
@@ -1163,7 +1288,7 @@ docker context use ninja
       
       
       <div class="card">
-        <a href="/posts/code-server-installation-guide/">
+        <a href="/posts/install-docker-on-ubuntu-server/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1186,7 +1311,7 @@ docker context use ninja
   <i class="unloaded">2024-07-15T11:57:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>VS Code Server installation guide</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install docker on Ubuntu Server</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1195,7 +1320,27 @@ docker context use ninja
 
 
 
-                Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web ...
+                Installation
+
+
+  Update apt package
+
+
+1
+2
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+
+
+  Add Docker’s official GPG key:
+
+
+1
+2
+3
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -f...
               </p>
             </div>
           </div>
@@ -1218,15 +1363,15 @@ docker context use ninja
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/code-server-installation-guide/" class="btn btn-outline-primary">
-    <p>VS Code Server installation guide</p>
-  </a>
-  
-
-  
   <span class="btn btn-outline-primary disabled">
     <p>-</p>
   </span>
+  
+
+  
+  <a href="/posts/install-docker-on-ubuntu-server/" class="btn btn-outline-primary">
+    <p>Install docker on Ubuntu Server</p>
+  </a>
   
 
 </div>
