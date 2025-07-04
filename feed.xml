@@ -1,0 +1,80 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://blogs.mrasif.in</id>
+  <title>Asif Mohammad Mollah</title>
+  <subtitle>Sr. Software Engineer, Indian Author</subtitle>
+  <updated>2025-07-04T23:21:44+05:30</updated>
+  <author>
+    <name>Asif Mohammad Mollah</name>
+    <uri>https://blogs.mrasif.in</uri>
+  </author>
+  <link href="/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://blogs.mrasif.in" rel="alternate" type="text/html" />
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2025 Asif Mohammad Mollah </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Install docker on Ubuntu Server</title>
+    <link href="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" rel="alternate" type="text/html" title="Install docker on Ubuntu Server" />
+    <published>2024-07-15T11:57:00+05:30</published>
+  
+    <updated>2024-07-15T11:57:00+05:30</updated>
+  
+    <id>https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/</id>
+    <content src="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+
+  
+    
+    <category term="DevOps" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Installation
+
+
+  Update apt package
+
+
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+
+
+  Add Docker’s official GPG key:
+
+
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+
+
+  Add the repository to Apt sources:
+
+
+echo \
+  "deb [arch=$(dpkg --print-architec...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+

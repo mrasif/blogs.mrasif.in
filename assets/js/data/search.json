@@ -1,0 +1,19 @@
+[
+  
+  {
+    "title": "Install docker on Ubuntu Server",
+    "url": "/posts/install-docker-on-ubuntu-server/",
+    "categories": "DevOps",
+    "tags": "ubuntu, linux, docker, installation",
+    "date": "2024-07-15 11:57:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Installation  Update apt packagesudo apt updatesudo apt install -y ca-certificates curl  Add Docker’s official GPG key:sudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc  ..."
+  }
+  
+]
+
