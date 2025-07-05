@@ -16,6 +16,36 @@
   },
   
   {
+    "title": "GPG key installation or setup guide",
+    "url": "/posts/gpg-key-installation-or-setup-guide/",
+    "categories": "DevOps",
+    "tags": "ubuntu, gpg, installation",
+    "date": "2024-07-16 14:50:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.Create gpg key:gpg --full-generate-keySet ownertrust:gpg --edit-key &amp;lt;key-id&amp;gt;gpg&amp;gt; trust# Input: 5 for ultimate trust# &quot;q&quot; for save and quitList Secret Keys:g..."
+  },
+  
+  {
+    "title": "Install Golang on Ubuntu Server",
+    "url": "/posts/install-golang-on-ubuntu-server/",
+    "categories": "DevOps",
+    "tags": "ubuntu, Golang, installation",
+    "date": "2024-07-16 14:47:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step.Let’s Begin  Define the Go version to installGO_VERSION=&quot;1.24.4&quot;  Define the architecture (amd64, arm64, etc.)ARCH=&quot;$(dpkg --print-architecture)&quot;  Define the installatio..."
+  },
+  
+  {
     "title": "VS Code Server installation guide",
     "url": "/posts/code-server-installation-guide/",
     "categories": "DevOps",
@@ -31,11 +61,26 @@
   },
   
   {
+    "title": "Deploy your self-hosted github action runner",
+    "url": "/posts/setup-self-hosted-github-actions-runners/",
+    "categories": "DevOps, Docker",
+    "tags": "github, CI/CD, systemd, installation",
+    "date": "2024-07-14 11:49:00 +0530",
+    
+
+
+
+
+
+    "snippet": "PrerequisitesPurpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment.  create work directory and give user permissionssudo mkdir /devopssudo chown $USER -R /devops  Go to work directorycd /devops  Create actions-runner directory..."
+  },
+  
+  {
     "title": "Install docker on Ubuntu Server",
     "url": "/posts/install-docker-on-ubuntu-server/",
     "categories": "DevOps, Docker",
     "tags": "ubuntu, linux, docker, installation",
-    "date": "2024-07-15 11:57:00 +0530",
+    "date": "2024-07-13 11:57:00 +0530",
     
 
 
@@ -43,6 +88,21 @@
 
 
     "snippet": "Installation  Update apt packagesudo apt updatesudo apt install -y ca-certificates curl  Add Docker’s official GPG key:sudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc  ..."
+  },
+  
+  {
+    "title": "Make your own self-hosted docs server using Bookstack",
+    "url": "/posts/bookstack-installation-guide/",
+    "categories": "DevOps, Docker",
+    "tags": "docker, documentation, installation",
+    "date": "2024-06-15 06:11:00 +0530",
+    
+
+
+
+
+
+    "snippet": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files.  Create directorysudo mkdir -p /srv/bookstacksudo mkdir -p /srv/bookstack/publi..."
   }
   
 ]

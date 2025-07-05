@@ -4,7 +4,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-05T13:47:12+05:30</updated>
+  <updated>2025-07-05T14:25:21+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -70,6 +70,128 @@ Key Features
 
   
   <entry>
+    <title>GPG key installation or setup guide</title>
+    <link href="https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/" rel="alternate" type="text/html" title="GPG key installation or setup guide" />
+    <published>2024-07-16T14:50:00+05:30</published>
+  
+    <updated>2024-07-16T14:50:00+05:30</updated>
+  
+    <id>https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/</id>
+    <content src="https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+
+  
+    
+    <category term="DevOps" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.
+
+Create gpg key:
+
+gpg --full-generate-key
+
+
+Set ownertrust:
+
+gpg --edit-key &amp;lt;key-id&amp;gt;
+gpg&amp;gt; trust
+# Input: 5 for ultimate trust
+# "q" for save and quit
+
+
+List Secret Keys:
+
+gpg --list-secret-keys
+
+
+gpg --list-secret-keys --keyid-format LONG
+
+
+Export public key:
+
+gpg --armor --ex...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Install Golang on Ubuntu Server</title>
+    <link href="https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/" rel="alternate" type="text/html" title="Install Golang on Ubuntu Server" />
+    <published>2024-07-16T14:47:00+05:30</published>
+  
+    <updated>2024-07-16T14:47:00+05:30</updated>
+  
+    <id>https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/</id>
+    <content src="https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+
+  
+    
+    <category term="DevOps" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step.
+
+Let’s Begin
+
+
+  Define the Go version to install
+
+
+GO_VERSION="1.24.4"
+
+
+
+  Define the architecture (amd64, arm64, etc.)
+
+
+ARCH="$(dpkg --print-architecture)"
+
+
+
+  Define the installation directory
+
+
+INSTALL_DIR="/usr/local"
+
+
+
+  Download the Go binary using curl
+
+
+curl -LO "https://gol...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>VS Code Server installation guide</title>
     <link href="https://blogs.mrasif.in/posts/code-server-installation-guide/" rel="alternate" type="text/html" title="VS Code Server installation guide" />
     <published>2024-07-15T14:42:00+05:30</published>
@@ -118,14 +240,14 @@ cd code-server
 
   
   <entry>
-    <title>Install docker on Ubuntu Server</title>
-    <link href="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" rel="alternate" type="text/html" title="Install docker on Ubuntu Server" />
-    <published>2024-07-15T11:57:00+05:30</published>
+    <title>Deploy your self-hosted github action runner</title>
+    <link href="https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/" rel="alternate" type="text/html" title="Deploy your self-hosted github action runner" />
+    <published>2024-07-14T11:49:00+05:30</published>
   
-    <updated>2025-07-05T13:46:30+05:30</updated>
+    <updated>2024-07-14T11:49:00+05:30</updated>
   
-    <id>https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/</id>
-    <content src="https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/" />
+    <id>https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/</id>
+    <content src="https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -146,31 +268,37 @@ cd code-server
 
 
 
-      Installation
+      Prerequisites
+Purpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment.
 
 
-  Update apt package
+  create work directory and give user permissions
 
 
-sudo apt update
-sudo apt install -y ca-certificates curl
-
-
-
-  Add Docker’s official GPG key:
-
-
-sudo install -m 0755 -d /etc/apt/keyrings
-sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
-sudo chmod a+r /etc/apt/keyrings/docker.asc
+sudo mkdir /devops
+sudo chown $USER -R /devops
 
 
 
-  Add the repository to Apt sources:
+  Go to work directory
 
 
-echo \
-  "deb [arch=$(dpkg --print-architec...
+cd /devops
+
+
+
+  Create actions-runner directory
+
+
+mkdir actions-runner
+cd actions-runner
+
+
+
+  
+    Pull actions runner code
+
+   ...
     </summary>
   
 
