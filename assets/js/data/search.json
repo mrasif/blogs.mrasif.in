@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Install kubernetes cluster using Minikube",
+    "url": "/posts/install-kubernetes-using-minikube/",
+    "categories": "DevOps, Kubernetes",
+    "tags": "ubuntu, linux, kubernetes, installation",
+    "date": "2024-11-23 19:34:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.Key Features  Local Kubernetes Cluster:          Runs a single-node Kubernetes cluster on your local machine.        Multi-Driver Support:  ..."
+  },
+  
+  {
     "title": "VS Code Server installation guide",
     "url": "/posts/code-server-installation-guide/",
     "categories": "DevOps",
@@ -18,7 +33,7 @@
   {
     "title": "Install docker on Ubuntu Server",
     "url": "/posts/install-docker-on-ubuntu-server/",
-    "categories": "DevOps",
+    "categories": "DevOps, Docker",
     "tags": "ubuntu, linux, docker, installation",
     "date": "2024-07-15 11:57:00 +0530",
     

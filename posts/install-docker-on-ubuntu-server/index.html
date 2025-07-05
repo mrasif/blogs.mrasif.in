@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Installation","url":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/","@type":"BlogPosting","headline":"Install docker on Ubuntu Server","dateModified":"2024-07-15T11:57:00+05:30","datePublished":"2024-07-15T11:57:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Installation","url":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/","@type":"BlogPosting","headline":"Install docker on Ubuntu Server","dateModified":"2025-07-05T13:46:30+05:30","datePublished":"2024-07-15T11:57:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -567,6 +567,35 @@
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Sat, Jul  5, 2025, 12:16 PM +0400"
+  >
+
+  
+  
+
+  
+    Jul  5
+  
+
+  <i class="unloaded">2025-07-05T13:46:30+05:30</i>
+
+</span>
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -599,7 +628,7 @@
   <li>Update apt package</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
 <span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> ca-certificates curl
@@ -609,7 +638,7 @@
   <li>Add Docker’s official GPG key:</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo install</span> <span class="nt">-m</span> 0755 <span class="nt">-d</span> /etc/apt/keyrings
@@ -621,7 +650,7 @@
   <li>Add the repository to Apt sources:</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -635,7 +664,7 @@
   <li>Update apt package</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -643,7 +672,7 @@
   <li>Installing docker</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install</span> <span class="nt">-y</span> docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -651,7 +680,7 @@
   <li>Add user to the docker group</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker <span class="nv">$USER</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -659,7 +688,7 @@
   <li>See running containers</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 </pre></td><td class="rouge-code"><pre>docker ps
@@ -671,7 +700,7 @@ docker ps <span class="nt">-a</span>
   <li>Create docker network</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>docker network create <span class="nt">--subnet</span><span class="o">=</span>10.10.0.0/16 <span class="nt">--gateway</span><span class="o">=</span>10.10.0.1 subnet1
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -679,7 +708,7 @@ docker ps <span class="nt">-a</span>
   <li>See docker container IP</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>docker inspect &lt;containerid|name&gt; | <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'"IPAddress": '</span> <span class="s1">'{print $2}'</span> | <span class="nb">awk</span> <span class="nt">-F</span><span class="s1">'[,"]'</span> <span class="s1">'{print $2}'</span> | <span class="nb">sed</span> <span class="s1">'/^$/d'</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -687,7 +716,7 @@ docker ps <span class="nt">-a</span>
   <li>See docker volume</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>docker volume <span class="nb">ls</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -695,7 +724,7 @@ docker ps <span class="nt">-a</span>
   <li>See docker images</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>docker images
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -742,7 +771,7 @@ docker ps <span class="nt">-a</span>
   <li>Linked it to <code class="language-plaintext highlighter-rouge">sites-enabled</code></li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo ln</span> <span class="nt">-s</span> /etc/nginx/sites-available/docker /etc/nginx/sites-enabled/
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -750,7 +779,7 @@ docker ps <span class="nt">-a</span>
   <li>Add <code class="language-plaintext highlighter-rouge">nginx</code> to docker group</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> docker www-data
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -758,7 +787,7 @@ docker ps <span class="nt">-a</span>
   <li>Test <code class="language-plaintext highlighter-rouge">nginx</code> config</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -766,7 +795,7 @@ docker ps <span class="nt">-a</span>
   <li>Restart <code class="language-plaintext highlighter-rouge">nginx</code></li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl restart nginx
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -774,7 +803,7 @@ docker ps <span class="nt">-a</span>
   <li>Docker url will be -</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>tcp://0.0.0.0:2375
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -784,7 +813,7 @@ docker ps <span class="nt">-a</span>
   <li>See docker context</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 </pre></td><td class="rouge-code"><pre>docker context <span class="nb">ls</span>
 </pre></td></tr></tbody></table></code></div></div>
 
@@ -792,7 +821,7 @@ docker ps <span class="nt">-a</span>
   <li>Create docker context</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -806,7 +835,7 @@ docker context create ninja <span class="nt">--description</span> <span class="s
   <li>Use docker context</li>
 </ul>
 
-<div class="language-shell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -826,7 +855,8 @@ docker context use ninja
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/devops/'>DevOps</a>
+            <a href='/categories/devops/'>DevOps</a>,
+            <a href='/categories/docker/'>Docker</a>
         </div>
         
 
@@ -946,6 +976,11 @@ docker context use ninja
         
         
         
+        <li><a href="/posts/install-docker-on-ubuntu-server/">Install docker on Ubuntu Server</a></li>
+      
+        
+        
+        
         <li><a href="/posts/code-server-installation-guide/">VS Code Server installation guide</a></li>
       
 
@@ -1001,6 +1036,40 @@ docker context use ninja
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1031,11 +1100,6 @@ docker context use ninja
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1057,12 +1121,17 @@ docker context use ninja
     
     
     
+      
+    
   
     
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -1088,10 +1157,13 @@ docker context use ninja
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/ubuntu/">ubuntu</a>
+      
+        
         <a class="post-tag" href="/tags/docker/">docker</a>
       
         
-        <a class="post-tag" href="/tags/ubuntu/">ubuntu</a>
+        <a class="post-tag" href="/tags/kubernetes/">kubernetes</a>
       
         
         <a class="post-tag" href="/tags/vscode/">VSCode</a>
@@ -1154,6 +1226,19 @@ docker context use ninja
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
 
 
@@ -1175,6 +1260,12 @@ docker context use ninja
   
     
     
+      
+      
+    
+  
+    
+    
   
 
 
@@ -1184,6 +1275,53 @@ docker context use ninja
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
     <h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/install-kubernetes-using-minikube/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Nov 23, 2024
+  
+
+  <i class="unloaded">2024-11-23T19:34:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install kubernetes cluster using Minikube</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
+
+Key Features
+
+
+  Local Kubernetes Clus...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     
       
       
@@ -1367,6 +1505,40 @@ docker context use ninja
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
@@ -1397,11 +1569,6 @@ docker context use ninja
     
     
     
-  
-    
-    
-    
-    
       
         
         
@@ -1423,12 +1590,17 @@ docker context use ninja
     
     
     
+      
+    
   
     
     
     
     
-      
+  
+    
+    
+    
     
   
     
@@ -1449,10 +1621,13 @@ docker context use ninja
         <a class="post-tag" href="/tags/linux/">linux</a>
       
         
+        <a class="post-tag" href="/tags/ubuntu/">ubuntu</a>
+      
+        
         <a class="post-tag" href="/tags/docker/">docker</a>
       
         
-        <a class="post-tag" href="/tags/ubuntu/">ubuntu</a>
+        <a class="post-tag" href="/tags/kubernetes/">kubernetes</a>
       
         
         <a class="post-tag" href="/tags/vscode/">VSCode</a>
