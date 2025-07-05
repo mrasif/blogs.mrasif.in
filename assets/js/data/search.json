@@ -16,6 +16,111 @@
   },
   
   {
+    "title": "SendMail setup on ubuntu server",
+    "url": "/posts/sendmail-setup-on-ubuntu-server/",
+    "categories": "DevOps",
+    "tags": "smtp, sendmail, linux, installation",
+    "date": "2024-07-18 21:45:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Send mail is a cli application for sending email using smtp server.Installationsudo apt install sendmailConfigure# Config path &quot;/etc/ssmtp/ssmtp.conf&quot;# The person who gets all mail for userids &amp;lt; 1000root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;#SMTP Con..."
+  },
+  
+  {
+    "title": "NeoVIM installation and setup guide",
+    "url": "/posts/neovim-installation-and-setup-guide/",
+    "categories": "DevOps",
+    "tags": "neovim, vim, installation",
+    "date": "2024-07-16 15:21:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Neo Vim is a new generation VIM editor. It has beautiful UI.Installation  Download NeoVim:wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage  Install:chmod +x nvim.appimagemv nvim.appimage /usr/local/bin/nvimPreset Configuration setup  Download dotfiles from github and ..."
+  },
+  
+  {
+    "title": "Step by step PostgreSQL setup guide",
+    "url": "/posts/step-by-step-postgresql-setup-guide/",
+    "categories": "DevOps",
+    "tags": "ubuntu, postgres, installation",
+    "date": "2024-07-16 15:16:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.Install PostgreSQL Clientsudo apt-get install -y postgresql-clientLogin to Database:psql -U username -h hostname -p 5432  Show users:\\du# With All column\\du+  Reset password:ALTER USER &amp;lt;..."
+  },
+  
+  {
+    "title": "Golang debugging guide using dlv debugger",
+    "url": "/posts/golang-debug-guide-using-dlv/",
+    "categories": "DevOps",
+    "tags": "ubuntu, golang, installation",
+    "date": "2024-07-16 15:11:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this documentation is to provide a comprehensive guide on how to debug Golang applications using the Delve debugger (dlv). This guide covers installation, setting up a remote debugger, and local debugging.Installationgo install github.com/go-delve/delve/cmd/dlv@latestRemote debugger  S..."
+  },
+  
+  {
+    "title": "Installation guide of terminal multiplexer T-MUX",
+    "url": "/posts/installation-guide-of-terminal-multiplexer-t-mux/",
+    "categories": "DevOps",
+    "tags": "ubuntu, t-mux, installation",
+    "date": "2024-07-16 15:07:00 +0530",
+    
+
+
+
+
+
+    "snippet": "It is a T-mux user guide. T-mux and VIM works awesome for development.Installation:sudo apt install tmuxOpen tmux and press Ctrl+b and Shift+I to activate plugins.Configuration:  Clone tpm that is Tmux package manager.git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm  Create .tmux..."
+  },
+  
+  {
+    "title": "Deploy your own media streaming server with Jellyfin",
+    "url": "/posts/jellyfin-media-streaming-server-setup/",
+    "categories": "DevOps",
+    "tags": "ubuntu, jellyfin, installation",
+    "date": "2024-07-16 14:58:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Jellyfin media streaming server installation guide for Raspberry PIInstallation  Before we proceed, let us start by ensuring we are running an updated operating system.As long as you are running a Debian operating system such as Ubuntu or Raspberry Pi OS, the following steps will work fine for yo..."
+  },
+  
+  {
+    "title": "Setup Network File System (NFS) on ubuntu linux",
+    "url": "/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
+    "categories": "DevOps",
+    "tags": "ubuntu, NFS, installation",
+    "date": "2024-07-16 14:56:00 +0530",
+    
+
+
+
+
+
+    "snippet": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:Server Setup      Install the NFS kernel:     sudo apt-get install nfs-kernel-server        Create the directory /exported/storage. ..."
+  },
+  
+  {
     "title": "GPG key installation or setup guide",
     "url": "/posts/gpg-key-installation-or-setup-guide/",
     "categories": "DevOps",
@@ -34,7 +139,7 @@
     "title": "Install Golang on Ubuntu Server",
     "url": "/posts/install-golang-on-ubuntu-server/",
     "categories": "DevOps",
-    "tags": "ubuntu, Golang, installation",
+    "tags": "ubuntu, golang, installation",
     "date": "2024-07-16 14:47:00 +0530",
     
 

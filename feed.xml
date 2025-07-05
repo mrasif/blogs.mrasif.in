@@ -4,7 +4,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-05T14:25:21+05:30</updated>
+  <updated>2025-07-05T15:30:36+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -70,14 +70,14 @@ Key Features
 
   
   <entry>
-    <title>GPG key installation or setup guide</title>
-    <link href="https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/" rel="alternate" type="text/html" title="GPG key installation or setup guide" />
-    <published>2024-07-16T14:50:00+05:30</published>
+    <title>SendMail setup on ubuntu server</title>
+    <link href="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" rel="alternate" type="text/html" title="SendMail setup on ubuntu server" />
+    <published>2024-07-18T21:45:00+05:30</published>
   
-    <updated>2024-07-16T14:50:00+05:30</updated>
+    <updated>2024-07-18T21:45:00+05:30</updated>
   
-    <id>https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/</id>
-    <content src="https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/" />
+    <id>https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/</id>
+    <content src="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -96,32 +96,24 @@ Key Features
 
 
 
-      Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.
+      Send mail is a cli application for sending email using smtp server.
 
-Create gpg key:
+Installation
 
-gpg --full-generate-key
-
-
-Set ownertrust:
-
-gpg --edit-key &amp;lt;key-id&amp;gt;
-gpg&amp;gt; trust
-# Input: 5 for ultimate trust
-# "q" for save and quit
+sudo apt install sendmail
 
 
-List Secret Keys:
+Configure
 
-gpg --list-secret-keys
-
-
-gpg --list-secret-keys --keyid-format LONG
-
-
-Export public key:
-
-gpg --armor --ex...
+# Config path "/etc/ssmtp/ssmtp.conf"
+# The person who gets all mail for userids &amp;lt; 1000
+root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;
+#SMTP Config
+mailhub=smtp.gmail.com:587
+AuthUser=&amp;lt;gmail-id&amp;gt;
+AuthPass=&amp;lt;app-password&amp;gt;
+UseTLS=YES
+UseSTARTTLS=...
     </summary>
   
 
@@ -129,14 +121,14 @@ gpg --armor --ex...
 
   
   <entry>
-    <title>Install Golang on Ubuntu Server</title>
-    <link href="https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/" rel="alternate" type="text/html" title="Install Golang on Ubuntu Server" />
-    <published>2024-07-16T14:47:00+05:30</published>
+    <title>NeoVIM installation and setup guide</title>
+    <link href="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" rel="alternate" type="text/html" title="NeoVIM installation and setup guide" />
+    <published>2024-07-16T15:21:00+05:30</published>
   
-    <updated>2024-07-16T14:47:00+05:30</updated>
+    <updated>2024-07-16T15:21:00+05:30</updated>
   
-    <id>https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/</id>
-    <content src="https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/" />
+    <id>https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/</id>
+    <content src="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -155,36 +147,32 @@ gpg --armor --ex...
 
 
 
-      Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step.
+      Neo Vim is a new generation VIM editor. It has beautiful UI.
 
-Let’s Begin
-
-
-  Define the Go version to install
+Installation
 
 
-GO_VERSION="1.24.4"
+  Download NeoVim:
 
 
-
-  Define the architecture (amd64, arm64, etc.)
-
-
-ARCH="$(dpkg --print-architecture)"
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
 
 
 
-  Define the installation directory
+  Install:
 
 
-INSTALL_DIR="/usr/local"
+chmod +x nvim.appimage
+mv nvim.appimage /usr/local/bin/nvim
 
 
+Preset Configuration setup
 
-  Download the Go binary using curl
+
+  Download dotfiles from github and use stow command to link config:
 
 
-curl -LO "https://gol...
+git clone git@github.com:mrasif/dotfiles.gi...
     </summary>
   
 
@@ -192,14 +180,14 @@ curl -LO "https://gol...
 
   
   <entry>
-    <title>VS Code Server installation guide</title>
-    <link href="https://blogs.mrasif.in/posts/code-server-installation-guide/" rel="alternate" type="text/html" title="VS Code Server installation guide" />
-    <published>2024-07-15T14:42:00+05:30</published>
+    <title>Step by step PostgreSQL setup guide</title>
+    <link href="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" rel="alternate" type="text/html" title="Step by step PostgreSQL setup guide" />
+    <published>2024-07-16T15:16:00+05:30</published>
   
-    <updated>2025-07-05T13:46:30+05:30</updated>
+    <updated>2024-07-16T15:16:00+05:30</updated>
   
-    <id>https://blogs.mrasif.in/posts/code-server-installation-guide/</id>
-    <content src="https://blogs.mrasif.in/posts/code-server-installation-guide/" />
+    <id>https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/</id>
+    <content src="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -218,21 +206,39 @@ curl -LO "https://gol...
 
 
 
-      Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface.
+      Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.
 
-Installation Via GitHub releases
+Install PostgreSQL Client
 
-
-  Go to temp directory and create a directory named code-server.
-
-
-cd /tmp
-mkdir code-server
-cd code-server
+sudo apt-get install -y postgresql-client
 
 
+Login to Database:
 
-  Download compatible binaries of code ser...
+psql -U username -h hostname -p 5432
+
+
+
+  Show users:
+
+
+\du
+# With All column
+\du+
+
+
+
+  Reset password:
+
+
+ALTER USER &amp;lt;username&amp;gt; WITH PASSWORD 'new_password';
+
+
+
+  Add permission:
+
+
+ALTER ROLE &amp;l...
     </summary>
   
 
@@ -240,14 +246,14 @@ cd code-server
 
   
   <entry>
-    <title>Deploy your self-hosted github action runner</title>
-    <link href="https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/" rel="alternate" type="text/html" title="Deploy your self-hosted github action runner" />
-    <published>2024-07-14T11:49:00+05:30</published>
+    <title>Golang debugging guide using dlv debugger</title>
+    <link href="https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/" rel="alternate" type="text/html" title="Golang debugging guide using dlv debugger" />
+    <published>2024-07-16T15:11:00+05:30</published>
   
-    <updated>2024-07-14T11:49:00+05:30</updated>
+    <updated>2024-07-16T15:11:00+05:30</updated>
   
-    <id>https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/</id>
-    <content src="https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/" />
+    <id>https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/</id>
+    <content src="https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -255,8 +261,6 @@ cd code-server
   
     
     <category term="DevOps" />
-    
-    <category term="Docker" />
     
   
 
@@ -268,37 +272,24 @@ cd code-server
 
 
 
-      Prerequisites
-Purpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment.
+      Purpose of this documentation is to provide a comprehensive guide on how to debug Golang applications using the Delve debugger (dlv). This guide covers installation, setting up a remote debugger, and local debugging.
+
+Installation
+
+go install github.com/go-delve/delve/cmd/dlv@latest
 
 
-  create work directory and give user permissions
+Remote debugger
 
 
-sudo mkdir /devops
-sudo chown $USER -R /devops
+  Start server
 
 
-
-  Go to work directory
-
-
-cd /devops
-
-
-
-  Create actions-runner directory
-
-
-mkdir actions-runner
-cd actions-runner
+dlv debug main.go --listen=":2345" --headless=true --api-version=2
 
 
 
-  
-    Pull actions runner code
-
-   ...
+  Conn...
     </summary>
   
 
