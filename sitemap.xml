@@ -5,7 +5,7 @@
     xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://blogs.mrasif.in</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -95,139 +95,139 @@
       </url>
     <url>
         <loc>https://blogs.mrasif.in/categories/devops/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://blogs.mrasif.in/categories/docker/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://blogs.mrasif.in/categories/kubernetes/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
     </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/docker/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/documentation/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/installation/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/ubuntu/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/linux/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/github/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/ci-cd/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/systemd/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/vscode/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/golang/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/gpg/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/nfs/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/jellyfin/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/t-mux/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/postgres/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/neovim/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/vim/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/smtp/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/sendmail/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
       <url>
         <loc>https://blogs.mrasif.in/tags/kubernetes/</loc>
-        <lastmod>2025-07-09T00:10:07+05:30</lastmod>
+        <lastmod>2025-07-09T00:55:29+05:30</lastmod>
         <changefreq>hourly</changefreq>
         <priority>1.0</priority>
       </url>
