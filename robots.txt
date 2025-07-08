@@ -1,5 +1,6 @@
 User-agent: *
-
 Disallow: /norobots/
 
+User-agent: *
+Allow: /
 Sitemap: https://blogs.mrasif.in/sitemap.xml
