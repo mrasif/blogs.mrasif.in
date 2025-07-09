@@ -1,0 +1,149 @@
+{
+  "url": "https://blogs.mrasif.in",
+  "title": "Asif Mohammad Mollah",
+  "description": "Sr. Software Engineer, Indian Author",
+  "author": "Asif Mohammad Mollah",
+  "updated_at": "2025-07-10T00:25:36+05:30",
+  "posts": [
+    {
+      "id": "/posts/install-kubernetes-using-minikube",
+      "title": "Install kubernetes cluster using Minikube",
+      "url": "https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Kubernetes"],
+      "tags": ["ubuntu", "linux", "kubernetes", "installation"],
+      "updated_at": "2024-11-23T19:34:00+05:30",
+      "summary": "Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments."
+    },
+    {
+      "id": "/posts/sendmail-setup-on-ubuntu-server",
+      "title": "SendMail setup on ubuntu server",
+      "url": "https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["smtp", "sendmail", "linux", "installation"],
+      "updated_at": "2024-07-18T21:45:00+05:30",
+      "summary": "Send mail is a cli application for sending email using smtp server."
+    },
+    {
+      "id": "/posts/neovim-installation-and-setup-guide",
+      "title": "NeoVIM installation and setup guide",
+      "url": "https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["neovim", "vim", "installation"],
+      "updated_at": "2024-07-16T15:21:00+05:30",
+      "summary": "Neo Vim is a new generation VIM editor. It has beautiful UI."
+    },
+    {
+      "id": "/posts/step-by-step-postgresql-setup-guide",
+      "title": "Step by step PostgreSQL setup guide",
+      "url": "https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "postgres", "installation"],
+      "updated_at": "2024-07-16T15:16:00+05:30",
+      "summary": "Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases."
+    },
+    {
+      "id": "/posts/golang-debug-guide-using-dlv",
+      "title": "Golang debugging guide using dlv debugger",
+      "url": "https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "golang", "installation"],
+      "updated_at": "2024-07-16T15:11:00+05:30",
+      "summary": "Purpose of this documentation is to provide a comprehensive guide on how to debug Golang applications using the Delve debugger (dlv). This guide covers installation, setting up a remote debugger, and local debugging."
+    },
+    {
+      "id": "/posts/installation-guide-of-terminal-multiplexer-t-mux",
+      "title": "Installation guide of terminal multiplexer T-MUX",
+      "url": "https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "t-mux", "installation"],
+      "updated_at": "2024-07-16T15:07:00+05:30",
+      "summary": "It is a T-mux user guide. T-mux and VIM works awesome for development."
+    },
+    {
+      "id": "/posts/jellyfin-media-streaming-server-setup",
+      "title": "Deploy your own media streaming server with Jellyfin",
+      "url": "https://blogs.mrasif.in/posts/jellyfin-media-streaming-server-setup/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "jellyfin", "installation"],
+      "updated_at": "2024-07-16T14:58:00+05:30",
+      "summary": "Jellyfin media streaming server installation guide for Raspberry PI"
+    },
+    {
+      "id": "/posts/setup-network-file-system-nfs-on-ubuntu-linux",
+      "title": "Setup Network File System (NFS) on ubuntu linux",
+      "url": "https://blogs.mrasif.in/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "NFS", "installation"],
+      "updated_at": "2024-07-16T14:56:00+05:30",
+      "summary": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:"
+    },
+    {
+      "id": "/posts/gpg-key-installation-or-setup-guide",
+      "title": "GPG key installation or setup guide",
+      "url": "https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "gpg", "installation"],
+      "updated_at": "2024-07-16T14:50:00+05:30",
+      "summary": "Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server."
+    },
+    {
+      "id": "/posts/install-golang-on-ubuntu-server",
+      "title": "Install Golang on Ubuntu Server",
+      "url": "https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "golang", "installation"],
+      "updated_at": "2024-07-16T14:47:00+05:30",
+      "summary": "Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step."
+    },
+    {
+      "id": "/posts/code-server-installation-guide",
+      "title": "VS Code Server installation guide",
+      "url": "https://blogs.mrasif.in/posts/code-server-installation-guide/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["VSCode", "linux", "installation"],
+      "updated_at": "2024-07-15T14:42:00+05:30",
+      "summary": "Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface."
+    },
+    {
+      "id": "/posts/setup-self-hosted-github-actions-runners",
+      "title": "Deploy your self-hosted github action runner",
+      "url": "https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Docker"],
+      "tags": ["github", "CI/CD", "systemd", "installation"],
+      "updated_at": "2024-07-14T11:49:00+05:30",
+      "summary": "PrerequisitesPurpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment."
+    },
+    {
+      "id": "/posts/install-docker-on-ubuntu-server",
+      "title": "Install docker on Ubuntu Server",
+      "url": "https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Docker"],
+      "tags": ["ubuntu", "linux", "docker", "installation"],
+      "updated_at": "2024-07-13T11:57:00+05:30",
+      "summary": "Installation"
+    },
+    {
+      "id": "/posts/bookstack-installation-guide",
+      "title": "Make your own self-hosted docs server using Bookstack",
+      "url": "https://blogs.mrasif.in/posts/bookstack-installation-guide/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Docker"],
+      "tags": ["docker", "documentation", "installation"],
+      "updated_at": "2024-06-15T06:11:00+05:30",
+      "summary": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files."
+    }
+  ]
+}
