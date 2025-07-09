@@ -1,4 +1,1 @@
 User-agent: *
-Disallow: /norobots/
-Allow: /
-Sitemap: https://blogs.mrasif.in/sitemap.xml
