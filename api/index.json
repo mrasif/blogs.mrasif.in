@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-10T00:25:36+05:30",
+  "updated_at": "2025-07-17T16:36:37+05:30",
   "posts": [
+    {
+      "id": "/posts/awk-cheatsheet-with-example",
+      "title": "AWK Cheatsheet with Examples",
+      "url": "https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["Linux"],
+      "tags": ["shell", "awk"],
+      "updated_at": "2025-07-17T14:55:00+05:30",
+      "summary": "AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting."
+    },
     {
       "id": "/posts/install-kubernetes-using-minikube",
       "title": "Install kubernetes cluster using Minikube",

@@ -21,25 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="linux" />
+<meta property="og:title" content="AWK Cheatsheet with Examples" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sr. Software Engineer, Indian Author" />
-<meta property="og:description" content="Sr. Software Engineer, Indian Author" />
-<link rel="canonical" href="https://blogs.mrasif.in/tags/linux/" />
-<meta property="og:url" content="https://blogs.mrasif.in/tags/linux/" />
+<meta name="description" content="AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting." />
+<meta property="og:description" content="AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-17T14:55:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="linux" />
+<meta property="twitter:title" content="AWK Cheatsheet with Examples" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Sr. Software Engineer, Indian Author","url":"https://blogs.mrasif.in/tags/linux/","@type":"WebPage","headline":"linux","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.","url":"https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/","@type":"BlogPosting","headline":"AWK Cheatsheet with Examples","dateModified":"2025-07-17T14:55:00+05:30","datePublished":"2025-07-17T14:55:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>linux | Asif Mohammad Mollah
+  <title>AWK Cheatsheet with Examples | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -115,9 +117,14 @@
 
 
 
-<link rel="preload" href="/assets/css/category-tag.css" as="style">
-<link rel="stylesheet" href="/assets/css/category-tag.css">
+<link rel="preload" href="/assets/css/post.css" as="style">
+<link rel="stylesheet" href="/assets/css/post.css">
 
+
+  
+    <link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" />
+  
 
 
 
@@ -140,7 +147,7 @@
 
 
 
-<script async src="/assets/js/page.min.js"></script>
+<script async src="/assets/js/post.min.js"></script>
 
 
 
@@ -458,22 +465,14 @@
         
         <span>
           <a href="/">
-            Home
-          </a>
-        </span>
-        
-      
-        
-        <span>
-          <a href="/tabs/tags/">
-            Tags
+            Posts
           </a>
         </span>
         
       
 
       
-        <span>linux</span>
+        <span>AWK Cheatsheet with Examples</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -481,7 +480,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -524,47 +523,300 @@
 
 <!-- return -->
 <div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
+
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
+
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+      <h1 data-toc-skip>AWK Cheatsheet with Examples</h1>
+
+      <div class="post-meta text-muted d-flex flex-column">
+        <!-- Published date and author -->
+        <div>
+          <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Jul 17, 2025,  2:55 PM +0530"
+  >
+
+  
+  
+
+  
+    Jul 17
+  
+
+  <i class="unloaded">2025-07-17T14:55:00+05:30</i>
+
+</span>
+          by
+          <span class="author">
+            Asif Mohammad Mollah
+          </span>
+        </div>
+
+        <div>
+          <!-- lastmod -->
+          
+
+          <!-- read time -->
+          <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="282 words">1 min</span>
+
+
+          <!-- page views -->
+          
+
+        </div>
+
+      </div> <!-- .post-meta -->
+
+      <div class="post-content">
+
+        <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+        
+          <p>AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.</p>
+
+<h2 id="basic-syntax">Basic Syntax</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'pattern { action }'</span> file
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li><strong>pattern</strong>: condition to match (can be omitted)</li>
+  <li><strong>action</strong>: what to do if pattern matches</li>
+</ul>
+
+<h2 id="common-built-in-variables">Common Built-in Variables</h2>
+
+<div class="table-wrapper"><table>
+  <thead>
+    <tr>
+      <th>Variable</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$0</td>
+      <td>Entire current line</td>
+    </tr>
+    <tr>
+      <td>$1..$n</td>
+      <td>First to nth field (column)</td>
+    </tr>
+    <tr>
+      <td>NR</td>
+      <td>Number of records (lines) read so far</td>
+    </tr>
+    <tr>
+      <td>NF</td>
+      <td>Number of fields in current record</td>
+    </tr>
+    <tr>
+      <td>FS</td>
+      <td>Field separator (input)</td>
+    </tr>
+    <tr>
+      <td>OFS</td>
+      <td>Output field separator</td>
+    </tr>
+  </tbody>
+</table></div>
+
+<h2 id="frequently-used-examples">Frequently Used Examples</h2>
+
+<h3 id="1-print-1st-column-of-a-file">1. Print 1st Column of a File</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{print $1}'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="2-print-unique-values-from-column">2. Print Unique Values from Column</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{print $2}'</span> filename | <span class="nb">sort</span> | <span class="nb">uniq</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="3-pipe-each-line-to-a-command">3. Pipe Each Line to a Command</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{print $0}'</span> filename | <span class="k">while </span><span class="nb">read </span>line<span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$line</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="4-add-delimiter-for-columns">4. Add Delimiter for Columns</h3>
+
+<p>For example, use <code class="language-plaintext highlighter-rouge">:</code> as delimiter:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{print $1 ":" $2}'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="5-ignore-lines-matching-a-pattern">5. Ignore Lines Matching a Pattern</h3>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'!/pattern_to_ignore/'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Or, using an <code class="language-plaintext highlighter-rouge">if</code> condition:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{ if ($1 != "skip") print }'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="6-delay-between-each-line-processing">6. Delay Between Each Line Processing</h3>
+
+<p>Using a pipe to <code class="language-plaintext highlighter-rouge">sleep</code>:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'{print $1}'</span> filename | <span class="k">while </span><span class="nb">read </span>line<span class="p">;</span> <span class="k">do </span><span class="nb">echo</span> <span class="s2">"</span><span class="nv">$line</span><span class="s2">"</span><span class="p">;</span> <span class="nb">sleep </span>1<span class="p">;</span> <span class="k">done</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="setting-custom-delimiters">Setting Custom Delimiters</h3>
+
+<ul>
+  <li>Set Input Field Separator (e.g., comma):</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="nt">-F</span><span class="s1">','</span> <span class="s1">'{print $1}'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Set Output Field Separator:</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'BEGIN{OFS=":"} {print $1, $2}'</span> filename
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="use-case-filter-format-and-execute">Use Case: Filter, Format, and Execute</h3>
+
+<ul>
+  <li>Example: Filter out comments and execute line</li>
+</ul>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">awk</span> <span class="s1">'!/^#/ {print $1}'</span> script.txt | <span class="k">while </span><span class="nb">read </span>cmd<span class="p">;</span> <span class="k">do </span><span class="nb">eval</span> <span class="s2">"</span><span class="nv">$cmd</span><span class="s2">"</span><span class="p">;</span> <span class="k">done</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="handy-tips">Handy Tips</h3>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">awk</code> scripts can be multiline using <code class="language-plaintext highlighter-rouge">BEGIN</code>, <code class="language-plaintext highlighter-rouge">END</code>, and main block.</li>
+  <li>Can be used in pipelines.</li>
+  <li>Fast for CSV and TSV file processing.</li>
+</ul>
+
+<hr />
+
+<p>Happy AWKing! 🐧</p>
+
+        
+      </div>
+
+      <div class="post-tail-wrapper text-muted">
+
+        <!-- categories -->
+        
+        <div class="post-meta mb-3">
+          <i class="far fa-folder-open fa-fw mr-1"></i>
+          
+            <a href='/categories/linux/'>Linux</a>
+        </div>
+        
+
+        <!-- tags -->
+        
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
+          
+          <a href="/tags/shell/"
+            class="post-tag no-text-decoration" >shell</a>
+          
+          <a href="/tags/awk/"
+            class="post-tag no-text-decoration" >awk</a>
+          
+          </div>
+        
+
+        <div class="post-tail-bottom
+          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+          
+
+          <!--
+ Post sharing snippet
+
+ v2.1
+ https://github.com/cotes2020/jekyll-theme-chirpy
+ © 2019 Cotes Chung
+ Published under the MIT License
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
     
-      <div id="page-tag">
-  <h1 class="pl-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    linux
-    <span class="lead text-muted pl-2">4</span>
-  </h1>
-  <ul class="post-content pl-0">
     
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/install-kubernetes-using-minikube/">Install kubernetes cluster using Minikube</a>
-      <span class="dash flex-grow-1"></span>
-      <span class="text-muted small">Nov 23, 2024</span>
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/sendmail-setup-on-ubuntu-server/">SendMail setup on ubuntu server</a>
-      <span class="dash flex-grow-1"></span>
-      <span class="text-muted small">Jul 18, 2024</span>
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/code-server-installation-guide/">VS Code Server installation guide</a>
-      <span class="dash flex-grow-1"></span>
-      <span class="text-muted small">Jul 15, 2024</span>
-    </li>
-    
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/install-docker-on-ubuntu-server/">Install docker on Ubuntu Server</a>
-      <span class="dash flex-grow-1"></span>
-      <span class="text-muted small">Jul 13, 2024</span>
-    </li>
-    
-  </ul>
-</div>
 
     
-    </div> <!-- #page -->
-  </div><!-- .col-12 -->
+      
+        <a href="https://twitter.com/intent/tweet?text=AWK Cheatsheet with Examples - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" data-toggle="tooltip" data-placement="top"
+          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-fw fab fa-twitter"></i>
+        </a>
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=AWK Cheatsheet with Examples - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://telegram.me/share?text=AWK Cheatsheet with Examples - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i class="fa-fw fas fa-link small" onclick="copyLink()"
+        data-toggle="tooltip" data-placement="top" title="Copy link"></i>
+
+  </span>
+</div>
+
+
+        </div><!-- .post-tail-bottom -->
+
+      </div><!-- div.post-tail -->
+
+    </div> <!-- .post -->
+
+
+  </div> <!-- #post-wrapper -->
+
+  
+
+  
 
   <!--
   The Pannel on right side (Desktop views)
@@ -1074,13 +1326,485 @@
   </div> <!-- .access -->
 
   
+    <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+      <span class="pl-3 pt-2 mb-2">Contents</span>
+      <nav id="toc" data-toggle="toc"></nav>
+    </div>
+  
 
 </div> <!-- #panel-wrapper -->
 
 
+</div> <!-- .row -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+
+ v2.0
+ https://github.com/cotes2020/jekyll-theme-chirpy
+ © 2019 Cotes Chung
+ Published under the MIT License
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+  
+    
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+      
+    
+  
+    
+    
+      
+      
+        
+        
+        
+          
+
+
+
+
+
+  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+    <h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/install-kubernetes-using-minikube/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Nov 23, 2024
+  
+
+  <i class="unloaded">2024-11-23T19:34:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install kubernetes cluster using Minikube</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
+
+Key Features
+
+
+  Local Kubernetes Clus...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/sendmail-setup-on-ubuntu-server/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Jul 18, 2024
+  
+
+  <i class="unloaded">2024-07-18T21:45:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>SendMail setup on ubuntu server</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Send mail is a cli application for sending email using smtp server.
+
+Installation
+
+sudo apt install sendmail
+
+
+Configure
+
+# Config path "/etc/ssmtp/ssmtp.conf"
+# The person who gets all mail for us...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/neovim-installation-and-setup-guide/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Jul 16, 2024
+  
+
+  <i class="unloaded">2024-07-16T15:21:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>NeoVIM installation and setup guide</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Neo Vim is a new generation VIM editor. It has beautiful UI.
+
+Installation
+
+
+  Download NeoVim:
+
+
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
+
+
+
+  Install:
+
+
+chmod...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+
+    <!--
+  Navigation buttons at the bottom of the post.
+
+  v2.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/install-kubernetes-using-minikube/" class="btn btn-outline-primary">
+    <p>Install kubernetes cluster using Minikube</p>
+  </a>
+  
+
+  
+  <span class="btn btn-outline-primary disabled">
+    <p>-</p>
+  </span>
+  
+
 </div>
 
+    
 
+    </div> <!-- #post-extend-wrapper -->
+
+  </div> <!-- .col-* -->
+
+</div> <!-- .row -->
+
+<!-- image lazy load: https://github.com/ApoorvSaxena/lozad.js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+<script type="text/javascript">
+  const imgs = document.querySelectorAll('#post-wrapper img');
+  const observer = lozad(imgs);
+  observer.observe();
+</script>
 
 
 

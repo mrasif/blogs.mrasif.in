@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-10T00:25:36+05:30</updated>
+  <updated>2025-07-17T16:36:37+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -13,6 +13,49 @@
   <rights> © 2025 Asif Mohammad Mollah </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>AWK Cheatsheet with Examples</title>
+    <link href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" rel="alternate" type="text/html" title="AWK Cheatsheet with Examples" />
+    <published>2025-07-17T14:55:00+05:30</published>
+    <updated>2025-07-17T14:55:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/</id>
+    <content src="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="Linux" />
+    <summary>
+
+
+
+
+AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.
+
+Basic Syntax
+
+awk 'pattern { action }' file
+
+
+
+  pattern: condition to match (can be omitted)
+  action: what to do if pattern matches
+
+
+Common Built-in Variables
+
+
+  
+    
+      Variable
+      Description
+    
+  
+  
+    
+      $0
+      Entire current li...
+    </summary>
+  </entry>
   <entry>
     <title>Install kubernetes cluster using Minikube</title>
     <link href="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" rel="alternate" type="text/html" title="Install kubernetes cluster using Minikube" />
@@ -177,42 +220,6 @@ ALTER USER &amp;lt;username&amp;gt; WITH PASSWORD 'new_password';
 
 
 ALTER ROLE &amp;l...
-    </summary>
-  </entry>
-  <entry>
-    <title>Golang debugging guide using dlv debugger</title>
-    <link href="https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/" rel="alternate" type="text/html" title="Golang debugging guide using dlv debugger" />
-    <published>2024-07-16T15:11:00+05:30</published>
-    <updated>2024-07-16T15:11:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/</id>
-    <content src="https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <summary>
-
-
-
-
-Purpose of this documentation is to provide a comprehensive guide on how to debug Golang applications using the Delve debugger (dlv). This guide covers installation, setting up a remote debugger, and local debugging.
-
-Installation
-
-go install github.com/go-delve/delve/cmd/dlv@latest
-
-
-Remote debugger
-
-
-  Start server
-
-
-dlv debug main.go --listen=":2345" --headless=true --api-version=2
-
-
-
-  Conn...
     </summary>
   </entry>
 </feed>

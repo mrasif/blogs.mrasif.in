@@ -909,95 +909,6 @@
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1057,10 +968,46 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -1085,6 +1032,89 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1127,55 +1157,10 @@
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1216,6 +1201,29 @@
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -1234,6 +1242,13 @@
     
     
     
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -1280,6 +1295,9 @@
         <a class="post-tag" href="/tags/golang/">golang</a>
       
         
+        <a class="post-tag" href="/tags/awk/">awk</a>
+      
+        
         <a class="post-tag" href="/tags/ci-cd/">CI/CD</a>
       
         
@@ -1290,9 +1308,6 @@
       
         
         <a class="post-tag" href="/tags/gpg/">gpg</a>
-      
-        
-        <a class="post-tag" href="/tags/jellyfin/">jellyfin</a>
       
 
       </div>
@@ -1339,6 +1354,19 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1633,7 +1661,7 @@ sudo curl -fsSL https:...
       
       
       <div class="card">
-        <a href="/posts/install-golang-on-ubuntu-server/">
+        <a href="/posts/gpg-key-installation-or-setup-guide/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1653,10 +1681,10 @@ sudo curl -fsSL https:...
     Jul 16, 2024
   
 
-  <i class="unloaded">2024-07-16T14:47:00+05:30</i>
+  <i class="unloaded">2024-07-16T14:50:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install Golang on Ubuntu Server</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>GPG key installation or setup guide</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1665,20 +1693,21 @@ sudo curl -fsSL https:...
 
 
 
-                Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step.
+                Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.
 
-Let’s Begin
-
-
-  Define the Go version to install
-
+Create gpg key:
 
 1
-GO_VERSION="1.24.4"
+gpg --full-generate-key
 
 
+Set ownertrust:
 
-  Define th...
+1
+2
+3
+4
+gpg --edit-key ...
               </p>
             </div>
           </div>
@@ -1829,95 +1858,6 @@ GO_VERSION="1.24.4"
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -1977,10 +1917,46 @@ GO_VERSION="1.24.4"
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2005,6 +1981,89 @@ GO_VERSION="1.24.4"
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2047,55 +2106,10 @@ GO_VERSION="1.24.4"
     
     
     
-  
-    
-    
-    
-    
       
         
         
 
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2136,6 +2150,29 @@ GO_VERSION="1.24.4"
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2154,6 +2191,13 @@ GO_VERSION="1.24.4"
     
     
     
+    
+  
+    
+    
+    
+    
+      
     
   
     
@@ -2195,6 +2239,9 @@ GO_VERSION="1.24.4"
         <a class="post-tag" href="/tags/golang/">golang</a>
       
         
+        <a class="post-tag" href="/tags/awk/">awk</a>
+      
+        
         <a class="post-tag" href="/tags/ci-cd/">CI/CD</a>
       
         
@@ -2205,9 +2252,6 @@ GO_VERSION="1.24.4"
       
         
         <a class="post-tag" href="/tags/gpg/">gpg</a>
-      
-        
-        <a class="post-tag" href="/tags/jellyfin/">jellyfin</a>
       
 
     </div>

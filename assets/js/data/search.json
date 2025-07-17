@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "AWK Cheatsheet with Examples",
+    "url": "/posts/awk-cheatsheet-with-example/",
+    "categories": "Linux",
+    "tags": "shell, awk",
+    "date": "2025-07-17 14:55:00 +0530",
+    
+
+
+
+
+
+    "snippet": "AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.Basic Syntaxawk &#39;pattern { action }&#39; file  pattern: condition to match (can be omitted)  action: what to do if pattern matchesCommon Built-in Varia..."
+  },
+  
+  {
     "title": "Install kubernetes cluster using Minikube",
     "url": "/posts/install-kubernetes-using-minikube/",
     "categories": "DevOps, Kubernetes",
