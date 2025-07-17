@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-17T16:36:37+05:30",
+  "updated_at": "2025-07-17T17:21:12+05:30",
   "posts": [
     {
       "id": "/posts/awk-cheatsheet-with-example",
@@ -13,7 +13,7 @@
       "categories": ["Linux"],
       "tags": ["shell", "awk"],
       "updated_at": "2025-07-17T14:55:00+05:30",
-      "summary": "AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting."
+      "summary": "AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting."
     },
     {
       "id": "/posts/install-kubernetes-using-minikube",

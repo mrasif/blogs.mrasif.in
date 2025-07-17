@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-17T16:36:37+05:30</updated>
+  <updated>2025-07-17T17:21:12+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -17,7 +17,7 @@
     <title>AWK Cheatsheet with Examples</title>
     <link href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" rel="alternate" type="text/html" title="AWK Cheatsheet with Examples" />
     <published>2025-07-17T14:55:00+05:30</published>
-    <updated>2025-07-17T14:55:00+05:30</updated>
+    <updated>2025-07-17T17:20:32+05:30</updated>
     <id>https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/</id>
     <content src="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
     <author>
@@ -29,7 +29,7 @@
 
 
 
-AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.
+AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting.
 
 Basic Syntax
 
@@ -53,7 +53,7 @@ Common Built-in Variables
   
     
       $0
-      Entire current li...
+      Entire current lin...
     </summary>
   </entry>
   <entry>

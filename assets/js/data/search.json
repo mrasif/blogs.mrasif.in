@@ -12,7 +12,7 @@
 
 
 
-    "snippet": "AWK is a powerful pattern scanning and processing language. It is especially useful for text and data extraction, manipulation, and reporting.Basic Syntaxawk &#39;pattern { action }&#39; file  pattern: condition to match (can be omitted)  action: what to do if pattern matchesCommon Built-in Varia..."
+    "snippet": "AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting.Basic Syntaxawk &#39;pattern { action }&#39; file  pattern: condition to match (can be omitted)  action: what to do if pattern matchesCommon Built-in Variab..."
   },
   
   {
