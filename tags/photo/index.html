@@ -21,27 +21,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Step by step PostgreSQL setup guide" />
+<meta property="og:title" content="photo" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases." />
-<meta property="og:description" content="Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases." />
-<link rel="canonical" href="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
-<meta property="og:url" content="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
+<meta name="description" content="Sr. Software Engineer, Indian Author" />
+<meta property="og:description" content="Sr. Software Engineer, Indian Author" />
+<link rel="canonical" href="https://blogs.mrasif.in/tags/photo/" />
+<meta property="og:url" content="https://blogs.mrasif.in/tags/photo/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
-<meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-16T15:16:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Step by step PostgreSQL setup guide" />
+<meta property="twitter:title" content="photo" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.","url":"https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/","@type":"BlogPosting","headline":"Step by step PostgreSQL setup guide","dateModified":"2024-07-16T15:16:00+05:30","datePublished":"2024-07-16T15:16:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Sr. Software Engineer, Indian Author","url":"https://blogs.mrasif.in/tags/photo/","@type":"WebPage","headline":"photo","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Step by step PostgreSQL setup guide | Asif Mohammad Mollah
+  <title>photo | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -117,14 +115,9 @@
 
 
 
-<link rel="preload" href="/assets/css/post.css" as="style">
-<link rel="stylesheet" href="/assets/css/post.css">
+<link rel="preload" href="/assets/css/category-tag.css" as="style">
+<link rel="stylesheet" href="/assets/css/category-tag.css">
 
-
-  
-    <link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css">
-    <link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" />
-  
 
 
 
@@ -147,7 +140,7 @@
 
 
 
-<script async src="/assets/js/post.min.js"></script>
+<script async src="/assets/js/page.min.js"></script>
 
 
 
@@ -465,14 +458,22 @@
         
         <span>
           <a href="/">
-            Posts
+            Home
+          </a>
+        </span>
+        
+      
+        
+        <span>
+          <a href="/tabs/tags/">
+            Tags
           </a>
         </span>
         
       
 
       
-        <span>Step by step PostgreSQL setup guide</span>
+        <span>photo</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -480,7 +481,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      Post
+      Tag
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -523,396 +524,29 @@
 
 <!-- return -->
 <div class="row">
-
-  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
-
-    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-
-      <h1 data-toc-skip>Step by step PostgreSQL setup guide</h1>
-
-      <div class="post-meta text-muted d-flex flex-column">
-        <!-- Published date and author -->
-        <div>
-          <!--
-  Date format snippet
-
-  v2.4.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-<span class="timeago "
-  
-    data-toggle="tooltip"
-    data-placement="bottom"
-    title="Tue, Jul 16, 2024,  3:16 PM +0530"
-  >
-
-  
-  
-
-  
-    Jul 16, 2024
-  
-
-  <i class="unloaded">2024-07-16T15:16:00+05:30</i>
-
-</span>
-          by
-          <span class="author">
-            Asif Mohammad Mollah
-          </span>
-        </div>
-
-        <div>
-          <!-- lastmod -->
-          
-
-          <!-- read time -->
-          <!--
-  Calculate the post's reading time, and display the word count in tooltip
- -->
-
-
-
-
-
-
-<!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="513 words">2 min</span>
-
-
-          <!-- page views -->
-          
-
-        </div>
-
-      </div> <!-- .post-meta -->
-
-      <div class="post-content">
-
-        <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
-        
-          <p>Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.</p>
-
-<h4 id="install-postgresql-client">Install PostgreSQL Client</h4>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> postgresql-client
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="login-to-database">Login to Database:</h4>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>psql <span class="nt">-U</span> username <span class="nt">-h</span> <span class="nb">hostname</span> <span class="nt">-p</span> 5432
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Show users:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="se">\d</span>u
-<span class="c"># With All column</span>
-<span class="se">\d</span>u+
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Reset password:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">ALTER</span> <span class="k">USER</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="n">PASSWORD</span> <span class="s1">'new_password'</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Add permission:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">ALTER</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">|</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">permission</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">ALTER</span> <span class="k">ROLE</span> <span class="n">username</span> <span class="k">createdb</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Delete permission from role:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">AlTER</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">|</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">no</span><span class="o">&lt;</span><span class="n">permission</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">ALTER</span> <span class="k">ROLE</span> <span class="n">username</span> <span class="k">noCreatedb</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create extension:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="n">EXTENSION</span> <span class="o">&lt;</span><span class="n">extension_name</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">CREATE</span> <span class="n">EXTENSION</span> <span class="nv">"uuid-ossp"</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create Role with admin access:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="k">createdb</span> <span class="n">createrole</span> <span class="n">login</span> <span class="n">password</span> <span class="s1">'&lt;password&gt;'</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create standard user:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="k">CREATE</span> <span class="k">USER</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="k">createdb</span> <span class="n">createrole</span> <span class="n">login</span> <span class="n">password</span> <span class="s1">'&lt;password&gt;'</span><span class="p">;</span>
-<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">PRIVILEGES</span> <span class="k">ON</span> <span class="k">DATABASE</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span> <span class="k">TO</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Change database owner:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="err">\</span><span class="k">c</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span>
-<span class="n">REASSIGN</span> <span class="n">OWNED</span> <span class="k">BY</span> <span class="o">&lt;</span><span class="k">old</span><span class="o">-</span><span class="k">role</span><span class="o">&gt;</span> <span class="k">TO</span> <span class="o">&lt;</span><span class="k">new</span><span class="o">-</span><span class="k">role</span><span class="o">&gt;</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Dump Database:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="c"># In Binary Format</span>
-pg_dump <span class="nt">-Fc</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="o">&gt;</span> dbname.dump
-pg_dump <span class="nt">-Fc</span> <span class="nt">-v</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="nt">-f</span> dbname.dump
-<span class="c"># Without owner Role</span>
-pg_dump <span class="nt">-Fc</span> <span class="nt">-O</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="o">&gt;</span> dbname.dump
-<span class="c"># In SQL Format</span>
-pg_dump <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username dbname <span class="o">&gt;</span> dbname.sql
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Restore Database:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="c"># In Binary Format</span>
-pg_restore <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="nt">-1</span> dbname.dump
-<span class="c"># In SQL Format</span>
-psql <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname &lt; dbname.sql
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Postgresql Permission Name and Description</li>
-</ul>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>Role</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CreateDB | NoCreateDB</td>
-      <td>Will allow/deny user to create database.</td>
-    </tr>
-    <tr>
-      <td>CreateRole | NoCreateRole</td>
-      <td>Allow the role to create or change roles.</td>
-    </tr>
-    <tr>
-      <td>Inherit | NoInherit</td>
-      <td>Determine if the role to inherit privileges of roles of which it is a member.</td>
-    </tr>
-    <tr>
-      <td>Login | NoLogin</td>
-      <td>Allow the role to log in.</td>
-    </tr>
-    <tr>
-      <td>Replication | NoReplication</td>
-      <td>Determine if the role is a replication roles.</td>
-    </tr>
-    <tr>
-      <td>ByPassRLS | NoByPassRLS</td>
-      <td>Determine if the role to by pass a row-level security (RLS) policy.</td>
-    </tr>
-    <tr>
-      <td>CONNECTION LIMIT</td>
-      <td>Specify the number of concurrent connection a role can made, -1 means unlimited.</td>
-    </tr>
-    <tr>
-      <td>PASSWORD ‘password’ | PASSWORD NULL</td>
-      <td>Change the role’s password.</td>
-    </tr>
-    <tr>
-      <td>VALID UNTIL ‘timestamp’</td>
-      <td>Set the date and time after which the role’s password is no long valid.  <br />Ex. 2050-01-01</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h4 id="pg_dump--pg_restore-flags">PG_DUMP &amp; PG_RESTORE Flags:</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-</pre></td><td class="rouge-code"><pre>General options:
-  -f, --file=FILENAME          output file or directory name
-  -F, --format=c|d|t|p         output file format (custom, directory, tar,
-                               plain text (default))
-  -v, --verbose                verbose mode
-  -Z, --compress=0-9           compression level for compressed formats
-
-Options controlling the output content:
-  -b, --blobs                  include large objects in dump
-  -O, --no-owner               skip restoration of object ownership in
-                               plain-text format
-  -x, --no-privileges          do not dump privileges (grant/revoke)
-
-Connection options:
-  -d, --dbname=DBNAME      database to dump
-  -h, --host=HOSTNAME      database server host or socket directory
-  -p, --port=PORT          database server port number
-  -U, --username=NAME      connect as specified database user
-  -w, --no-password        never prompt for password
-  -W, --password           force password prompt (should happen automatically)
-  --role=ROLENAME          do SET ROLE before dump
-</pre></td></tr></tbody></table></code></div></div>
-
-        
-      </div>
-
-      <div class="post-tail-wrapper text-muted">
-
-        <!-- categories -->
-        
-        <div class="post-meta mb-3">
-          <i class="far fa-folder-open fa-fw mr-1"></i>
-          
-            <a href='/categories/devops/'>DevOps</a>
-        </div>
-        
-
-        <!-- tags -->
-        
-        <div class="post-tags">
-          <i class="fa fa-tags fa-fw mr-1"></i>
-          
-          <a href="/tags/ubuntu/"
-            class="post-tag no-text-decoration" >ubuntu</a>
-          
-          <a href="/tags/postgres/"
-            class="post-tag no-text-decoration" >postgres</a>
-          
-          <a href="/tags/installation/"
-            class="post-tag no-text-decoration" >installation</a>
-          
-          </div>
-        
-
-        <div class="post-tail-bottom
-          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
-          
-
-          <!--
- Post sharing snippet
-
- v2.1
- https://github.com/cotes2020/jekyll-theme-chirpy
- © 2019 Cotes Chung
- Published under the MIT License
--->
-
-<div class="share-wrapper">
-  <span class="share-label text-muted mr-1">Share</span>
-  <span class="share-icons">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
     
+      <div id="page-tag">
+  <h1 class="pl-lg-2">
+    <i class="fa fa-tag fa-fw text-muted"></i>
+    photo
+    <span class="lead text-muted pl-2">1</span>
+  </h1>
+  <ul class="post-content pl-0">
     
-
+    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
+      <a href="/posts/install-self-hosted-photo-video-server-immich/">Install Self-Hosted Photo and Video Server with Immich</a>
+      <span class="dash flex-grow-1"></span>
+      <span class="text-muted small">Jul 20, 2024</span>
+    </li>
     
-      
-        <a href="https://twitter.com/intent/tweet?text=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
-          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
-          <i class="fa-fw fab fa-twitter"></i>
-        </a>
-    
-      
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
-          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fa-fw fab fa-facebook-square"></i>
-        </a>
-    
-      
-        <a href="https://telegram.me/share?text=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
-          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
-          <i class="fa-fw fab fa-telegram"></i>
-        </a>
-    
-
-    <i class="fa-fw fas fa-link small" onclick="copyLink()"
-        data-toggle="tooltip" data-placement="top" title="Copy link"></i>
-
-  </span>
+  </ul>
 </div>
 
-
-        </div><!-- .post-tail-bottom -->
-
-      </div><!-- div.post-tail -->
-
-    </div> <!-- .post -->
-
-
-  </div> <!-- #post-wrapper -->
-
-  
-
-  
+    
+    </div> <!-- #page -->
+  </div><!-- .col-12 -->
 
   <!--
   The Pannel on right side (Desktop views)
@@ -1456,450 +1090,9 @@ Connection options:
 </div> <!-- #panel-wrapper -->
 
 
-</div> <!-- .row -->
-
-<div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
-
-    <!--
- Recommend the other 3 posts according to the tags and categories of the current post,
- if the number is not enough, use the other latest posts to supplement.
-
- v2.0
- https://github.com/cotes2020/jekyll-theme-chirpy
- © 2019 Cotes Chung
- Published under the MIT License
--->
-
-<!-- The total size of related posts  -->
-
-
-<!-- An random integer that bigger than 0  -->
-
-
-<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-
-
-
-
-
-
-<!-- Fill with the other newlest posts  -->
-
-
-
-
-
-
-  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
-    <h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
-    <div class="card-deck mb-4">
-    
-      
-      
-      <div class="card">
-        <a href="/posts/setup-network-file-system-nfs-on-ubuntu-linux/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-
-  v2.4.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-<span class="timeago small"
-  >
-
-  
-  
-
-  
-    Jul 16, 2024
-  
-
-  <i class="unloaded">2024-07-16T14:56:00+05:30</i>
-
-</span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Setup Network File System (NFS) on ubuntu linux</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:
-
-Server Setup
-
-
-  
-    Install ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/jellyfin-media-streaming-server-setup/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-
-  v2.4.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-<span class="timeago small"
-  >
-
-  
-  
-
-  
-    Jul 16, 2024
-  
-
-  <i class="unloaded">2024-07-16T14:58:00+05:30</i>
-
-</span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Deploy your own media streaming server with Jellyfin</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                Jellyfin media streaming server installation guide for Raspberry PI
-
-Installation
-
-
-  Before we proceed, let us start by ensuring we are running an updated operating system.
-
-
-As long as you are ru...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/installation-guide-of-terminal-multiplexer-t-mux/">
-          <div class="card-body">
-            <!--
-  Date format snippet
-
-  v2.4.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-<span class="timeago small"
-  >
-
-  
-  
-
-  
-    Jul 16, 2024
-  
-
-  <i class="unloaded">2024-07-16T15:07:00+05:30</i>
-
-</span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Installation guide of terminal multiplexer T-MUX</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                It is a T-mux user guide. T-mux and VIM works awesome for development.
-
-Installation:
-
-sudo apt install tmux
-
-
-Open tmux and press Ctrl+b and Shift+I to activate plugins.
-
-Configuration:
-
-
-  Clone ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-    </div> <!-- .card-deck -->
-  </div> <!-- #related-posts -->
-
-
-
-    <!--
-  Navigation buttons at the bottom of the post.
-
-  v2.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-
-<div class="post-navigation d-flex justify-content-between">
-  
-  <a href="/posts/golang-debug-guide-using-dlv/" class="btn btn-outline-primary">
-    <p>Golang debugging guide using dlv debugger</p>
-  </a>
-  
-
-  
-  <a href="/posts/neovim-installation-and-setup-guide/" class="btn btn-outline-primary">
-    <p>NeoVIM installation and setup guide</p>
-  </a>
-  
-
 </div>
 
-    
 
-    </div> <!-- #post-extend-wrapper -->
-
-  </div> <!-- .col-* -->
-
-</div> <!-- .row -->
-
-<!-- image lazy load: https://github.com/ApoorvSaxena/lozad.js -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
-<script type="text/javascript">
-  const imgs = document.querySelectorAll('#post-wrapper img');
-  const observer = lozad(imgs);
-  observer.observe();
-</script>
 
 
 

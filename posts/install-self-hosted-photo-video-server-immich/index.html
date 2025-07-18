@@ -21,27 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Step by step PostgreSQL setup guide" />
+<meta property="og:title" content="Install Self-Hosted Photo and Video Server with Immich" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases." />
-<meta property="og:description" content="Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases." />
-<link rel="canonical" href="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
-<meta property="og:url" content="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
+<meta name="description" content="Immich is a self-hosted photo and video management solution Easily back up, organize, and manage your photos on your own server. Immich helps you browse, search and organize your photos and videos with ease, without sacrificing your privacy." />
+<meta property="og:description" content="Immich is a self-hosted photo and video management solution Easily back up, organize, and manage your photos on your own server. Immich helps you browse, search and organize your photos and videos with ease, without sacrificing your privacy." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-07-16T15:16:00+05:30" />
+<meta property="article:published_time" content="2024-07-20T10:57:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Step by step PostgreSQL setup guide" />
+<meta property="twitter:title" content="Install Self-Hosted Photo and Video Server with Immich" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.","url":"https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/","@type":"BlogPosting","headline":"Step by step PostgreSQL setup guide","dateModified":"2024-07-16T15:16:00+05:30","datePublished":"2024-07-16T15:16:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Immich is a self-hosted photo and video management solution Easily back up, organize, and manage your photos on your own server. Immich helps you browse, search and organize your photos and videos with ease, without sacrificing your privacy.","url":"https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/","@type":"BlogPosting","headline":"Install Self-Hosted Photo and Video Server with Immich","dateModified":"2024-07-20T10:57:00+05:30","datePublished":"2024-07-20T10:57:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Step by step PostgreSQL setup guide | Asif Mohammad Mollah
+  <title>Install Self-Hosted Photo and Video Server with Immich | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -472,7 +472,7 @@
       
 
       
-        <span>Step by step PostgreSQL setup guide</span>
+        <span>Install Self-Hosted Photo and Video Server with Immich</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -528,7 +528,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Step by step PostgreSQL setup guide</h1>
+      <h1 data-toc-skip>Install Self-Hosted Photo and Video Server with Immich</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -545,17 +545,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Jul 16, 2024,  3:16 PM +0530"
+    title="Sat, Jul 20, 2024, 10:57 AM +0530"
   >
 
   
   
 
   
-    Jul 16, 2024
+    Jul 20, 2024
   
 
-  <i class="unloaded">2024-07-16T15:16:00+05:30</i>
+  <i class="unloaded">2024-07-20T10:57:00+05:30</i>
 
 </span>
           by
@@ -579,7 +579,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="513 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="305 words">1 min</span>
 
 
           <!-- page views -->
@@ -593,194 +593,14 @@
 
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         
-          <p>Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.</p>
+          <p><strong><em>Immich</em></strong> is a self-hosted photo and
+video management solution
+Easily back up, organize, and manage your photos on your own server. Immich helps you
+browse, search and organize your photos and videos with ease, without sacrificing your privacy.</p>
 
-<h4 id="install-postgresql-client">Install PostgreSQL Client</h4>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get <span class="nb">install</span> <span class="nt">-y</span> postgresql-client
-</pre></td></tr></tbody></table></code></div></div>
-
-<h4 id="login-to-database">Login to Database:</h4>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>psql <span class="nt">-U</span> username <span class="nt">-h</span> <span class="nb">hostname</span> <span class="nt">-p</span> 5432
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Show users:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="se">\d</span>u
-<span class="c"># With All column</span>
-<span class="se">\d</span>u+
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Reset password:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">ALTER</span> <span class="k">USER</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="n">PASSWORD</span> <span class="s1">'new_password'</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Add permission:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">ALTER</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">|</span><span class="n">username</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">permission</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">ALTER</span> <span class="k">ROLE</span> <span class="n">username</span> <span class="k">createdb</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Delete permission from role:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">AlTER</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">|</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">no</span><span class="o">&lt;</span><span class="n">permission</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">ALTER</span> <span class="k">ROLE</span> <span class="n">username</span> <span class="k">noCreatedb</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create extension:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="n">EXTENSION</span> <span class="o">&lt;</span><span class="n">extension_name</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="o">#</span> <span class="n">Example</span><span class="p">:</span>
-<span class="k">CREATE</span> <span class="n">EXTENSION</span> <span class="nv">"uuid-ossp"</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create Role with admin access:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">ROLE</span> <span class="o">&lt;</span><span class="n">rolename</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="k">createdb</span> <span class="n">createrole</span> <span class="n">login</span> <span class="n">password</span> <span class="s1">'&lt;password&gt;'</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Create standard user:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="rouge-code"><pre><span class="k">CREATE</span> <span class="k">DATABASE</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span><span class="p">;</span>
-<span class="k">CREATE</span> <span class="k">USER</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span> <span class="k">WITH</span> <span class="k">createdb</span> <span class="n">createrole</span> <span class="n">login</span> <span class="n">password</span> <span class="s1">'&lt;password&gt;'</span><span class="p">;</span>
-<span class="k">GRANT</span> <span class="k">ALL</span> <span class="k">PRIVILEGES</span> <span class="k">ON</span> <span class="k">DATABASE</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span> <span class="k">TO</span> <span class="o">&lt;</span><span class="n">username</span><span class="o">&gt;</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Change database owner:</li>
-</ul>
-
-<div class="language-sql highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="err">\</span><span class="k">c</span> <span class="o">&lt;</span><span class="n">dbname</span><span class="o">&gt;</span>
-<span class="n">REASSIGN</span> <span class="n">OWNED</span> <span class="k">BY</span> <span class="o">&lt;</span><span class="k">old</span><span class="o">-</span><span class="k">role</span><span class="o">&gt;</span> <span class="k">TO</span> <span class="o">&lt;</span><span class="k">new</span><span class="o">-</span><span class="k">role</span><span class="o">&gt;</span><span class="p">;</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Dump Database:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="rouge-code"><pre><span class="c"># In Binary Format</span>
-pg_dump <span class="nt">-Fc</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="o">&gt;</span> dbname.dump
-pg_dump <span class="nt">-Fc</span> <span class="nt">-v</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="nt">-f</span> dbname.dump
-<span class="c"># Without owner Role</span>
-pg_dump <span class="nt">-Fc</span> <span class="nt">-O</span> <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="o">&gt;</span> dbname.dump
-<span class="c"># In SQL Format</span>
-pg_dump <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username dbname <span class="o">&gt;</span> dbname.sql
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Restore Database:</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-</pre></td><td class="rouge-code"><pre><span class="c"># In Binary Format</span>
-pg_restore <span class="nt">-U</span> username <span class="nt">-d</span> dbname <span class="nt">-1</span> dbname.dump
-<span class="c"># In SQL Format</span>
-psql <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span class="nt">-U</span> username <span class="nt">-d</span> dbname &lt; dbname.sql
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Postgresql Permission Name and Description</li>
-</ul>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>Role</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>CreateDB | NoCreateDB</td>
-      <td>Will allow/deny user to create database.</td>
-    </tr>
-    <tr>
-      <td>CreateRole | NoCreateRole</td>
-      <td>Allow the role to create or change roles.</td>
-    </tr>
-    <tr>
-      <td>Inherit | NoInherit</td>
-      <td>Determine if the role to inherit privileges of roles of which it is a member.</td>
-    </tr>
-    <tr>
-      <td>Login | NoLogin</td>
-      <td>Allow the role to log in.</td>
-    </tr>
-    <tr>
-      <td>Replication | NoReplication</td>
-      <td>Determine if the role is a replication roles.</td>
-    </tr>
-    <tr>
-      <td>ByPassRLS | NoByPassRLS</td>
-      <td>Determine if the role to by pass a row-level security (RLS) policy.</td>
-    </tr>
-    <tr>
-      <td>CONNECTION LIMIT</td>
-      <td>Specify the number of concurrent connection a role can made, -1 means unlimited.</td>
-    </tr>
-    <tr>
-      <td>PASSWORD ‘password’ | PASSWORD NULL</td>
-      <td>Change the role’s password.</td>
-    </tr>
-    <tr>
-      <td>VALID UNTIL ‘timestamp’</td>
-      <td>Set the date and time after which the role’s password is no long valid.  <br />Ex. 2050-01-01</td>
-    </tr>
-  </tbody>
-</table></div>
-
-<h4 id="pg_dump--pg_restore-flags">PG_DUMP &amp; PG_RESTORE Flags:</h4>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h2 id="installation-steps">Installation Steps</h2>
+<h3 id="create-a-docker-composeyaml-file">Create a <code class="language-plaintext highlighter-rouge">docker-compose.yaml</code> file</h3>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -801,28 +621,166 @@ psql <span class="nt">-h</span> localhost <span class="nt">-p</span> 5432 <span 
 19
 20
 21
-</pre></td><td class="rouge-code"><pre>General options:
-  -f, --file=FILENAME          output file or directory name
-  -F, --format=c|d|t|p         output file format (custom, directory, tar,
-                               plain text (default))
-  -v, --verbose                verbose mode
-  -Z, --compress=0-9           compression level for compressed formats
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+</pre></td><td class="rouge-code"><pre><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.8"</span>
+<span class="na">name</span><span class="pi">:</span> <span class="s">immich</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">immich-server</span><span class="pi">:</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">immich_server</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">techthinkerorg/immich-server:v1.135.3</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">upload_location:/usr/src/app/upload</span>
+      <span class="pi">-</span> <span class="s">/etc/localtime:/etc/localtime:ro</span>
+    <span class="na">env_file</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">.env</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">2283:3001</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">redis</span>
+      <span class="pi">-</span> <span class="s">database</span>
 
-Options controlling the output content:
-  -b, --blobs                  include large objects in dump
-  -O, --no-owner               skip restoration of object ownership in
-                               plain-text format
-  -x, --no-privileges          do not dump privileges (grant/revoke)
+  <span class="na">immich-machine-learning</span><span class="pi">:</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">immich_machine_learning</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">techthinkerorg/immich-machine-learning:v1.135.3</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">model-cache:/cache</span>
+    <span class="na">env_file</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">.env</span>
 
-Connection options:
-  -d, --dbname=DBNAME      database to dump
-  -h, --host=HOSTNAME      database server host or socket directory
-  -p, --port=PORT          database server port number
-  -U, --username=NAME      connect as specified database user
-  -w, --no-password        never prompt for password
-  -W, --password           force password prompt (should happen automatically)
-  --role=ROLENAME          do SET ROLE before dump
+  <span class="na">redis</span><span class="pi">:</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">immich_redis</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">techthinkerorg/immich-redis:v1.135.3</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">healthcheck</span><span class="pi">:</span>
+      <span class="na">test</span><span class="pi">:</span> <span class="s">redis-cli ping || exit </span><span class="m">1</span>
+
+  <span class="na">database</span><span class="pi">:</span>
+    <span class="na">container_name</span><span class="pi">:</span> <span class="s">immich_postgres</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">techthinkerorg/immich-postgres:v1.135.3</span>
+    <span class="na">restart</span><span class="pi">:</span> <span class="s">always</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">5431:5432</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="na">POSTGRES_PASSWORD</span><span class="pi">:</span> <span class="s">${DB_PASSWORD}</span>
+      <span class="na">POSTGRES_USER</span><span class="pi">:</span> <span class="s">${DB_USERNAME}</span>
+      <span class="na">POSTGRES_DB</span><span class="pi">:</span> <span class="s">${DB_DATABASE_NAME}</span>
+      <span class="na">POSTGRES_INITDB_ARGS</span><span class="pi">:</span> <span class="s">--data-checksums</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">db_data_location:/var/lib/postgresql/data</span>
+
+<span class="na">volumes</span><span class="pi">:</span>
+  <span class="na">upload_location</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+    <span class="na">driver_opts</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
+      <span class="na">device</span><span class="pi">:</span> <span class="s">${UPLOAD_LOCATION}</span>
+      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
+  <span class="na">db_data_location</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+    <span class="na">driver_opts</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
+      <span class="na">device</span><span class="pi">:</span> <span class="s">${DB_DATA_LOCATION}</span>
+      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
+  <span class="na">model-cache</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
+    <span class="na">driver_opts</span><span class="pi">:</span>
+      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
+      <span class="na">device</span><span class="pi">:</span> <span class="s">${MODEL_CACHE}</span>
+      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
+<span class="na">x-dockge</span><span class="pi">:</span>
+  <span class="na">urls</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="s">https://photos.pvt.one</span>
+<span class="na">networks</span><span class="pi">:</span> <span class="pi">{}</span>
 </pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="create-env-file">Create <code class="language-plaintext highlighter-rouge">.env</code> file</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="nv">TZ</span><span class="o">=</span>Asia/Kolkata
+<span class="c"># The location where your uploaded files are stored</span>
+<span class="nv">UPLOAD_LOCATION</span><span class="o">=</span>/srv/immich/upload
+<span class="c"># The location where your database files are stored</span>
+<span class="nv">DB_DATA_LOCATION</span><span class="o">=</span>/srv/immich/pgdata
+<span class="nv">MODEL_CACHE</span><span class="o">=</span>/srv/immich/model_cache
+<span class="nv">DB_DATABASE_NAME</span><span class="o">=</span>immich
+<span class="nv">DB_USERNAME</span><span class="o">=</span>postgres
+<span class="nv">DB_PASSWORD</span><span class="o">=</span>postgres
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="create-data-directories">Create data directories</h3>
+<p>Make sure you have updated the directories to <code class="language-plaintext highlighter-rouge">.env</code> file.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir</span> <span class="nt">-p</span> /srv/immich/upload
+<span class="nb">mkdir</span> <span class="nt">-p</span> /srv/immich/pgdata
+<span class="nb">mkdir</span> <span class="nt">-p</span> /srv/immich/model_cache
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="run-docker">Run docker</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>docker-compose up <span class="nt">-d</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>Your immich installation is complete. Visit url http://localhost:2283</p>
 
         
       </div>
@@ -834,7 +792,8 @@ Connection options:
         <div class="post-meta mb-3">
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
-            <a href='/categories/devops/'>DevOps</a>
+            <a href='/categories/devops/'>DevOps</a>,
+            <a href='/categories/docker/'>Docker</a>
         </div>
         
 
@@ -843,11 +802,17 @@ Connection options:
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/ubuntu/"
-            class="post-tag no-text-decoration" >ubuntu</a>
+          <a href="/tags/immich/"
+            class="post-tag no-text-decoration" >immich</a>
           
-          <a href="/tags/postgres/"
-            class="post-tag no-text-decoration" >postgres</a>
+          <a href="/tags/photo/"
+            class="post-tag no-text-decoration" >photo</a>
+          
+          <a href="/tags/video/"
+            class="post-tag no-text-decoration" >video</a>
+          
+          <a href="/tags/self-hosted/"
+            class="post-tag no-text-decoration" >self-hosted</a>
           
           <a href="/tags/installation/"
             class="post-tag no-text-decoration" >installation</a>
@@ -876,19 +841,19 @@ Connection options:
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Install Self-Hosted Photo and Video Server with Immich - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Install Self-Hosted Photo and Video Server with Immich - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Step by step PostgreSQL setup guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Install Self-Hosted Photo and Video Server with Immich - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1452,6 +1417,11 @@ Connection options:
   </div> <!-- .access -->
 
   
+    <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+      <span class="pl-3 pt-2 mb-2">Contents</span>
+      <nav id="toc" data-toggle="toc"></nav>
+    </div>
+  
 
 </div> <!-- #panel-wrapper -->
 
@@ -1516,46 +1486,46 @@ Connection options:
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -1706,7 +1676,7 @@ Connection options:
       
       
       <div class="card">
-        <a href="/posts/setup-network-file-system-nfs-on-ubuntu-linux/">
+        <a href="/posts/bookstack-installation-guide/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1723,13 +1693,13 @@ Connection options:
   
 
   
-    Jul 16, 2024
+    Jun 15, 2024
   
 
-  <i class="unloaded">2024-07-16T14:56:00+05:30</i>
+  <i class="unloaded">2024-06-15T06:11:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Setup Network File System (NFS) on ubuntu linux</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Make your own self-hosted docs server using Bookstack</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1738,13 +1708,7 @@ Connection options:
 
 
 
-                NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:
-
-Server Setup
-
-
-  
-    Install ...
+                BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge ba...
               </p>
             </div>
           </div>
@@ -1754,7 +1718,7 @@ Server Setup
       
       
       <div class="card">
-        <a href="/posts/jellyfin-media-streaming-server-setup/">
+        <a href="/posts/install-docker-on-ubuntu-server/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1771,13 +1735,13 @@ Server Setup
   
 
   
-    Jul 16, 2024
+    Jul 13, 2024
   
 
-  <i class="unloaded">2024-07-16T14:58:00+05:30</i>
+  <i class="unloaded">2024-07-13T11:57:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Deploy your own media streaming server with Jellyfin</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install docker on Ubuntu Server</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1786,15 +1750,22 @@ Server Setup
 
 
 
-                Jellyfin media streaming server installation guide for Raspberry PI
-
-Installation
+                Installation
 
 
-  Before we proceed, let us start by ensuring we are running an updated operating system.
+  Update apt package
 
 
-As long as you are ru...
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+
+
+  Add Docker’s official GPG key:
+
+
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https:...
               </p>
             </div>
           </div>
@@ -1804,7 +1775,7 @@ As long as you are ru...
       
       
       <div class="card">
-        <a href="/posts/installation-guide-of-terminal-multiplexer-t-mux/">
+        <a href="/posts/setup-self-hosted-github-actions-runners/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1821,13 +1792,13 @@ As long as you are ru...
   
 
   
-    Jul 16, 2024
+    Jul 14, 2024
   
 
-  <i class="unloaded">2024-07-16T15:07:00+05:30</i>
+  <i class="unloaded">2024-07-14T11:49:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Installation guide of terminal multiplexer T-MUX</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Deploy your self-hosted github action runner</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1836,19 +1807,14 @@ As long as you are ru...
 
 
 
-                It is a T-mux user guide. T-mux and VIM works awesome for development.
-
-Installation:
-
-sudo apt install tmux
+                Prerequisites
+Purpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment.
 
 
-Open tmux and press Ctrl+b and Shift+I to activate plugins.
-
-Configuration:
+  create work directory and give user permissions
 
 
-  Clone ...
+sud...
               </p>
             </div>
           </div>
@@ -1871,14 +1837,14 @@ Configuration:
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/golang-debug-guide-using-dlv/" class="btn btn-outline-primary">
-    <p>Golang debugging guide using dlv debugger</p>
+  <a href="/posts/sendmail-setup-on-ubuntu-server/" class="btn btn-outline-primary">
+    <p>SendMail setup on ubuntu server</p>
   </a>
   
 
   
-  <a href="/posts/neovim-installation-and-setup-guide/" class="btn btn-outline-primary">
-    <p>NeoVIM installation and setup guide</p>
+  <a href="/posts/install-kubernetes-using-minikube/" class="btn btn-outline-primary">
+    <p>Install kubernetes cluster using Minikube</p>
   </a>
   
 

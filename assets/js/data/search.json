@@ -31,6 +31,21 @@
   },
   
   {
+    "title": "Install Self-Hosted Photo and Video Server with Immich",
+    "url": "/posts/install-self-hosted-photo-video-server-immich/",
+    "categories": "DevOps, Docker",
+    "tags": "immich, photo, video, self-hosted, installation",
+    "date": "2024-07-20 10:57:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Immich is a self-hosted photo andvideo management solutionEasily back up, organize, and manage your photos on your own server. Immich helps youbrowse, search and organize your photos and videos with ease, without sacrificing your privacy.Installation StepsCreate a docker-compose.yaml fileversion:..."
+  },
+  
+  {
     "title": "SendMail setup on ubuntu server",
     "url": "/posts/sendmail-setup-on-ubuntu-server/",
     "categories": "DevOps",

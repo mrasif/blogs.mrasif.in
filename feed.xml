@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-18T11:26:29+05:30</updated>
+  <updated>2025-07-18T12:05:48+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -92,6 +92,38 @@ Key Features
     </summary>
   </entry>
   <entry>
+    <title>Install Self-Hosted Photo and Video Server with Immich</title>
+    <link href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" rel="alternate" type="text/html" title="Install Self-Hosted Photo and Video Server with Immich" />
+    <published>2024-07-20T10:57:00+05:30</published>
+    <updated>2024-07-20T10:57:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/</id>
+    <content src="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Docker" />
+    <summary>
+
+
+
+
+Immich is a self-hosted photo and
+video management solution
+Easily back up, organize, and manage your photos on your own server. Immich helps you
+browse, search and organize your photos and videos with ease, without sacrificing your privacy.
+
+Installation Steps
+Create a docker-compose.yaml file
+version: "3.8"
+name: immich
+services:
+  immich-server:
+    container_name: immich_server
+    image: t...
+    </summary>
+  </entry>
+  <entry>
     <title>SendMail setup on ubuntu server</title>
     <link href="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" rel="alternate" type="text/html" title="SendMail setup on ubuntu server" />
     <published>2024-07-18T21:45:00+05:30</published>
@@ -169,57 +201,6 @@ Preset Configuration setup
 
 
 git clone git@github.com:mrasif/dotfiles.gi...
-    </summary>
-  </entry>
-  <entry>
-    <title>Step by step PostgreSQL setup guide</title>
-    <link href="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" rel="alternate" type="text/html" title="Step by step PostgreSQL setup guide" />
-    <published>2024-07-16T15:16:00+05:30</published>
-    <updated>2024-07-16T15:16:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/</id>
-    <content src="https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <summary>
-
-
-
-
-Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases.
-
-Install PostgreSQL Client
-
-sudo apt-get install -y postgresql-client
-
-
-Login to Database:
-
-psql -U username -h hostname -p 5432
-
-
-
-  Show users:
-
-
-\du
-# With All column
-\du+
-
-
-
-  Reset password:
-
-
-ALTER USER &amp;lt;username&amp;gt; WITH PASSWORD 'new_password';
-
-
-
-  Add permission:
-
-
-ALTER ROLE &amp;l...
     </summary>
   </entry>
 </feed>
