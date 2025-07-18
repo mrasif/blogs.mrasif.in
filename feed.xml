@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-18T16:22:50+05:30</updated>
+  <updated>2025-07-19T01:12:45+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -13,6 +13,29 @@
   <rights> © 2025 Asif Mohammad Mollah </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</title>
+    <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" rel="alternate" type="text/html" title="Enable 2FA on SSH Login with TOTP verification using Google Authenticator" />
+    <published>2025-07-17T14:55:00+05:30</published>
+    <updated>2025-07-17T14:55:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/</id>
+    <content src="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="Linux" />
+    <summary>
+
+
+
+
+Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator.
+
+Why do we need 2FA?
+To enhance security by requiring an additional layer of authentication beyond just a password. This helps prevent unauthorized access even if a password is compromised.
+Note: Here we will use ssh key based authe...
+    </summary>
+  </entry>
   <entry>
     <title>AWK Cheatsheet with Examples</title>
     <link href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" rel="alternate" type="text/html" title="AWK Cheatsheet with Examples" />
@@ -152,50 +175,6 @@ AuthUser=&amp;lt;gmail-id&amp;gt;
 AuthPass=&amp;lt;app-password&amp;gt;
 UseTLS=YES
 UseSTARTTLS=...
-    </summary>
-  </entry>
-  <entry>
-    <title>NeoVIM installation and setup guide</title>
-    <link href="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" rel="alternate" type="text/html" title="NeoVIM installation and setup guide" />
-    <published>2024-07-16T15:21:00+05:30</published>
-    <updated>2024-07-16T15:21:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/</id>
-    <content src="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <summary>
-
-
-
-
-Neo Vim is a new generation VIM editor. It has beautiful UI.
-
-Installation
-
-
-  Download NeoVim:
-
-
-wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
-
-
-
-  Install:
-
-
-chmod +x nvim.appimage
-mv nvim.appimage /usr/local/bin/nvim
-
-
-Preset Configuration setup
-
-
-  Download dotfiles from github and use stow command to link config:
-
-
-git clone git@github.com:mrasif/dotfiles.gi...
     </summary>
   </entry>
 </feed>

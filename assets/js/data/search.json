@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Enable 2FA on SSH Login with TOTP verification using Google Authenticator",
+    "url": "/posts/enable-2fa-on-ssh-login-with-totp-verification/",
+    "categories": "Linux",
+    "tags": "shell, awk",
+    "date": "2025-07-17 14:55:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator.Why do we need 2FA?To enhance security by requiring an additional layer of authentication beyond just a password. This helps prevent ..."
+  },
+  
+  {
     "title": "AWK Cheatsheet with Examples",
     "url": "/posts/awk-cheatsheet-with-example/",
     "categories": "Linux",
