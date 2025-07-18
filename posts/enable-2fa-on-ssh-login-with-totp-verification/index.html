@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="488 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="518 words">2 min</span>
 
 
           <!-- page views -->
@@ -630,6 +630,7 @@
 
 <h2 id="how-to-enable-2fa">How to enable 2FA?</h2>
 <h3 id="1-install-pam-google-authenticator">1. Install PAM Google Authenticator.</h3>
+
 <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
@@ -639,19 +640,49 @@
 <h3 id="2-generate-a-secret-key-using-google-authenticator">2. Generate a secret key using Google Authenticator.</h3>
 <ul>
   <li>Make sure you have any TOTP authenticator app installed on your mobile device.</li>
-  <li>Generate TOTP secret key
-    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>google-authenticator
-</pre></td></tr></tbody></table></code></div>    </div>
-  </li>
-  <li>For your reference I am giving this steps-
-```
-Do you want authentication tokens to be time-based (y/n) y</li>
+  <li>Generate TOTP secret key</li>
 </ul>
 
-<IT WILL="" SHOW="" QR="" CODE="">
-<SCAN TO="" AUTHENTICATOR="" APP="">
-<TYPE VERIFICATION="" CODE="">
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>google-authenticator
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>For your reference I am giving this steps-</li>
+</ul>
+
+<div class="language-md highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+</pre></td><td class="rouge-code"><pre>Do you want authentication tokens to be time-based (y/n) y
+
+<span class="nt">&lt;IT</span> <span class="na">WILL</span> <span class="na">SHOW</span> <span class="na">QR</span> <span class="na">CODE</span><span class="nt">&gt;</span>
+<span class="nt">&lt;SCAN</span> <span class="na">TO</span> <span class="na">AUTHENTICATOR</span> <span class="na">APP</span><span class="nt">&gt;</span>
+<span class="nt">&lt;TYPE</span> <span class="na">VERIFICATION</span> <span class="na">CODE</span><span class="nt">&gt;</span>
 
 Do you want me to update your "/root/.google_authenticator" file? (y/n) y
 
@@ -674,34 +705,56 @@ If the computer that you are logging into isn't hardened against brute-force
 login attempts, you can enable rate-limiting for the authentication module.
 By default, this limits attackers to no more than 3 login attempts every 30s.
 Do you want to enable rate-limiting? (y/n) n
-```
+</pre></td></tr></tbody></table></code></div></div>
 
-### 3. Configure SSH to use TOTP verification.
-- Edit `/etc/pam.d/sshd` and add the following line before `@include common-auth`:
-```sh
-auth required pam_google_authenticator.so
-# Do NOT include: @include common-auth if you don't want to use password authentication
-```
-- Edit `/etc/ssh/sshd_config` and add the following line at the end:
-```sh
-# If these already exist, then modify them accordingly
-UsePAM yes
-ChallengeResponseAuthentication yes
-KbdInteractiveAuthentication yes
-PasswordAuthentication no
+<h3 id="3-configure-ssh-to-use-totp-verification">3. Configure SSH to use TOTP verification.</h3>
+<ul>
+  <li>Edit <code class="language-plaintext highlighter-rouge">/etc/pam.d/sshd</code> and add the following line before <code class="language-plaintext highlighter-rouge">@include common-auth</code>:</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>auth required pam_google_authenticator.so
+<span class="c"># Do NOT include: @include common-auth if you don't want to use password authentication</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Edit <code class="language-plaintext highlighter-rouge">/etc/ssh/sshd_config</code> and add the following line at the end:</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="c"># If these already exist, then modify them accordingly</span>
+UsePAM <span class="nb">yes
+</span>ChallengeResponseAuthentication <span class="nb">yes
+</span>KbdInteractiveAuthentication <span class="nb">yes
+</span>PasswordAuthentication no
 AuthenticationMethods publickey,keyboard-interactive
-```
-- Restart the SSH service:
-```sh
-sudo systemctl restart ssh
-```
-- Don't forget to backup the secret key generated by Google Authenticator.
-- Don't logout until you have tested the setup.
-### 4. Test the setup by logging in to your SSH server.
-- Open another terminal window and try to login using your SSH key.
-- Enter the TOTP code generated by Google Authenticator.
-- Congrats! You have successfully setup 2FA with SSH.
-</TYPE></SCAN></IT>
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Restart the SSH service:</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl restart ssh
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Don’t forget to backup the secret key generated by Google Authenticator.</li>
+  <li>Don’t logout until you have tested the setup.</li>
+</ul>
+
+<h3 id="4-test-the-setup-by-logging-in-to-your-ssh-server">4. Test the setup by logging in to your SSH server.</h3>
+<ul>
+  <li>Open another terminal window and try to login using your SSH key.</li>
+  <li>Enter the TOTP code generated by Google Authenticator.</li>
+  <li>Congrats! You have successfully setup 2FA with SSH.</li>
+</ul>
 
         
       </div>
