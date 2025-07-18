@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-18T12:08:53+05:30</updated>
+  <updated>2025-07-18T12:37:51+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -92,10 +92,10 @@ Key Features
     </summary>
   </entry>
   <entry>
-    <title>Install Self-Hosted Photo and Video Server with Immich</title>
-    <link href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" rel="alternate" type="text/html" title="Install Self-Hosted Photo and Video Server with Immich" />
+    <title>Install self-hosted Photo and Video server with Immich</title>
+    <link href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" rel="alternate" type="text/html" title="Install self-hosted Photo and Video server with Immich" />
     <published>2024-07-20T10:57:00+05:30</published>
-    <updated>2025-07-18T12:08:09+05:30</updated>
+    <updated>2025-07-18T12:37:08+05:30</updated>
     <id>https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/</id>
     <content src="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
     <author>
@@ -108,19 +108,12 @@ Key Features
 
 
 
-Immich is a self-hosted photo and
-video management solution
-Easily back up, organize, and manage your photos on your own server. Immich helps you
-browse, search and organize your photos and videos with ease, without sacrificing your privacy.
+Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server.
 
-Installation Steps
-Create a docker-compose.yaml file
-version: "3.8"
-name: immich
-services:
-  immich-server:
-    container_name: immich_server
-    image: t...
+Why Immich?
+
+  
+    Immich is a self-hosted photo and video management solution that allows you to easily back up, organize, and manage your photos and videos on your own server. It helps you browse, search, and organize your photos and videos with ease, without sac...
     </summary>
   </entry>
   <entry>
