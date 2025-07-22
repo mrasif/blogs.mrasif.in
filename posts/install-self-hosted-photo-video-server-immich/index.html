@@ -1342,32 +1342,15 @@
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1381,10 +1364,11 @@
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
   
     
     
@@ -1396,15 +1380,6 @@
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -1425,7 +1400,15 @@
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -1439,6 +1422,272 @@
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -1453,6 +1702,55 @@
     
       
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -1486,19 +1784,19 @@
         <a class="post-tag" href="/tags/golang/">golang</a>
       
         
+        <a class="post-tag" href="/tags/immich/">immich</a>
+      
+        
+        <a class="post-tag" href="/tags/photo/">photo</a>
+      
+        
+        <a class="post-tag" href="/tags/self-hosted/">self-hosted</a>
+      
+        
+        <a class="post-tag" href="/tags/video/">video</a>
+      
+        
         <a class="post-tag" href="/tags/2fa/">2FA</a>
-      
-        
-        <a class="post-tag" href="/tags/awk/">awk</a>
-      
-        
-        <a class="post-tag" href="/tags/ci-cd/">CI/CD</a>
-      
-        
-        <a class="post-tag" href="/tags/documentation/">documentation</a>
-      
-        
-        <a class="post-tag" href="/tags/github/">github</a>
       
 
       </div>
@@ -1545,6 +1843,19 @@
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -1779,7 +2090,7 @@
       
       
       <div class="card">
-        <a href="/posts/bookstack-installation-guide/">
+        <a href="/posts/immich-server-deployment-on-kubernetes-with-nfs/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -1796,13 +2107,13 @@
   
 
   
-    Jun 15, 2024
+    Jun 19
   
 
-  <i class="unloaded">2024-06-15T06:11:00+05:30</i>
+  <i class="unloaded">2025-06-19T10:51:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Make your own self-hosted docs server using Bookstack</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Immich server deployment on kubernetes with NFS</h3>
             <div class="text-muted small">
               <p>
                 
@@ -1811,7 +2122,9 @@
 
 
 
-                BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge ba...
+                In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.
+
+Lets Setup NFS first...
               </p>
             </div>
           </div>
@@ -2374,32 +2687,15 @@ sudo curl -fsSL https:...
     
     
     
-      
-        
-        
-
   
     
     
     
     
-      
-    
   
     
     
     
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2413,10 +2709,11 @@ sudo curl -fsSL https:...
     
     
     
-      
-        
-        
-
+  
+    
+    
+    
+    
   
     
     
@@ -2428,15 +2725,6 @@ sudo curl -fsSL https:...
     
     
     
-    
-      
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2457,7 +2745,15 @@ sudo curl -fsSL https:...
     
     
     
-      
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2471,6 +2767,272 @@ sudo curl -fsSL https:...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -2485,6 +3047,55 @@ sudo curl -fsSL https:...
     
       
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
   
     
     
@@ -2513,19 +3124,19 @@ sudo curl -fsSL https:...
         <a class="post-tag" href="/tags/golang/">golang</a>
       
         
+        <a class="post-tag" href="/tags/immich/">immich</a>
+      
+        
+        <a class="post-tag" href="/tags/photo/">photo</a>
+      
+        
+        <a class="post-tag" href="/tags/self-hosted/">self hosted</a>
+      
+        
+        <a class="post-tag" href="/tags/video/">video</a>
+      
+        
         <a class="post-tag" href="/tags/2fa/">2FA</a>
-      
-        
-        <a class="post-tag" href="/tags/awk/">awk</a>
-      
-        
-        <a class="post-tag" href="/tags/ci-cd/">CI/CD</a>
-      
-        
-        <a class="post-tag" href="/tags/documentation/">documentation</a>
-      
-        
-        <a class="post-tag" href="/tags/github/">github</a>
       
 
     </div>

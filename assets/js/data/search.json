@@ -31,6 +31,21 @@
   },
   
   {
+    "title": "Immich server deployment on kubernetes with NFS",
+    "url": "/posts/immich-server-deployment-on-kubernetes-with-nfs/",
+    "categories": "DevOps, Kubernetes",
+    "tags": "immich, photo, video, self-hosted, installation",
+    "date": "2025-06-19 10:51:00 +0530",
+    
+
+
+
+
+
+    "snippet": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.Lets Setup NFS first:  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn ..."
+  },
+  
+  {
     "title": "Install kubernetes cluster using Minikube",
     "url": "/posts/install-kubernetes-using-minikube/",
     "categories": "DevOps, Kubernetes",

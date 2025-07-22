@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-22T20:11:36+05:30</updated>
+  <updated>2025-07-22T23:09:35+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -82,6 +82,31 @@ Common Built-in Variables
     </summary>
   </entry>
   <entry>
+    <title>Immich server deployment on kubernetes with NFS</title>
+    <link href="https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/" rel="alternate" type="text/html" title="Immich server deployment on kubernetes with NFS" />
+    <published>2025-06-19T10:51:00+05:30</published>
+    <updated>2025-06-19T10:51:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/</id>
+    <content src="https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Kubernetes" />
+    <summary>
+
+
+
+
+In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.
+
+Lets Setup NFS first:
+
+  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn how to setup NFS from scratch on Ubuntu server then read this article.
+  Create share folder imm...
+    </summary>
+  </entry>
+  <entry>
     <title>Install kubernetes cluster using Minikube</title>
     <link href="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" rel="alternate" type="text/html" title="Install kubernetes cluster using Minikube" />
     <published>2024-11-23T19:34:00+05:30</published>
@@ -141,50 +166,6 @@ Why Immich?
 
   
     Immich is a self-hosted photo and video management solution that allows you to easily back up, organize, and manage your photos and videos on your own server. It helps you browse, search, and organize your photos and videos with ease, without s...
-    </summary>
-  </entry>
-  <entry>
-    <title>NeoVIM installation and setup guide</title>
-    <link href="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" rel="alternate" type="text/html" title="NeoVIM installation and setup guide" />
-    <published>2024-07-16T15:21:00+05:30</published>
-    <updated>2024-07-16T15:21:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/</id>
-    <content src="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <summary>
-
-
-
-
-Neo Vim is a new generation VIM editor. It has beautiful UI.
-
-Installation
-
-
-  Download NeoVim:
-
-
-wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
-
-
-
-  Install:
-
-
-chmod +x nvim.appimage
-mv nvim.appimage /usr/local/bin/nvim
-
-
-Preset Configuration setup
-
-
-  Download dotfiles from github and use stow command to link config:
-
-
-git clone git@github.com:mrasif/dotfiles.gi...
     </summary>
   </entry>
 </feed>
