@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-22T23:21:14+05:30</updated>
+  <updated>2025-07-22T23:31:10+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -98,13 +98,14 @@ Common Built-in Variables
 
 
 
-In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services. If you want to install with docker-compose then read this article.
+In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.
 
 
 
 Lets Setup NFS first:
 
-  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn how to setup NFS from scrat...
+  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn how to setup NFS from scratch on Ubuntu server then read this article.
+  Create share folder i...
     </summary>
   </entry>
   <entry>

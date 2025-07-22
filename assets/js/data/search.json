@@ -42,7 +42,7 @@
 
 
 
-    "snippet": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services. If you want to install with docker-compose then read this article.Lets Setup NFS first:  Mount your Hard Drive to OMV, th..."
+    "snippet": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.Lets Setup NFS first:  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn ..."
   },
   
   {

@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-22T23:21:14+05:30",
+  "updated_at": "2025-07-22T23:31:10+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
@@ -33,7 +33,7 @@
       "categories": ["DevOps", "Kubernetes"],
       "tags": ["immich", "photo", "video", "self-hosted", "installation"],
       "updated_at": "2025-06-19T10:51:00+05:30",
-      "summary": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services. If you want to install with docker-compose then read this article."
+      "summary": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services."
     },
     {
       "id": "/posts/install-kubernetes-using-minikube",
