@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-22T20:06:16+05:30",
+  "updated_at": "2025-07-22T20:11:36+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
@@ -44,16 +44,6 @@
       "tags": ["immich", "photo", "video", "self-hosted", "installation"],
       "updated_at": "2024-07-20T10:57:00+05:30",
       "summary": "Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server."
-    },
-    {
-      "id": "/posts/sendmail-setup-on-ubuntu-server",
-      "title": "SendMail setup on ubuntu server",
-      "url": "https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/",
-      "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
-      "tags": ["smtp", "sendmail", "linux", "installation"],
-      "updated_at": "2024-07-18T21:45:00+05:30",
-      "summary": "Send mail is a cli application for sending email using smtp server."
     },
     {
       "id": "/posts/neovim-installation-and-setup-guide",
@@ -164,6 +154,16 @@
       "tags": ["VSCode", "linux", "installation"],
       "updated_at": "2020-03-01T10:42:00+05:30",
       "summary": "Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface."
+    },
+    {
+      "id": "/posts/sendmail-setup-on-ubuntu-server",
+      "title": "SendMail setup on ubuntu server",
+      "url": "https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["smtp", "sendmail", "linux", "installation"],
+      "updated_at": "2019-04-08T21:45:00+05:30",
+      "summary": "Send mail is a cli application for sending email using smtp server."
     },
     {
       "id": "/posts/install-docker-on-ubuntu-server",

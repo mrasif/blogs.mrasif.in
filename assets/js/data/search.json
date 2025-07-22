@@ -61,21 +61,6 @@
   },
   
   {
-    "title": "SendMail setup on ubuntu server",
-    "url": "/posts/sendmail-setup-on-ubuntu-server/",
-    "categories": "DevOps",
-    "tags": "smtp, sendmail, linux, installation",
-    "date": "2024-07-18 21:45:00 +0530",
-    
-
-
-
-
-
-    "snippet": "Send mail is a cli application for sending email using smtp server.Installationsudo apt install sendmailConfigure# Config path &quot;/etc/ssmtp/ssmtp.conf&quot;# The person who gets all mail for userids &amp;lt; 1000root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;#SMTP Con..."
-  },
-  
-  {
     "title": "NeoVIM installation and setup guide",
     "url": "/posts/neovim-installation-and-setup-guide/",
     "categories": "DevOps",
@@ -238,6 +223,21 @@
 
 
     "snippet": "Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface.Installation Via GitHub releases  Go to temp directory and create a directory named code-s..."
+  },
+  
+  {
+    "title": "SendMail setup on ubuntu server",
+    "url": "/posts/sendmail-setup-on-ubuntu-server/",
+    "categories": "DevOps",
+    "tags": "smtp, sendmail, linux, installation",
+    "date": "2019-04-08 21:45:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Send mail is a cli application for sending email using smtp server.Installationsudo apt install sendmailConfigure# Config path &quot;/etc/ssmtp/ssmtp.conf&quot;# The person who gets all mail for userids &amp;lt; 1000root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;#SMTP Con..."
   },
   
   {

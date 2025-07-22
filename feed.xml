@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-22T20:06:16+05:30</updated>
+  <updated>2025-07-22T20:11:36+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -144,12 +144,12 @@ Why Immich?
     </summary>
   </entry>
   <entry>
-    <title>SendMail setup on ubuntu server</title>
-    <link href="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" rel="alternate" type="text/html" title="SendMail setup on ubuntu server" />
-    <published>2024-07-18T21:45:00+05:30</published>
-    <updated>2024-07-18T21:45:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/</id>
-    <content src="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" />
+    <title>NeoVIM installation and setup guide</title>
+    <link href="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" rel="alternate" type="text/html" title="NeoVIM installation and setup guide" />
+    <published>2024-07-16T15:21:00+05:30</published>
+    <updated>2024-07-16T15:21:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/</id>
+    <content src="https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
@@ -159,24 +159,32 @@ Why Immich?
 
 
 
-Send mail is a cli application for sending email using smtp server.
+Neo Vim is a new generation VIM editor. It has beautiful UI.
 
 Installation
 
-sudo apt install sendmail
+
+  Download NeoVim:
 
 
-Configure
+wget https://github.com/neovim/neovim/releases/download/v0.10.0/nvim.appimage
 
-# Config path "/etc/ssmtp/ssmtp.conf"
-# The person who gets all mail for userids &amp;lt; 1000
-root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;
-#SMTP Config
-mailhub=smtp.gmail.com:587
-AuthUser=&amp;lt;gmail-id&amp;gt;
-AuthPass=&amp;lt;app-password&amp;gt;
-UseTLS=YES
-UseSTARTTLS=...
+
+
+  Install:
+
+
+chmod +x nvim.appimage
+mv nvim.appimage /usr/local/bin/nvim
+
+
+Preset Configuration setup
+
+
+  Download dotfiles from github and use stow command to link config:
+
+
+git clone git@github.com:mrasif/dotfiles.gi...
     </summary>
   </entry>
 </feed>
