@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-22T17:58:01+05:30",
+  "updated_at": "2025-07-22T20:01:56+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
@@ -86,16 +86,6 @@
       "summary": "It is a T-mux user guide. T-mux and VIM works awesome for development."
     },
     {
-      "id": "/posts/jellyfin-media-streaming-server-setup",
-      "title": "Deploy your own media streaming server with Jellyfin",
-      "url": "https://blogs.mrasif.in/posts/jellyfin-media-streaming-server-setup/",
-      "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
-      "tags": ["ubuntu", "jellyfin", "installation"],
-      "updated_at": "2024-07-16T14:58:00+05:30",
-      "summary": "Jellyfin media streaming server installation guide for Raspberry PI"
-    },
-    {
       "id": "/posts/setup-network-file-system-nfs-on-ubuntu-linux",
       "title": "Setup Network File System (NFS) on ubuntu linux",
       "url": "https://blogs.mrasif.in/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
@@ -134,6 +124,16 @@
       "tags": ["docker", "documentation", "installation"],
       "updated_at": "2024-06-15T06:11:00+05:30",
       "summary": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files."
+    },
+    {
+      "id": "/posts/jellyfin-media-streaming-server-setup",
+      "title": "Deploy your own media streaming server with Jellyfin",
+      "url": "https://blogs.mrasif.in/posts/jellyfin-media-streaming-server-setup/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "jellyfin", "installation"],
+      "updated_at": "2022-08-21T14:58:00+05:30",
+      "summary": "Jellyfin media streaming server installation guide for Raspberry PI"
     },
     {
       "id": "/posts/gpg-key-installation-or-setup-guide",

@@ -121,21 +121,6 @@
   },
   
   {
-    "title": "Deploy your own media streaming server with Jellyfin",
-    "url": "/posts/jellyfin-media-streaming-server-setup/",
-    "categories": "DevOps",
-    "tags": "ubuntu, jellyfin, installation",
-    "date": "2024-07-16 14:58:00 +0530",
-    
-
-
-
-
-
-    "snippet": "Jellyfin media streaming server installation guide for Raspberry PIInstallation  Before we proceed, let us start by ensuring we are running an updated operating system.As long as you are running a Debian operating system such as Ubuntu or Raspberry Pi OS, the following steps will work fine for yo..."
-  },
-  
-  {
     "title": "Setup Network File System (NFS) on ubuntu linux",
     "url": "/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
     "categories": "DevOps",
@@ -193,6 +178,21 @@
 
 
     "snippet": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files.  Create directorysudo mkdir -p /srv/bookstacksudo mkdir -p /srv/bookstack/publi..."
+  },
+  
+  {
+    "title": "Deploy your own media streaming server with Jellyfin",
+    "url": "/posts/jellyfin-media-streaming-server-setup/",
+    "categories": "DevOps",
+    "tags": "ubuntu, jellyfin, installation",
+    "date": "2022-08-21 14:58:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Jellyfin media streaming server installation guide for Raspberry PIInstallation  Before we proceed, let us start by ensuring we are running an updated operating system.As long as you are running a Debian operating system such as Ubuntu or Raspberry Pi OS, the following steps will work fine for yo..."
   },
   
   {
