@@ -1,0 +1,183 @@
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://blogs.mrasif.in</id>
+  <title>Asif Mohammad Mollah</title>
+  <subtitle>Sr. Software Engineer, Indian Author</subtitle>
+  <updated>2025-07-22T17:58:01+05:30</updated>
+  <author>
+    <name>Asif Mohammad Mollah</name>
+    <uri>https://blogs.mrasif.in</uri>
+  </author>
+  <link href="/feed.xml" rel="self" type="application/atom+xml" />
+  <link href="https://blogs.mrasif.in" rel="alternate" type="text/html" />
+  <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
+  <rights> © 2025 Asif Mohammad Mollah </rights>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</title>
+    <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" rel="alternate" type="text/html" title="Enable 2FA on SSH Login with TOTP verification using Google Authenticator" />
+    <published>2025-07-18T23:45:00+05:30</published>
+    <updated>2025-07-19T01:17:14+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/</id>
+    <content src="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="Linux" />
+    <category term="Security" />
+    <summary>
+
+
+
+
+Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator.
+
+Why do we need 2FA?
+To enhance security by requiring an additional layer of authentication beyond just a password. This helps prevent unauthorized access even if a password is compromised.
+
+Note: Here we will use ssh key based auth...
+    </summary>
+  </entry>
+  <entry>
+    <title>AWK Cheatsheet with Examples</title>
+    <link href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" rel="alternate" type="text/html" title="AWK Cheatsheet with Examples" />
+    <published>2025-07-17T14:55:00+05:30</published>
+    <updated>2025-07-17T17:20:32+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/</id>
+    <content src="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="Linux" />
+    <summary>
+
+
+
+
+AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting.
+
+Basic Syntax
+
+awk 'pattern { action }' file
+
+
+
+  pattern: condition to match (can be omitted)
+  action: what to do if pattern matches
+
+
+Common Built-in Variables
+
+
+  
+    
+      Variable
+      Description
+    
+  
+  
+    
+      $0
+      Entire current lin...
+    </summary>
+  </entry>
+  <entry>
+    <title>Install kubernetes cluster using Minikube</title>
+    <link href="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" rel="alternate" type="text/html" title="Install kubernetes cluster using Minikube" />
+    <published>2024-11-23T19:34:00+05:30</published>
+    <updated>2024-11-23T19:34:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/</id>
+    <content src="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Kubernetes" />
+    <summary>
+
+
+
+
+Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
+
+Key Features
+
+
+  Local Kubernetes Cluster:
+    
+      Runs a single-node Kubernetes cluster on your local machine.
+    
+  
+  Multi-Driver Support:
+    
+      Works with Docker, VirtualBox, KVM, Hyper-V, and others.
+    
+  
+  Customizable ...
+    </summary>
+  </entry>
+  <entry>
+    <title>Install self-hosted Photo and Video server with Immich</title>
+    <link href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" rel="alternate" type="text/html" title="Install self-hosted Photo and Video server with Immich" />
+    <published>2024-07-20T10:57:00+05:30</published>
+    <updated>2025-07-21T14:02:51+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/</id>
+    <content src="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Docker" />
+    <summary>
+
+
+
+
+Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server.
+
+
+
+Why Immich?
+
+  
+    Immich is a self-hosted photo and video management solution that allows you to easily back up, organize, and manage your photos and videos on your own server. It helps you browse, search, and organize your photos and videos with ease, without s...
+    </summary>
+  </entry>
+  <entry>
+    <title>SendMail setup on ubuntu server</title>
+    <link href="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" rel="alternate" type="text/html" title="SendMail setup on ubuntu server" />
+    <published>2024-07-18T21:45:00+05:30</published>
+    <updated>2024-07-18T21:45:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/</id>
+    <content src="https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <summary>
+
+
+
+
+Send mail is a cli application for sending email using smtp server.
+
+Installation
+
+sudo apt install sendmail
+
+
+Configure
+
+# Config path "/etc/ssmtp/ssmtp.conf"
+# The person who gets all mail for userids &amp;lt; 1000
+root=&amp;lt;root-email-id-for-receiving-fallback-email-to-owner&amp;gt;
+#SMTP Config
+mailhub=smtp.gmail.com:587
+AuthUser=&amp;lt;gmail-id&amp;gt;
+AuthPass=&amp;lt;app-password&amp;gt;
+UseTLS=YES
+UseSTARTTLS=...
+    </summary>
+  </entry>
+</feed>
+
