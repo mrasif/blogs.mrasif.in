@@ -121,21 +121,6 @@
   },
   
   {
-    "title": "Setup Network File System (NFS) on ubuntu linux",
-    "url": "/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
-    "categories": "DevOps",
-    "tags": "ubuntu, NFS, installation",
-    "date": "2024-07-16 14:56:00 +0530",
-    
-
-
-
-
-
-    "snippet": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:Server Setup      Install the NFS kernel:     sudo apt-get install nfs-kernel-server        Create the directory /exported/storage. ..."
-  },
-  
-  {
     "title": "Install Golang on Ubuntu Server",
     "url": "/posts/install-golang-on-ubuntu-server/",
     "categories": "DevOps",
@@ -178,6 +163,21 @@
 
 
     "snippet": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files.  Create directorysudo mkdir -p /srv/bookstacksudo mkdir -p /srv/bookstack/publi..."
+  },
+  
+  {
+    "title": "Setup Network File System (NFS) on ubuntu linux",
+    "url": "/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
+    "categories": "DevOps",
+    "tags": "ubuntu, NFS, installation",
+    "date": "2023-11-02 14:56:00 +0530",
+    
+
+
+
+
+
+    "snippet": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:Server Setup      Install the NFS kernel:     sudo apt-get install nfs-kernel-server        Create the directory /exported/storage. ..."
   },
   
   {

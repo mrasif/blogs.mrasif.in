@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-22T20:01:56+05:30",
+  "updated_at": "2025-07-22T20:06:16+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
@@ -86,16 +86,6 @@
       "summary": "It is a T-mux user guide. T-mux and VIM works awesome for development."
     },
     {
-      "id": "/posts/setup-network-file-system-nfs-on-ubuntu-linux",
-      "title": "Setup Network File System (NFS) on ubuntu linux",
-      "url": "https://blogs.mrasif.in/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
-      "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
-      "tags": ["ubuntu", "NFS", "installation"],
-      "updated_at": "2024-07-16T14:56:00+05:30",
-      "summary": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:"
-    },
-    {
       "id": "/posts/install-golang-on-ubuntu-server",
       "title": "Install Golang on Ubuntu Server",
       "url": "https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/",
@@ -124,6 +114,16 @@
       "tags": ["docker", "documentation", "installation"],
       "updated_at": "2024-06-15T06:11:00+05:30",
       "summary": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files."
+    },
+    {
+      "id": "/posts/setup-network-file-system-nfs-on-ubuntu-linux",
+      "title": "Setup Network File System (NFS) on ubuntu linux",
+      "url": "https://blogs.mrasif.in/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["ubuntu", "NFS", "installation"],
+      "updated_at": "2023-11-02T14:56:00+05:30",
+      "summary": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:"
     },
     {
       "id": "/posts/jellyfin-media-streaming-server-setup",
