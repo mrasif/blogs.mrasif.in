@@ -21,27 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Make your own self-hosted docs server using Bookstack" />
+<meta property="og:title" content="Securing Nginx with IP Whitelist, Rate Limit and Basic Auth" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files." />
-<meta property="og:description" content="BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files." />
-<link rel="canonical" href="https://blogs.mrasif.in/posts/bookstack-installation-guide/" />
-<meta property="og:url" content="https://blogs.mrasif.in/posts/bookstack-installation-guide/" />
+<meta name="description" content="Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security." />
+<meta property="og:description" content="Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2024-06-15T06:11:00+05:30" />
+<meta property="article:published_time" content="2018-01-03T20:31:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Make your own self-hosted docs server using Bookstack" />
+<meta property="twitter:title" content="Securing Nginx with IP Whitelist, Rate Limit and Basic Auth" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files.","url":"https://blogs.mrasif.in/posts/bookstack-installation-guide/","@type":"BlogPosting","headline":"Make your own self-hosted docs server using Bookstack","dateModified":"2024-06-15T06:11:00+05:30","datePublished":"2024-06-15T06:11:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/bookstack-installation-guide/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security.","url":"https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/","@type":"BlogPosting","headline":"Securing Nginx with IP Whitelist, Rate Limit and Basic Auth","dateModified":"2018-01-03T20:31:00+05:30","datePublished":"2018-01-03T20:31:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Make your own self-hosted docs server using Bookstack | Asif Mohammad Mollah
+  <title>Securing Nginx with IP Whitelist, Rate Limit and Basic Auth | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -472,7 +472,7 @@
       
 
       
-        <span>Make your own self-hosted docs server using Bookstack</span>
+        <span>Securing Nginx with IP Whitelist, Rate Limit and Basic Auth</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -528,7 +528,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Make your own self-hosted docs server using Bookstack</h1>
+      <h1 data-toc-skip>Securing Nginx with IP Whitelist, Rate Limit and Basic Auth</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -545,17 +545,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sat, Jun 15, 2024,  6:11 AM +0530"
+    title="Wed, Jan  3, 2018,  8:31 PM +0530"
   >
 
   
   
 
   
-    Jun 15, 2024
+    Jan  3, 2018
   
 
-  <i class="unloaded">2024-06-15T06:11:00+05:30</i>
+  <i class="unloaded">2018-01-03T20:31:00+05:30</i>
 
 </span>
           by
@@ -579,7 +579,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="263 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="690 words">3 min</span>
 
 
           <!-- page views -->
@@ -593,28 +593,287 @@
 
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         
-          <p>BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files.</p>
+          <p>Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security.</p>
 
-<ul>
-  <li>Create directory</li>
-</ul>
+<p>This guide walks you through three key protection mechanisms on an Ubuntu server:</p>
+<ol>
+  <li>Installation</li>
+  <li>IP Whitelisting</li>
+  <li>Basic Authentication</li>
+  <li>Rate Limiting</li>
+  <li>SSL/TLS Encryption</li>
+</ol>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h2 id="1-installation">1. Installation</h2>
+<p>To install Nginx on an Ubuntu server, follow these steps:</p>
+
+<ol>
+  <li>Update the package list:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt update
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Install Nginx:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install </span>nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>Check default configuration is present in <code class="language-plaintext highlighter-rouge">/etc/nginx/sites-available/default.conf</code>.</p>
+  </li>
+  <li>Check symbolic link to default configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo ls</span> <span class="nt">-l</span> /etc/nginx/sites-enabled/
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Test default configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Check in browser <code class="language-plaintext highlighter-rouge">http://localhost</code> is working.</li>
+</ol>
+
+<h2 id="2-ip-whitelisting">2. IP Whitelisting</h2>
+<p>This will restrict access to trusted IPs only.</p>
+<ol>
+  <li>Open the Nginx configuration file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nano /etc/nginx/sites-available/default.conf
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Add the following lines inside the <code class="language-plaintext highlighter-rouge">server</code> block:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo mkdir</span> <span class="nt">-p</span> /srv/bookstack
-<span class="nb">sudo mkdir</span> <span class="nt">-p</span> /srv/bookstack/public/uploads
-<span class="nb">sudo mkdir</span> <span class="nt">-p</span> /srv/bookstack/storage/uploads
-<span class="nb">sudo chown</span> <span class="nt">-R</span> <span class="nv">$USER</span>:<span class="nv">$USER</span> /srv/bookstack
-</pre></td></tr></tbody></table></code></div></div>
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
 
-<ul>
-  <li>Install <code class="language-plaintext highlighter-rouge">mysql</code> database and create user for it.</li>
-  <li>Create <code class="language-plaintext highlighter-rouge">docker-compose.yml</code></li>
-</ul>
+ <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+     <span class="kn">allow</span> <span class="mi">192</span><span class="s">.168.1.100</span><span class="p">;</span>
+     <span class="kn">allow</span> <span class="mi">192</span><span class="s">.168.1.101</span><span class="p">;</span>
+     <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
 
-<div class="language-yaml highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:8080</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Save and exit the file.</li>
+  <li>Test the configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h2 id="3-basic-authentication">3. Basic Authentication</h2>
+<p>This will allow to add password protection using <code class="language-plaintext highlighter-rouge">htpasswd</code>.</p>
+<ol>
+  <li>Install <code class="language-plaintext highlighter-rouge">htpasswd</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install </span>apache2-utils
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Create a password file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>htpasswd <span class="nt">-c</span> /etc/nginx/.htpasswd admin
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Open the Nginx configuration file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nano /etc/nginx/sites-available/default.conf
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Add the following lines inside the <code class="language-plaintext highlighter-rouge">server</code> block:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+</pre></td><td class="rouge-code"><pre><span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+
+ <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:8080</span><span class="p">;</span>
+ <span class="p">}</span>
+
+ <span class="kn">location</span> <span class="n">/admin</span> <span class="p">{</span>
+     <span class="kn">auth_basic</span> <span class="s">"Restricted"</span><span class="p">;</span>
+     <span class="kn">auth_basic_user_file</span> <span class="n">/etc/nginx/.htpasswd</span><span class="p">;</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:3000</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Save and exit the file.</li>
+  <li>Test the configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h2 id="4-rate-limiting">4. Rate Limiting</h2>
+<p>This will limit the number of requests per IP address.</p>
+<ol>
+  <li>Open the Nginx configuration file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nano /etc/nginx/sites-available/default.conf
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Write the following lines to add rate limit based on IP address, it always 5 requests per minute and burst of 3 requests before rejecting:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">limit_req_zone</span> <span class="nv">$binary_remote_addr</span> <span class="s">zone=auth_limit:10m</span> <span class="s">rate=5r/m</span><span class="p">;</span>
+<span class="k">server</span> <span class="p">{</span>
+  	<span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+
+ <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+     <span class="kn">limit_req</span> <span class="s">zone=auth_limit</span> <span class="s">burst=3</span> <span class="s">nodelay</span><span class="p">;</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:8080</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Write the following lines if you want rate limit based on user agent:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">limit_req_zone</span> <span class="nv">$binary_remote_addr</span> <span class="s">zone=user_agent_limit:10m</span> <span class="s">rate=10r/m</span><span class="p">;</span>
+<span class="k">server</span> <span class="p">{</span>
+  	<span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+
+ <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+     <span class="kn">limit_req</span> <span class="s">zone=user_agent_limit</span> <span class="s">burst=5</span> <span class="s">nodelay</span><span class="p">;</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:8080</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Save and exit the file.</li>
+  <li>Test the configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h2 id="5-ssltls-encryption">5. SSL/TLS Encryption</h2>
+<p>This will encrypt traffic between clients and the server.</p>
+<ol>
+  <li>Generate a self-signed certificate (If you don’t have a valid certificate):
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>openssl req <span class="nt">-x509</span> <span class="nt">-nodes</span> <span class="nt">-days</span> 365 <span class="nt">-newkey</span> rsa:2048 <span class="nt">-keyout</span> /etc/ssl/private/nginx-selfsigned.key <span class="nt">-out</span> /etc/ssl/certs/nginx-selfsigned.crt
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Open the Nginx configuration file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nano /etc/nginx/sites-available/default.conf
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Add the following lines inside the <code class="language-plaintext highlighter-rouge">server</code> block:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</pre></td><td class="rouge-code"><pre><span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
+ <span class="kn">ssl_certificate</span> <span class="n">/etc/ssl/certs/nginx-selfsigned.crt</span><span class="p">;</span>
+ <span class="kn">ssl_certificate_key</span> <span class="n">/etc/ssl/private/nginx-selfsigned.key</span><span class="p">;</span>
+
+ <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:8080</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Save and exit the file.</li>
+  <li>Test the configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
+
+<h2 id="7-lets-combine-together">7. Let’s Combine Together</h2>
+<ol>
+  <li>Open the Nginx configuration file:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nano /etc/nginx/sites-available/default.conf
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Add the following lines inside the <code class="language-plaintext highlighter-rouge">server</code> block:
+    <div class="language-nginx highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -644,126 +903,50 @@
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-</pre></td><td class="rouge-code"><pre><span class="na">version</span><span class="pi">:</span> <span class="s2">"</span><span class="s">3.8"</span>
-<span class="na">services</span><span class="pi">:</span>
-  <span class="na">bookstack</span><span class="pi">:</span>
-    <span class="na">container_name</span><span class="pi">:</span> <span class="s">bookstack</span>
-    <span class="na">image</span><span class="pi">:</span> <span class="s">techthinkerorg/bookstack:25.5</span>
-    <span class="na">ports</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">8080:8080</span>
-    <span class="na">networks</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">mysql_mynet</span>
-    <span class="na">environment</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">DB_HOST=${DB_HOST}</span>
-      <span class="pi">-</span> <span class="s">DB_DATABASE=${DB_DATABASE}</span>
-      <span class="pi">-</span> <span class="s">DB_USERNAME=${DB_USERNAME}</span>
-      <span class="pi">-</span> <span class="s">DB_PASSWORD=${DB_PASSWORD}</span>
-      <span class="pi">-</span> <span class="s">APP_URL=http://localhost:8801</span>
-      <span class="pi">-</span> <span class="s">MAIL_DRIVER=${MAIL_DRIVER}</span>
-      <span class="pi">-</span> <span class="s">MAIL_HOST=${MAIL_HOST}</span>
-      <span class="pi">-</span> <span class="s">MAIL_PORT=${MAIL_PORT}</span>
-      <span class="pi">-</span> <span class="s">MAIL_ENCRYPTION=${MAIL_ENCRYPTION}</span>
-      <span class="pi">-</span> <span class="s">MAIL_VERIFY_SSL=${MAIL_VERIFY_SSL}</span>
-      <span class="pi">-</span> <span class="s">MAIL_USERNAME=${MAIL_USERNAME}</span>
-      <span class="pi">-</span> <span class="s">MAIL_PASSWORD=${MAIL_PASSWORD}</span>
-      <span class="pi">-</span> <span class="s">MAIL_FROM=${MAIL_FROM}</span>
-      <span class="pi">-</span> <span class="s">MAIL_FROM_NAME=${MAIL_FROM_NAME}</span>
-    <span class="na">volumes</span><span class="pi">:</span>
-      <span class="pi">-</span> <span class="s">public_upload:/var/www/bookstack/public/uploads</span>
-      <span class="pi">-</span> <span class="s">storage_upload:/var/www/bookstack/storage/uploads</span>
-<span class="na">networks</span><span class="pi">:</span>
-  <span class="na">mysql_mynet</span><span class="pi">:</span>
-    <span class="na">external</span><span class="pi">:</span> <span class="no">true</span>
-<span class="na">volumes</span><span class="pi">:</span>
-  <span class="na">public_upload</span><span class="pi">:</span>
-    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
-    <span class="na">driver_opts</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
-      <span class="na">device</span><span class="pi">:</span> <span class="s">/srv/bookstack/public/uploads</span>
-      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
-  <span class="na">storage_upload</span><span class="pi">:</span>
-    <span class="na">driver</span><span class="pi">:</span> <span class="s">local</span>
-    <span class="na">driver_opts</span><span class="pi">:</span>
-      <span class="na">type</span><span class="pi">:</span> <span class="s">none</span>
-      <span class="na">device</span><span class="pi">:</span> <span class="s">/srv/bookstack/storage/uploads</span>
-      <span class="na">o</span><span class="pi">:</span> <span class="s">bind</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td><td class="rouge-code"><pre><span class="c1"># Rate limiting</span>
+<span class="k">limit_req_zone</span> <span class="nv">$binary_remote_addr</span> <span class="s">zone=auth_limit:10m</span> <span class="s">rate=5r/m</span><span class="p">;</span>
+<span class="c1"># server block</span>
+<span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">443</span> <span class="s">ssl</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
 
-<ul>
-  <li>Create <code class="language-plaintext highlighter-rouge">.env</code> file</li>
-</ul>
+ <span class="kn">ssl_certificate</span> <span class="n">/etc/ssl/certs/nginx-selfsigned.crt</span><span class="p">;</span>
+ <span class="kn">ssl_certificate_key</span> <span class="n">/etc/ssl/private/nginx-selfsigned.key</span><span class="p">;</span>
 
-<div class="language-ini highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-</pre></td><td class="rouge-code"><pre><span class="py">DB_HOST</span><span class="p">=</span><span class="s">mysql</span>
-<span class="py">DB_DATABASE</span><span class="p">=</span><span class="s">bookstack</span>
-<span class="py">DB_USERNAME</span><span class="p">=</span><span class="s">bookstack</span>
-<span class="py">DB_PASSWORD</span><span class="p">=</span><span class="s">secret</span>
+ <span class="kn">location</span> <span class="n">/admin</span> <span class="p">{</span>
+     <span class="kn">allow</span> <span class="mi">192</span><span class="s">.168.1.100</span><span class="p">;</span>
+     <span class="kn">allow</span> <span class="mi">192</span><span class="s">.168.1.101</span><span class="p">;</span>
+     <span class="kn">deny</span> <span class="s">all</span><span class="p">;</span>
 
-<span class="py">MAIL_DRIVER</span><span class="p">=</span><span class="s">smtp</span>
-<span class="c"># SMTP server host address
-</span><span class="py">MAIL_HOST</span><span class="p">=</span><span class="s">smtp.gmail.com</span>
-<span class="py">MAIL_PORT</span><span class="p">=</span><span class="s">587</span>
-<span class="py">MAIL_ENCRYPTION</span><span class="p">=</span><span class="s">tls</span>
-<span class="py">MAIL_VERIFY_SSL</span><span class="p">=</span><span class="s">false</span>
+     <span class="kn">auth_basic</span> <span class="s">"Restricted"</span><span class="p">;</span>
+     <span class="kn">auth_basic_user_file</span> <span class="n">/etc/nginx/.htpasswd</span><span class="p">;</span>
 
-<span class="c"># Authentication details for your SMTP service
-</span><span class="py">MAIL_USERNAME</span><span class="p">=</span><span class="s">&lt;gmail address&gt;</span>
-<span class="py">MAIL_PASSWORD</span><span class="p">=</span><span class="s">&lt;password&gt;</span>
+     <span class="kn">limit_req</span> <span class="s">zone=auth_limit</span> <span class="s">burst=3</span> <span class="s">nodelay</span><span class="p">;</span>
 
-<span class="c"># The "from" email address for outgoing email
-</span><span class="py">MAIL_FROM</span><span class="p">=</span><span class="s">&lt;from email address&gt;</span>
+     <span class="kn">proxy_pass</span> <span class="s">http://localhost:3000</span><span class="p">;</span>
+ <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1"># Redirect HTTP to HTTPS</span>
+<span class="k">server</span> <span class="p">{</span>
+ <span class="kn">listen</span> <span class="mi">80</span><span class="p">;</span>
+ <span class="kn">server_name</span> <span class="s">example.com</span><span class="p">;</span>
 
-<span class="c"># The "from" name used for outgoing email
-</span><span class="py">MAIL_FROM_NAME</span><span class="p">=</span><span class="s">BookStack</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
-  <li>Docker compose up</li>
-</ul>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>docker-compose up <span class="nt">-d</span>
-</pre></td></tr></tbody></table></code></div></div>
-
-<h5 id="note">Note:</h5>
-
-<ul>
-  <li>Default username: <code class="language-plaintext highlighter-rouge">admin@admin.com</code></li>
-  <li>Default password: <code class="language-plaintext highlighter-rouge">password</code></li>
-</ul>
+ <span class="kn">return</span> <span class="mi">301</span> <span class="s">https://</span><span class="nv">$host$request_uri</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Save and exit the file.</li>
+  <li>Test the configuration:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>nginx <span class="nt">-t</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Reload Nginx to apply changes:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl reload nginx
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
 
         
       </div>
@@ -776,7 +959,7 @@
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
             <a href='/categories/devops/'>DevOps</a>,
-            <a href='/categories/docker/'>Docker</a>
+            <a href='/categories/security/'>Security</a>
         </div>
         
 
@@ -785,14 +968,14 @@
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/docker/"
-            class="post-tag no-text-decoration" >docker</a>
+          <a href="/tags/ubuntu/"
+            class="post-tag no-text-decoration" >ubuntu</a>
           
-          <a href="/tags/documentation/"
-            class="post-tag no-text-decoration" >documentation</a>
+          <a href="/tags/linux/"
+            class="post-tag no-text-decoration" >linux</a>
           
-          <a href="/tags/installation/"
-            class="post-tag no-text-decoration" >installation</a>
+          <a href="/tags/nginx/"
+            class="post-tag no-text-decoration" >nginx</a>
           
           </div>
         
@@ -818,19 +1001,19 @@
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Make your own self-hosted docs server using Bookstack - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/bookstack-installation-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Securing Nginx with IP Whitelist, Rate Limit and Basic Auth - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Make your own self-hosted docs server using Bookstack - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/bookstack-installation-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Securing Nginx with IP Whitelist, Rate Limit and Basic Auth - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Make your own self-hosted docs server using Bookstack - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/bookstack-installation-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Securing Nginx with IP Whitelist, Rate Limit and Basic Auth - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -1762,6 +1945,11 @@
   </div> <!-- .access -->
 
   
+    <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+      <span class="pl-3 pt-2 mb-2">Contents</span>
+      <nav id="toc" data-toggle="toc"></nav>
+    </div>
+  
 
 </div> <!-- #panel-wrapper -->
 
@@ -1930,98 +2118,98 @@
   
 
   
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
     
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
   
 
   
@@ -2051,6 +2239,53 @@
   <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
     <h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
     <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/install-kubernetes-using-minikube/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Nov 23, 2024
+  
+
+  <i class="unloaded">2024-11-23T19:34:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install kubernetes cluster using Minikube</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
+
+Key Features
+
+
+  Local Kubernetes Clus...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
     
       
       
@@ -2112,7 +2347,7 @@ sudo curl -fsSL https:...
       
       
       <div class="card">
-        <a href="/posts/setup-self-hosted-github-actions-runners/">
+        <a href="/posts/install-golang-on-ubuntu-server/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2129,13 +2364,13 @@ sudo curl -fsSL https:...
   
 
   
-    Jul 14, 2024
+    Jul 16, 2024
   
 
-  <i class="unloaded">2024-07-14T11:49:00+05:30</i>
+  <i class="unloaded">2024-07-16T14:47:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Deploy your self-hosted github action runner</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install Golang on Ubuntu Server</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2144,62 +2379,20 @@ sudo curl -fsSL https:...
 
 
 
-                Prerequisites
-Purpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment.
+                Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step.
 
-Let’s start
+Let’s Begin
 
 
-  create work directory and give user perm...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
-      
-      
-      <div class="card">
-        <a href="/posts/install-self-hosted-photo-video-server-immich/">
-          <div class="card-body">
-            <!--
-  Date format snippet
+  Define the Go version to install
 
-  v2.4.1
-  https://github.com/cotes2020/jekyll-theme-chirpy
-  © 2020 Cotes Chung
-  MIT License
--->
-<span class="timeago small"
-  >
 
-  
-  
-
-  
-    Jul 20, 2024
-  
-
-  <i class="unloaded">2024-07-20T10:57:00+05:30</i>
-
-</span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install self-hosted Photo and Video server with Immich</h3>
-            <div class="text-muted small">
-              <p>
-                
+1
+GO_VERSION="1.24.4"
 
 
 
-
-
-                Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server.
-
-
-
-Why Immich?
-
-  
-    Immich is a self-hosted photo and video mana...
+  Define th...
               </p>
             </div>
           </div>
@@ -2222,14 +2415,14 @@ Why Immich?
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/setup-network-file-system-nfs-on-ubuntu-linux/" class="btn btn-outline-primary">
-    <p>Setup Network File System (NFS) on ubuntu linux</p>
+  <a href="/posts/install-docker-on-ubuntu-server/" class="btn btn-outline-primary">
+    <p>Install docker on Ubuntu Server</p>
   </a>
   
 
   
-  <a href="/posts/setup-self-hosted-github-actions-runners/" class="btn btn-outline-primary">
-    <p>Deploy your self-hosted github action runner</p>
+  <a href="/posts/sendmail-setup-on-ubuntu-server/" class="btn btn-outline-primary">
+    <p>SendMail setup on ubuntu server</p>
   </a>
   
 

@@ -256,6 +256,21 @@
   },
   
   {
+    "title": "Securing Nginx with IP Whitelist, Rate Limit and Basic Auth",
+    "url": "/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/",
+    "categories": "DevOps, Security",
+    "tags": "ubuntu, linux, nginx",
+    "date": "2018-01-03 20:31:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security.This guide walks you through three key protection mechanisms on an..."
+  },
+  
+  {
     "title": "Install docker on Ubuntu Server",
     "url": "/posts/install-docker-on-ubuntu-server/",
     "categories": "DevOps, Docker",

@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-23T01:51:58+05:30",
+  "updated_at": "2025-07-23T03:38:07+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
@@ -174,6 +174,16 @@
       "tags": ["smtp", "sendmail", "linux", "installation"],
       "updated_at": "2019-04-08T21:45:00+05:30",
       "summary": "Send mail is a cli application for sending email using smtp server."
+    },
+    {
+      "id": "/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth",
+      "title": "Securing Nginx with IP Whitelist, Rate Limit and Basic Auth",
+      "url": "https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Security"],
+      "tags": ["ubuntu", "linux", "nginx"],
+      "updated_at": "2018-01-03T20:31:00+05:30",
+      "summary": "Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security."
     },
     {
       "id": "/posts/install-docker-on-ubuntu-server",
