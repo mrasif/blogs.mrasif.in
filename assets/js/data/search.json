@@ -283,6 +283,21 @@
 
 
     "snippet": "Installation  Update apt packagesudo apt updatesudo apt install -y ca-certificates curl  Add Docker’s official GPG key:sudo install -m 0755 -d /etc/apt/keyringssudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.ascsudo chmod a+r /etc/apt/keyrings/docker.asc  ..."
+  },
+  
+  {
+    "title": "Mastering in curl Installation and Practical User Guide",
+    "url": "/posts/mastering-in-curl-installation-and-practical-user-guide/",
+    "categories": "DevOps, Linux",
+    "tags": "curl, HTTP, jq, SSL",
+    "date": "2017-04-13 21:16:00 +0530",
+    
+
+
+
+
+
+    "snippet": "curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, includi..."
   }
   
 ]
