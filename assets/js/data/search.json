@@ -207,7 +207,7 @@
 
 
 
-    "snippet": "Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.Create gpg key:gpg --full-generate-keySet ownertrust:gpg --edit-key &amp;lt;key-id&amp;gt;gpg&amp;gt; trust# Input: 5 for ultimate trust# &quot;q&quot; for save and quitList Secret Keys:g..."
+    "snippet": "Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.GPG Installation  Install gnupg:    sudo apt updatesudo apt install gnupg        If .gnugpg directory empty then configure gpg using following command:    gpgconf --kill gpg-agent      GP..."
   },
   
   {
