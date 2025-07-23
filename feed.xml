@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-23T13:56:28+05:30</updated>
+  <updated>2025-07-23T17:18:14+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -17,12 +17,13 @@
     <title>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</title>
     <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" rel="alternate" type="text/html" title="Enable 2FA on SSH Login with TOTP verification using Google Authenticator" />
     <published>2025-07-18T23:45:00+05:30</published>
-    <updated>2025-07-19T01:17:14+05:30</updated>
+    <updated>2025-07-23T13:55:08+05:30</updated>
     <id>https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/</id>
     <content src="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" />
     <author>
       <name>Asif Mohammad Mollah</name>
     </author>
+    <category term="DevOps" />
     <category term="Linux" />
     <category term="Security" />
     <summary>
@@ -42,7 +43,7 @@ Note: Here we will use ssh key based auth...
     <title>AWK Cheatsheet with Examples</title>
     <link href="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" rel="alternate" type="text/html" title="AWK Cheatsheet with Examples" />
     <published>2025-07-17T14:55:00+05:30</published>
-    <updated>2025-07-17T17:20:32+05:30</updated>
+    <updated>2025-07-23T13:55:08+05:30</updated>
     <id>https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/</id>
     <content src="https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/" />
     <author>

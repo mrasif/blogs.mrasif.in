@@ -3,14 +3,14 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-23T13:56:28+05:30",
+  "updated_at": "2025-07-23T17:18:14+05:30",
   "posts": [
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
       "title": "Enable 2FA on SSH Login with TOTP verification using Google Authenticator",
       "url": "https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["Linux", "Security"],
+      "categories": ["DevOps", "Linux", "Security"],
       "tags": ["ssh", "2FA", "Google Authenticator", "TOTP"],
       "updated_at": "2025-07-18T23:45:00+05:30",
       "summary": "Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator."
@@ -21,7 +21,7 @@
       "url": "https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/",
       "author": "Asif Mohammad Mollah",
       "categories": ["Linux"],
-      "tags": ["shell", "awk"],
+      "tags": ["DevOps", "shell", "awk"],
       "updated_at": "2025-07-17T14:55:00+05:30",
       "summary": "AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting."
     },
@@ -201,7 +201,7 @@
       "url": "https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/",
       "author": "Asif Mohammad Mollah",
       "categories": ["DevOps", "Linux"],
-      "tags": ["curl", "HTTP", "jq", "SSL"],
+      "tags": ["DevOps", "curl", "HTTP", "jq", "SSL"],
       "updated_at": "2017-04-13T21:16:00+05:30",
       "summary": "curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification,..."
     }

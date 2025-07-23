@@ -3,7 +3,7 @@
   {
     "title": "Enable 2FA on SSH Login with TOTP verification using Google Authenticator",
     "url": "/posts/enable-2fa-on-ssh-login-with-totp-verification/",
-    "categories": "Linux, Security",
+    "categories": "DevOps, Linux, Security",
     "tags": "ssh, 2FA, Google Authenticator, TOTP",
     "date": "2025-07-18 23:45:00 +0530",
     
@@ -19,7 +19,7 @@
     "title": "AWK Cheatsheet with Examples",
     "url": "/posts/awk-cheatsheet-with-example/",
     "categories": "Linux",
-    "tags": "shell, awk",
+    "tags": "DevOps, shell, awk",
     "date": "2025-07-17 14:55:00 +0530",
     
 
@@ -289,7 +289,7 @@
     "title": "Mastering in curl Installation and Practical User Guide",
     "url": "/posts/mastering-in-curl-installation-and-practical-user-guide/",
     "categories": "DevOps, Linux",
-    "tags": "curl, HTTP, jq, SSL",
+    "tags": "DevOps, curl, HTTP, jq, SSL",
     "date": "2017-04-13 21:16:00 +0530",
     
 
