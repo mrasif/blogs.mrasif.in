@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-23T17:18:14+05:30</updated>
+  <updated>2025-07-31T01:04:51+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -13,6 +13,32 @@
   <rights> © 2025 Asif Mohammad Mollah </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>LUKS is a Best Disk Encryption in Linux</title>
+    <link href="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" rel="alternate" type="text/html" title="LUKS is a Best Disk Encryption in Linux" />
+    <published>2025-07-27T11:01:00+05:30</published>
+    <updated>2025-07-27T11:01:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/</id>
+    <content src="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Linux" />
+    <category term="Security" />
+    <summary>
+
+
+
+
+Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.
+
+Key Concepts
+
+  LUKS (Linux Unified Key Setup): A standard for full-disk encryption in Linux.
+  Encryption: The process of converting data into a form that cannot be understood without a de...
+    </summary>
+  </entry>
   <entry>
     <title>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</title>
     <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" rel="alternate" type="text/html" title="Enable 2FA on SSH Login with TOTP verification using Google Authenticator" />
@@ -142,33 +168,6 @@ Key Features
     
   
   Customizable ...
-    </summary>
-  </entry>
-  <entry>
-    <title>Install self-hosted Photo and Video server with Immich</title>
-    <link href="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" rel="alternate" type="text/html" title="Install self-hosted Photo and Video server with Immich" />
-    <published>2024-07-20T10:57:00+05:30</published>
-    <updated>2025-07-22T15:51:23+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/</id>
-    <content src="https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <category term="Docker" />
-    <summary>
-
-
-
-
-Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server.
-
-
-
-Why Immich?
-
-  
-    Immich is a self-hosted photo and video management solution that allows you to easily back up, organize, and manage your photos and videos on your own server. It helps you browse, search, and organize your photos and videos with ease, without s...
     </summary>
   </entry>
 </feed>

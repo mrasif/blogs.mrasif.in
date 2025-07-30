@@ -21,27 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Mastering in curl Installation and Practical User Guide" />
+<meta property="og:title" content="LUKS is a Best Disk Encryption in Linux" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification, sending POST requests, and piping responses into jq." />
-<meta property="og:description" content="curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification, sending POST requests, and piping responses into jq." />
-<link rel="canonical" href="https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/" />
-<meta property="og:url" content="https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/" />
+<meta name="description" content="Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition." />
+<meta property="og:description" content="Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-04-13T21:16:00+05:30" />
+<meta property="article:published_time" content="2025-07-27T11:01:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Mastering in curl Installation and Practical User Guide" />
+<meta property="twitter:title" content="LUKS is a Best Disk Encryption in Linux" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification, sending POST requests, and piping responses into jq.","url":"https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/","@type":"BlogPosting","headline":"Mastering in curl Installation and Practical User Guide","dateModified":"2017-04-13T21:16:00+05:30","datePublished":"2017-04-13T21:16:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.","url":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/","@type":"BlogPosting","headline":"LUKS is a Best Disk Encryption in Linux","dateModified":"2025-07-27T11:01:00+05:30","datePublished":"2025-07-27T11:01:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Mastering in curl Installation and Practical User Guide | Asif Mohammad Mollah
+  <title>LUKS is a Best Disk Encryption in Linux | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -472,7 +472,7 @@
       
 
       
-        <span>Mastering in curl Installation and Practical User Guide</span>
+        <span>LUKS is a Best Disk Encryption in Linux</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -528,7 +528,7 @@
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Mastering in curl Installation and Practical User Guide</h1>
+      <h1 data-toc-skip>LUKS is a Best Disk Encryption in Linux</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -545,17 +545,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Apr 13, 2017,  9:16 PM +0530"
+    title="Sun, Jul 27, 2025, 11:01 AM +0530"
   >
 
   
   
 
   
-    Apr 13, 2017
+    Jul 27
   
 
-  <i class="unloaded">2017-04-13T21:16:00+05:30</i>
+  <i class="unloaded">2025-07-27T11:01:00+05:30</i>
 
 </span>
           by
@@ -579,7 +579,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="380 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1186 words">6 min</span>
 
 
           <!-- page views -->
@@ -593,121 +593,311 @@
 
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         
-          <p><code class="language-plaintext highlighter-rouge">curl</code> is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing <code class="language-plaintext highlighter-rouge">curl</code> and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification, sending POST requests, and piping responses into <code class="language-plaintext highlighter-rouge">jq</code>.</p>
+          <p>Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.</p>
 
-<h2 id="installation">Installation</h2>
+<h2 id="key-concepts">Key Concepts</h2>
+<ul>
+  <li><strong>LUKS (Linux Unified Key Setup)</strong>: A standard for full-disk encryption in Linux.</li>
+  <li><strong>Encryption</strong>: The process of converting data into a form that cannot be understood without a decryption key.</li>
+  <li><strong>Decryption</strong>: The process of converting encrypted data back into its original form using a decryption key.</li>
+  <li><strong>Key Management</strong>: The process of securely storing and managing encryption keys.</li>
+  <li><strong>Partition</strong>: A section of a hard drive or other storage device that can be formatted and used independently.</li>
+  <li><strong>Mount</strong>: The process of attaching a file system to a directory in the file system hierarchy.</li>
+  <li><strong>File System</strong>: A method of organizing data on a storage device.</li>
+</ul>
 
-<h3 id="linux">Linux</h3>
-
-<p>On Linux systems, you can install <code class="language-plaintext highlighter-rouge">curl</code> using your package manager. For example, on Ubuntu or Debian-based systems:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt-get update
-<span class="nb">sudo </span>apt-get <span class="nb">install </span>curl
-</pre></td></tr></tbody></table></code></div></div>
-
-<p>On CentOS or RHEL-based systems:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>yum <span class="nb">install </span>curl
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="macos">macOS</h3>
-
-<p>On macOS, you can install <code class="language-plaintext highlighter-rouge">curl</code> using Homebrew:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>brew <span class="nb">install </span>curl
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="windows">Windows</h3>
-
-<p>On Windows, you can install <code class="language-plaintext highlighter-rouge">curl</code> using Chocolatey:</p>
-
-<div class="language-powershell highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="n">choco</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">curl</span><span class="w">
-</span></pre></td></tr></tbody></table></code></div></div>
-
-<h2 id="user-guide">User Guide</h2>
-
-<h3 id="1-downloading-files">1. Downloading Files</h3>
-
-<p>To download a file from a URL, use the <code class="language-plaintext highlighter-rouge">-o</code> option:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-o</span> file.zip https://example.com/file.zip
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="2-inspecting-http-headers">2. Inspecting HTTP Headers</h3>
-
-<p>To view the HTTP headers of a URL, use the <code class="language-plaintext highlighter-rouge">-I</code> option:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-I</span> https://example.com
-</pre></td></tr></tbody></table></code></div></div>
-
-<h3 id="3-ssl-verification">3. SSL Verification</h3>
-
-<p>To verify the SSL certificate of a URL, use the <code class="language-plaintext highlighter-rouge">-vI</code> option:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h2 id="lets-begin">Let’s Begin</h2>
+<p>Make sure you have a backup of your data before proceeding with the encryption process. If you don’t have a backup, you may lose all your data permanently. Check you have <code class="language-plaintext highlighter-rouge">LUKS</code> installed if not then install it using the following command:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-vI</span> https://example.com
-<span class="c"># You will see the SSL certificate information.</span>
-<span class="c"># You will see this line in the output if certificate is valid.</span>
-<span class="c"># SSL certificate verify ok.</span>
+</pre></td><td class="rouge-code"><pre><span class="c"># Check if LUKS is installed</span>
+<span class="nb">command</span> <span class="nt">-v</span> cryptsetup
+<span class="c"># Install LUKS if not installed</span>
+<span class="nb">sudo </span>apt-get <span class="nb">install </span>cryptsetup
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="4-sending-post-requests">4. Sending POST Requests</h3>
+<h3 id="1-attach-the-disk-to-your-system">1. Attach the Disk to your system.</h3>
 
-<p>To send a POST request with data, use the <code class="language-plaintext highlighter-rouge">-d</code> for data and <code class="language-plaintext highlighter-rouge">-H</code> for Headers option:</p>
+<h3 id="2-check-your-attached-disk">2. Check your attached disk</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>lsblk
+</pre></td></tr></tbody></table></code></div></div>
+<p>It will show you all the disks attached to your system.
+Let’s say your disk is <code class="language-plaintext highlighter-rouge">/dev/sdb</code>. We will go through the steps to setup LUKS encryption on it.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h3 id="3-create-a-luks-partition">3. Create a LUKS partition</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup luksFormat /dev/sdb
+</pre></td></tr></tbody></table></code></div></div>
+<p>This will create a LUKS partition on <code class="language-plaintext highlighter-rouge">/dev/sdb</code>.</p>
+
+<h3 id="4-if-you-want-to-use-a-encryption-key-file-then-use-the-following">4. If you want to use a encryption key file then use the following:</h3>
+<p>If you don’t want to use a key file, you can use a passphrase instead. Then skip this step.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo dd </span><span class="k">if</span><span class="o">=</span>/dev/urandom <span class="nv">of</span><span class="o">=</span>/root/.mykey.img <span class="nv">bs</span><span class="o">=</span>1024 <span class="nv">count</span><span class="o">=</span>4
+</pre></td></tr></tbody></table></code></div></div>
+<p>Add the key file to the LUKS partition:</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
-3
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-X</span> POST <span class="nt">-H</span> <span class="s2">"Content-Type: application/json"</span> <span class="se">\</span>
-  <span class="nt">-d</span> <span class="s1">'{"name":"User","email":"user@example.com"}'</span> <span class="se">\</span>
-  https://example.com/api/users
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup luksAddKey /dev/sdb /root/.mykey.img
+<span class="nb">sudo chmod </span>600 /root/.mykey.img
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="5-piping-responses-into-jq">5. Piping Responses into jq</h3>
-
-<p>To pipe the response into <code class="language-plaintext highlighter-rouge">jq</code>, use the <code class="language-plaintext highlighter-rouge">-s</code> option:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h3 id="5-open-the-luks-partition">5. Open the LUKS partition</h3>
+<p><code class="language-plaintext highlighter-rouge">vault1</code> is a mapper name for the LUKS partition. LUKS will create a mapper device <code class="language-plaintext highlighter-rouge">/dev/mapper/vault1</code> which you can use to mount the partition.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span class="s1">'.ip'</span>
-<span class="c"># This will print the IP address of the server.</span>
-curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span class="s1">'.ip'</span> | xargs <span class="nb">echo</span> <span class="s2">"IP Address: "</span>
-<span class="c"># This will print the IP address of the server with customize output format.</span>
+</pre></td><td class="rouge-code"><pre><span class="c"># If you want to use a key file</span>
+<span class="nb">sudo </span>cryptsetup open <span class="nt">--key-file</span> /root/.mykey.img /dev/sdb vault1
+<span class="c"># If you want to use a passphrase</span>
+<span class="nb">sudo </span>cryptsetup open /dev/sdb vault1
 </pre></td></tr></tbody></table></code></div></div>
 
-<h3 id="6-piping-response-to-shell">6. Piping Response to Shell</h3>
-
-<p>To pipe the response into a shell command, use the <code class="language-plaintext highlighter-rouge">-s</code> option:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<h3 id="6-format-the-luks-partition">6. Format the LUKS partition</h3>
+<p>This step needs to be performed only once. It will format the partition and create a filesystem on it.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-</pre></td><td class="rouge-code"><pre>curl <span class="nt">-s</span> https://your-script-url/script.sh | bash
-<span class="c"># This will directly execute the script.</span>
-<span class="c"># Note: Don't do it unless you trust the source.</span>
+4
+</pre></td><td class="rouge-code"><pre><span class="c"># check avialable partition using</span>
+lsblk
+<span class="c"># Format it using ext4 format</span>
+<span class="nb">sudo </span>mkfs.ext4 /dev/mapper/vault1
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="bonus-tips">Bonus Tips</h2>
+<h3 id="7-mount-partition">7. Mount partition</h3>
+<p><code class="language-plaintext highlighter-rouge">/mnt/vault1</code> is a mount point where you can mount your partition.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo mkdir</span> /mnt/vault1
+<span class="nb">sudo </span>mount /dev/mapper/vault1 /mnt/vault1
+</pre></td></tr></tbody></table></code></div></div>
+<p>Once mounted, you can use it as a normal partition.</p>
 
-<p>Don’t forget to check man page of curl for more options.</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre>man curl
+<h3 id="8-unmount-partition">8. Unmount partition</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>umount /mnt/vault1
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>Additionally, you can visit online <code class="language-plaintext highlighter-rouge">curl</code> man page through <a href="https://curl.se/docs/manpage.html">curl man page</a>.</p>
+<h3 id="9-close-the-luks-partition">9. Close the LUKS partition</h3>
+<p>This will close the LUKS partition and remove the mapper device <code class="language-plaintext highlighter-rouge">/dev/mapper/vault1</code> and lock the partition.</p>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup close vault1
+</pre></td></tr></tbody></table></code></div></div>
+<p>Here we have completed the setup of LUKS encryption on <code class="language-plaintext highlighter-rouge">/dev/sdb</code>. To use it you only need to perform steps 5, 7, 8 and 9. Don’t use step 6 it will format the partition again.</p>
+
+<h2 id="automate-the-process">Automate the process</h2>
+<p>Let’s talk about automating the process of unlocking, mounting and closing the LUKS partition for daily use.</p>
+<ul>
+  <li>Using <code class="language-plaintext highlighter-rouge">fstab</code>: If you are using internal hard drive, you can automate the process using <code class="language-plaintext highlighter-rouge">crypttab</code> and <code class="language-plaintext highlighter-rouge">fstab</code>. In this case error of the hard drive can lead to failure of system boot.</li>
+  <li>Using <code class="language-plaintext highlighter-rouge">systemd</code>: If you are using any drive, internal or external doesn’t matter, you can automate it. In this case we will use <code class="language-plaintext highlighter-rouge">systemd</code> to automate the process. No system boot failure will occur.</li>
+  <li>Both cases will be use disk unique id instead of the partition name. So, it will be unique and reliable. To get the unique id of the disk, use the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">ls</span> <span class="nt">-l</span> /dev/disk/by-id/ | <span class="nb">grep</span> <span class="s2">"sdb"</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+    <p>It should display output like this-</p>
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre>lrwxrwxrwx 1 root root  9 Jul 30 18:51 ata-VBOX_HARDDISK_VB5e1011c9-a737040b -&gt; ../../sdb
+lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-0ATA_VBOX_HARDDISK_VB5e1011c9-a737040b -&gt; ../../sdb
+lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-1ATA_VBOX_HARDDISK_VB5e1011c9-a737040b -&gt; ../../sdb
+lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a737040b -&gt; ../../sdb
+</pre></td></tr></tbody></table></code></div>    </div>
+    <p>Here you will notice the id starting with <code class="language-plaintext highlighter-rouge">ata-</code> is the unique id of the disk. Here I have used virtual hard disk. In your case, you will see manufacturer name, serial number, etc. So, we will use <code class="language-plaintext highlighter-rouge">ata-VBOX_HARDDISK_VB5e1011c9-a737040b</code> for the future steps.</p>
+  </li>
+</ul>
+
+<h3 id="1-using-fstab">1. Using <code class="language-plaintext highlighter-rouge">fstab</code></h3>
+<ul>
+  <li>Edit <code class="language-plaintext highlighter-rouge">/etc/crypttab</code> file and add the following line:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>vault1 /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b /root/.mykey.img luks
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">/etc/fstab</code> file and add the following line:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>/dev/mapper/vault1 /mnt/vault ext4 defaults 0 0
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Update initramfs:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>update-initramfs <span class="nt">-u</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h3 id="2-using-systemd">2. Using <code class="language-plaintext highlighter-rouge">systemd</code></h3>
+<ul>
+  <li>Create a file <code class="language-plaintext highlighter-rouge">/usr/local/bin/luks-mount.sh</code> with the following content:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+</pre></td><td class="rouge-code"><pre><span class="c">#!/bin/sh</span>
+<span class="c"># Env will be set by systemd</span>
+<span class="c"># System define variables</span>
+<span class="nv">DISK_PATH</span><span class="o">=</span><span class="s2">"/dev/disk/by-id/</span><span class="k">${</span><span class="nv">DRIVE_ID</span><span class="k">}</span><span class="s2">"</span>
+<span class="c"># Operations</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"❌ Drive </span><span class="k">${</span><span class="nv">DRIVE_ID</span><span class="k">}</span><span class="s2"> not present"</span>
+  <span class="nb">exit </span>1
+<span class="k">fi</span>
+<span class="c"># Check if already unlocked</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-e</span> <span class="s2">"/dev/mapper/</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"🔓 Volume '</span><span class="nv">$MAPPER_NAME</span><span class="s2">' is already unlocked."</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"🔐 Unlocking encrypted volume..."</span>
+  <span class="nb">echo</span> <span class="nv">$PASSPHRASE</span> | <span class="nb">sudo </span>cryptsetup luksOpen <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+      </span><span class="nb">echo</span> <span class="s2">"❌ Failed to unlock the volume."</span>
+      <span class="nb">exit </span>2
+  <span class="k">fi
+  </span><span class="nb">echo</span> <span class="s2">"✅ Volume unlocked as /dev/mapper/</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
+<span class="k">fi</span>
+<span class="c"># Mount the device</span>
+<span class="k">if </span>mountpoint <span class="nt">-q</span> <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"📁 Already mounted at </span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+<span class="k">else
+  </span><span class="nb">sudo mkdir</span> <span class="nt">-p</span> <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+  <span class="nb">sudo </span>mount <span class="s2">"/dev/mapper/</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+  <span class="nb">echo</span> <span class="s2">"✅ Mounted at </span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+<span class="k">fi</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+    <p>This script will be reused if you have multiple disks.</p>
+  </li>
+  <li>Give executable permission to the script:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo chmod</span> +x /usr/local/bin/luks-mount.sh
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Create a env file <code class="language-plaintext highlighter-rouge">/etc/vault1.env</code> with the following content:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td><td class="rouge-code"><pre><span class="nv">DRIVE_ID</span><span class="o">=</span>ata-VBOX_HARDDISK_VB5e1011c9-a737040b
+<span class="nv">MAPPER_NAME</span><span class="o">=</span>vault1
+<span class="nv">MOUNT_POINT</span><span class="o">=</span>/mnt/vault1
+<span class="nv">PASSPHRASE</span><span class="o">=</span>your_passphrase_here
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Give permission to the env file:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo chmod </span>600 /etc/vault1.env
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Create a systemd service file <code class="language-plaintext highlighter-rouge">/etc/systemd/system/mount-vault1.service</code> with the following content:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="rouge-code"><pre><span class="o">[</span>Unit]
+<span class="nv">Description</span><span class="o">=</span>Unlock and mount LUKS volume vault1
+<span class="nv">After</span><span class="o">=</span>cryptsetup-pre.target local-fs.target
+<span class="nv">Requires</span><span class="o">=</span>local-fs.target
+<span class="o">[</span>Service]
+<span class="nv">Type</span><span class="o">=</span>oneshot
+<span class="nv">EnvironmentFile</span><span class="o">=</span>/etc/vault1.env
+<span class="nv">ExecStart</span><span class="o">=</span>/usr/local/bin/luks-mount.sh
+<span class="nv">RemainAfterExit</span><span class="o">=</span><span class="nb">true</span>
+<span class="o">[</span>Install]
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Enable the service:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl daemon-reload
+<span class="nb">sudo </span>systemctl <span class="nb">enable </span>mount-vault1.service
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Start the service:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl start mount-vault1.service
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>
+    <p>No script required to unmount because once system gets shutdown, it will automatically unmount the volume.</p>
+  </li>
+  <li>If you want to manually take out your disk, you can use the following command:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>umount /mnt/vault1
+<span class="nb">sudo </span>cryptsetup close vault1
+<span class="nb">sudo </span>eject /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b
+<span class="nb">sudo </span>systemctl stop mount-vault1.service
+<span class="nb">sudo </span>systemctl disable mount-vault1.service
+<span class="nb">sudo </span>systemctl daemon-reload
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Congrats! You have successfully set up a LUKS encrypted disk in Linux.</li>
+</ul>
+
+<h2 id="tips">Tips</h2>
+<ol>
+  <li>Always better to take backup of header of the disk using:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup luksHeaderBackup /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b <span class="nt">--header-backup-file</span> /path/to/ata-VBOX_HARDDISK_VB5e1011c9-a737040b_header_backup.img
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>If you want to add additional passphrase to the LUKS volume:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup luksAddKey /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>If you want to remove a passphrase from the LUKS volume:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>cryptsetup luksRemoveKey /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Read manual page for more information:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre>man cryptsetup
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ol>
 
         
       </div>
@@ -720,7 +910,8 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
           <i class="far fa-folder-open fa-fw mr-1"></i>
           
             <a href='/categories/devops/'>DevOps</a>,
-            <a href='/categories/linux/'>Linux</a>
+            <a href='/categories/linux/'>Linux</a>,
+            <a href='/categories/security/'>Security</a>
         </div>
         
 
@@ -729,20 +920,17 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
-          <a href="/tags/devops/"
-            class="post-tag no-text-decoration" >DevOps</a>
+          <a href="/tags/luks/"
+            class="post-tag no-text-decoration" >luks</a>
           
-          <a href="/tags/curl/"
-            class="post-tag no-text-decoration" >curl</a>
+          <a href="/tags/encryption/"
+            class="post-tag no-text-decoration" >encryption</a>
           
-          <a href="/tags/http/"
-            class="post-tag no-text-decoration" >HTTP</a>
+          <a href="/tags/linux/"
+            class="post-tag no-text-decoration" >linux</a>
           
-          <a href="/tags/jq/"
-            class="post-tag no-text-decoration" >jq</a>
-          
-          <a href="/tags/ssl/"
-            class="post-tag no-text-decoration" >SSL</a>
+          <a href="/tags/security/"
+            class="post-tag no-text-decoration" >security</a>
           
           </div>
         
@@ -768,19 +956,19 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Mastering in curl Installation and Practical User Guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=LUKS is a Best Disk Encryption in Linux - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Mastering in curl Installation and Practical User Guide - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=LUKS is a Best Disk Encryption in Linux - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Mastering in curl Installation and Practical User Guide - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=LUKS is a Best Disk Encryption in Linux - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -2022,267 +2210,267 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
 
 
 
@@ -2303,7 +2491,7 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
       
       
       <div class="card">
-        <a href="/posts/awk-cheatsheet-with-example/">
+        <a href="/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2320,13 +2508,13 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
   
 
   
-    Jul 17
+    Jan  3, 2018
   
 
-  <i class="unloaded">2025-07-17T14:55:00+05:30</i>
+  <i class="unloaded">2018-01-03T20:31:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>AWK Cheatsheet with Examples</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Securing Nginx with IP Whitelist, Rate Limit and Basic Auth</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2335,16 +2523,7 @@ curl <span class="nt">-s</span> ipinfo.io | jq <span class="nt">-r</span> <span 
 
 
 
-                AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting.
-
-Basic Syntax
-
-1
-awk 'pattern { action }' file
-
-
-
-  pat...
+                Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’...
               </p>
             </div>
           </div>
@@ -2354,7 +2533,7 @@ awk 'pattern { action }' file
       
       
       <div class="card">
-        <a href="/posts/enable-2fa-on-ssh-login-with-totp-verification/">
+        <a href="/posts/install-kubernetes-using-minikube/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2371,13 +2550,13 @@ awk 'pattern { action }' file
   
 
   
-    Jul 18
+    Nov 23, 2024
   
 
-  <i class="unloaded">2025-07-18T23:45:00+05:30</i>
+  <i class="unloaded">2024-11-23T19:34:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install kubernetes cluster using Minikube</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2386,10 +2565,12 @@ awk 'pattern { action }' file
 
 
 
-                Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator.
+                Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
 
-Why do we need 2FA?
-To enhance ...
+Key Features
+
+
+  Local Kubernetes Clus...
               </p>
             </div>
           </div>
@@ -2399,7 +2580,7 @@ To enhance ...
       
       
       <div class="card">
-        <a href="/posts/luks-is-a-best-disk-encryption-in-linux/">
+        <a href="/posts/install-docker-on-ubuntu-server/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -2416,13 +2597,13 @@ To enhance ...
   
 
   
-    Jul 27
+    Dec 16, 2017
   
 
-  <i class="unloaded">2025-07-27T11:01:00+05:30</i>
+  <i class="unloaded">2017-12-16T11:57:00+05:30</i>
 
 </span>
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>LUKS is a Best Disk Encryption in Linux</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install docker on Ubuntu Server</h3>
             <div class="text-muted small">
               <p>
                 
@@ -2431,7 +2612,22 @@ To enhance ...
 
 
 
-                Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted p...
+                Installation
+
+
+  Update apt package
+
+
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+
+
+  Add Docker’s official GPG key:
+
+
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https:...
               </p>
             </div>
           </div>
@@ -2454,15 +2650,15 @@ To enhance ...
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <span class="btn btn-outline-primary disabled">
-    <p>-</p>
-  </span>
+  <a href="/posts/enable-2fa-on-ssh-login-with-totp-verification/" class="btn btn-outline-primary">
+    <p>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</p>
+  </a>
   
 
   
-  <a href="/posts/install-docker-on-ubuntu-server/" class="btn btn-outline-primary">
-    <p>Install docker on Ubuntu Server</p>
-  </a>
+  <span class="btn btn-outline-primary disabled">
+    <p>-</p>
+  </span>
   
 
 </div>

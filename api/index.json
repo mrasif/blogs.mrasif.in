@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-23T17:18:14+05:30",
+  "updated_at": "2025-07-31T01:04:51+05:30",
   "posts": [
+    {
+      "id": "/posts/luks-is-a-best-disk-encryption-in-linux",
+      "title": "LUKS is a Best Disk Encryption in Linux",
+      "url": "https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Linux", "Security"],
+      "tags": ["luks", "encryption", "linux", "security"],
+      "updated_at": "2025-07-27T11:01:00+05:30",
+      "summary": "Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition."
+    },
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",
       "title": "Enable 2FA on SSH Login with TOTP verification using Google Authenticator",
