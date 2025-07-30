@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-07-31T01:13:08+05:30",
+  "updated_at": "2025-07-31T01:29:01+05:30",
   "posts": [
+    {
+      "id": "/posts/how-to-use-systemd-for-docker-compose",
+      "title": "How to Use Systemd for Docker Compose",
+      "url": "https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps", "Linux"],
+      "tags": ["systemd", "linux", "docker"],
+      "updated_at": "2025-07-30T22:10:00+05:30",
+      "summary": "Purpose of this article to demonstrate how to use systemd for Docker Compose."
+    },
     {
       "id": "/posts/luks-is-a-best-disk-encryption-in-linux",
       "title": "LUKS is a Best Disk Encryption in Linux",
@@ -13,7 +23,7 @@
       "categories": ["DevOps", "Linux", "Security"],
       "tags": ["luks", "encryption", "linux", "security"],
       "updated_at": "2025-07-27T11:01:00+05:30",
-      "summary": "Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition."
+      "summary": "Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition."
     },
     {
       "id": "/posts/enable-2fa-on-ssh-login-with-totp-verification",

@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-31T01:13:08+05:30</updated>
+  <updated>2025-07-31T01:29:01+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -14,10 +14,33 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
   <entry>
+    <title>How to Use Systemd for Docker Compose</title>
+    <link href="https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" rel="alternate" type="text/html" title="How to Use Systemd for Docker Compose" />
+    <published>2025-07-30T22:10:00+05:30</published>
+    <updated>2025-07-30T22:10:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/</id>
+    <content src="https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Linux" />
+    <summary>
+
+
+
+
+Purpose of this article to demonstrate how to use systemd for Docker Compose.
+
+What is systemd?
+Systemd is a system and service manager for Linux operating systems. It is designed to replace the traditional init system and provides a unified interface for managing system services and processes. Systemd is responsible for starting and stopping services, managing dependencies between services, an...
+    </summary>
+  </entry>
+  <entry>
     <title>LUKS is a Best Disk Encryption in Linux</title>
     <link href="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" rel="alternate" type="text/html" title="LUKS is a Best Disk Encryption in Linux" />
     <published>2025-07-27T11:01:00+05:30</published>
-    <updated>2025-07-27T11:01:00+05:30</updated>
+    <updated>2025-07-31T01:28:07+05:30</updated>
     <id>https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/</id>
     <content src="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" />
     <author>
@@ -31,12 +54,12 @@
 
 
 
-Purpose of this blog post is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.
+Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.
 
 Key Concepts
 
   LUKS (Linux Unified Key Setup): A disk encryption specification that provides a standard on-disk format for data encryption.
-  Encryption: The process of converting data int...
+  Encryption: The process of converting data into ...
     </summary>
   </entry>
   <entry>
@@ -133,41 +156,6 @@ Lets Setup NFS first:
 
   Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn how to setup NFS from scratch on Ubuntu server then read this article.
   Create share folder i...
-    </summary>
-  </entry>
-  <entry>
-    <title>Install kubernetes cluster using Minikube</title>
-    <link href="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" rel="alternate" type="text/html" title="Install kubernetes cluster using Minikube" />
-    <published>2024-11-23T19:34:00+05:30</published>
-    <updated>2024-11-23T19:34:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/</id>
-    <content src="https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <category term="Kubernetes" />
-    <summary>
-
-
-
-
-Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
-
-Key Features
-
-
-  Local Kubernetes Cluster:
-    
-      Runs a single-node Kubernetes cluster on your local machine.
-    
-  
-  Multi-Driver Support:
-    
-      Works with Docker, VirtualBox, KVM, Hyper-V, and others.
-    
-  
-  Customizable ...
     </summary>
   </entry>
 </feed>

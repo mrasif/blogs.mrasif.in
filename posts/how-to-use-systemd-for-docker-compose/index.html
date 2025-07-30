@@ -21,25 +21,27 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="jq" />
+<meta property="og:title" content="How to Use Systemd for Docker Compose" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Sr. Software Engineer, Indian Author" />
-<meta property="og:description" content="Sr. Software Engineer, Indian Author" />
-<link rel="canonical" href="https://blogs.mrasif.in/tags/jq/" />
-<meta property="og:url" content="https://blogs.mrasif.in/tags/jq/" />
+<meta name="description" content="Purpose of this article to demonstrate how to use systemd for Docker Compose." />
+<meta property="og:description" content="Purpose of this article to demonstrate how to use systemd for Docker Compose." />
+<link rel="canonical" href="https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" />
+<meta property="og:url" content="https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-07-30T22:10:00+05:30" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="jq" />
+<meta property="twitter:title" content="How to Use Systemd for Docker Compose" />
 <meta name="twitter:site" content="@mrasifmdmollah" />
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Sr. Software Engineer, Indian Author","url":"https://blogs.mrasif.in/tags/jq/","@type":"WebPage","headline":"jq","@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article to demonstrate how to use systemd for Docker Compose.","url":"https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/","@type":"BlogPosting","headline":"How to Use Systemd for Docker Compose","dateModified":"2025-07-30T22:10:00+05:30","datePublished":"2025-07-30T22:10:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>jq | Asif Mohammad Mollah
+  <title>How to Use Systemd for Docker Compose | Asif Mohammad Mollah
   </title>
 
   <!--
@@ -115,9 +117,14 @@
 
 
 
-<link rel="preload" href="/assets/css/category-tag.css" as="style">
-<link rel="stylesheet" href="/assets/css/category-tag.css">
+<link rel="preload" href="/assets/css/post.css" as="style">
+<link rel="stylesheet" href="/assets/css/post.css">
 
+
+  
+    <link rel="preload" as="style" href="/assets/css/lib/bootstrap-toc.min.css">
+    <link rel="stylesheet" href="/assets/css/lib/bootstrap-toc.min.css" />
+  
 
 
 
@@ -140,7 +147,7 @@
 
 
 
-<script async src="/assets/js/page.min.js"></script>
+<script async src="/assets/js/post.min.js"></script>
 
 
 
@@ -458,22 +465,14 @@
         
         <span>
           <a href="/">
-            Home
-          </a>
-        </span>
-        
-      
-        
-        <span>
-          <a href="/tabs/tags/">
-            Tags
+            Posts
           </a>
         </span>
         
       
 
       
-        <span>jq</span>
+        <span>How to Use Systemd for Docker Compose</span>
       
 
     </span><!-- endof #breadcrumb -->
@@ -481,7 +480,7 @@
     <i id="sidebar-trigger" class="fas fa-bars fa-fw"></i>
 
     <div id="topbar-title">
-      Tag
+      Post
     </div>
 
     <i id="search-trigger" class="fas fa-search fa-fw"></i>
@@ -524,29 +523,254 @@
 
 <!-- return -->
 <div class="row">
-  <div class="col-12 col-lg-11 col-xl-8">
-    <div id="page" class="post pb-5 pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4 mb-md-4">
+
+  <div id="post-wrapper" class="col-12 col-lg-11 col-xl-8">
+
+    <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+      <h1 data-toc-skip>How to Use Systemd for Docker Compose</h1>
+
+      <div class="post-meta text-muted d-flex flex-column">
+        <!-- Published date and author -->
+        <div>
+          <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago "
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Jul 30, 2025, 10:10 PM +0530"
+  >
+
+  
+  
+
+  
+    Jul 30
+  
+
+  <i class="unloaded">2025-07-30T22:10:00+05:30</i>
+
+</span>
+          by
+          <span class="author">
+            Asif Mohammad Mollah
+          </span>
+        </div>
+
+        <div>
+          <!-- lastmod -->
+          
+
+          <!-- read time -->
+          <!--
+  Calculate the post's reading time, and display the word count in tooltip
+ -->
+
+
+
+
+
+
+<!-- return element -->
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="274 words">1 min</span>
+
+
+          <!-- page views -->
+          
+
+        </div>
+
+      </div> <!-- .post-meta -->
+
+      <div class="post-content">
+
+        <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
+        
+          <p>Purpose of this article to demonstrate how to use systemd for Docker Compose.</p>
+
+<h2 id="what-is-systemd">What is <code class="language-plaintext highlighter-rouge">systemd</code>?</h2>
+<p>Systemd is a system and service manager for Linux operating systems. It is designed to replace the traditional init system and provides a unified interface for managing system services and processes. Systemd is responsible for starting and stopping services, managing dependencies between services, and handling system shutdown and reboot.</p>
+
+<h2 id="what-is-docker-compose">What is <code class="language-plaintext highlighter-rouge">docker-compose</code>?</h2>
+<p>Docker Compose is a tool for defining and running multi-container Docker applications. It allows you to define your application’s services in a YAML file, and then use a single command to create and start all the services from your configuration.</p>
+
+<h2 id="lets-begin">Let’s Begin</h2>
+<h3 id="1-create-a-project-directory">1. Create a project directory:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">mkdir</span> <span class="nt">-p</span> /srv/myapp
+<span class="nb">cd</span> /srv/myapp
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="2-create-a-docker-composeyml-file-with-the-following-content">2. Create a <code class="language-plaintext highlighter-rouge">docker-compose.yml</code> file with the following content:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>version: <span class="s1">'3'</span>
+services:
+  web:
+    image: nginx:latest
+    ports:
+      - <span class="s2">"3000:80"</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="3-create-a-file-etcsystemdsystemmyappservice-with-the-following-content">3. Create a file <code class="language-plaintext highlighter-rouge">/etc/systemd/system/myapp.service</code> with the following content:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+</pre></td><td class="rouge-code"><pre><span class="o">[</span>Unit]
+<span class="nv">Description</span><span class="o">=</span>MyApp
+<span class="nv">After</span><span class="o">=</span>docker.service
+<span class="nv">Requires</span><span class="o">=</span>docker.service
+
+<span class="o">[</span>Service]
+<span class="nv">Type</span><span class="o">=</span>simple
+<span class="nv">WorkingDirectory</span><span class="o">=</span>/srv/myapp
+<span class="nv">ExecStart</span><span class="o">=</span>/usr/bin/docker-compose up
+<span class="nv">ExecStop</span><span class="o">=</span>/usr/bin/docker-compose down
+<span class="nv">Restart</span><span class="o">=</span>always
+<span class="nv">TimeoutStopSec</span><span class="o">=</span>30
+
+<span class="o">[</span>Install]
+<span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
+</pre></td></tr></tbody></table></code></div></div>
+
+<p><code class="language-plaintext highlighter-rouge">After</code> in <code class="language-plaintext highlighter-rouge">Unit</code> section is used to specify the dependencies between services. In this case, we want to ensure that the <code class="language-plaintext highlighter-rouge">docker.service</code> is started before our <code class="language-plaintext highlighter-rouge">myapp.service</code>.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Requires</code> in <code class="language-plaintext highlighter-rouge">Unit</code> section is used to specify the dependencies between services. In this case, we want to ensure that the <code class="language-plaintext highlighter-rouge">docker.service</code> is started before our <code class="language-plaintext highlighter-rouge">myapp.service</code>.</p>
+
+<h3 id="4-reload-systemd">4. Reload systemd:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl daemon-reload
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="5-start-the-service">5. Start the service:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl start myapp.service
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="6-enable-the-service">6. Enable the service:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl <span class="nb">enable </span>myapp.service
+</pre></td></tr></tbody></table></code></div></div>
+
+<h3 id="5-verify-the-service-status">5. Verify the service status:</h3>
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl status myapp.service
+</pre></td></tr></tbody></table></code></div></div>
+
+        
+      </div>
+
+      <div class="post-tail-wrapper text-muted">
+
+        <!-- categories -->
+        
+        <div class="post-meta mb-3">
+          <i class="far fa-folder-open fa-fw mr-1"></i>
+          
+            <a href='/categories/devops/'>DevOps</a>,
+            <a href='/categories/linux/'>Linux</a>
+        </div>
+        
+
+        <!-- tags -->
+        
+        <div class="post-tags">
+          <i class="fa fa-tags fa-fw mr-1"></i>
+          
+          <a href="/tags/systemd/"
+            class="post-tag no-text-decoration" >systemd</a>
+          
+          <a href="/tags/linux/"
+            class="post-tag no-text-decoration" >linux</a>
+          
+          <a href="/tags/docker/"
+            class="post-tag no-text-decoration" >docker</a>
+          
+          </div>
+        
+
+        <div class="post-tail-bottom
+          d-flex justify-content-between align-items-center mt-3 pt-5 pb-2">
+          
+
+          <!--
+ Post sharing snippet
+
+ v2.1
+ https://github.com/cotes2020/jekyll-theme-chirpy
+ © 2019 Cotes Chung
+ Published under the MIT License
+-->
+
+<div class="share-wrapper">
+  <span class="share-label text-muted mr-1">Share</span>
+  <span class="share-icons">
     
-      <div id="page-tag">
-  <h1 class="pl-lg-2">
-    <i class="fa fa-tag fa-fw text-muted"></i>
-    jq
-    <span class="lead text-muted pl-2">1</span>
-  </h1>
-  <ul class="post-content pl-0">
     
-    <li class="d-flex justify-content-between pl-md-3 pr-md-3">
-      <a href="/posts/mastering-in-curl-installation-and-practical-user-guide/">Mastering in curl Installation and Practical User Guide</a>
-      <span class="dash flex-grow-1"></span>
-      <span class="text-muted small">Apr 13, 2017</span>
-    </li>
-    
-  </ul>
-</div>
 
     
-    </div> <!-- #page -->
-  </div><!-- .col-12 -->
+      
+        <a href="https://twitter.com/intent/tweet?text=How to Use Systemd for Docker Compose - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" data-toggle="tooltip" data-placement="top"
+          title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
+          <i class="fa-fw fab fa-twitter"></i>
+        </a>
+    
+      
+        <a href="https://www.facebook.com/sharer/sharer.php?title=How to Use Systemd for Docker Compose - Asif Mohammad Mollah&u=https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" data-toggle="tooltip" data-placement="top"
+          title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
+          <i class="fa-fw fab fa-facebook-square"></i>
+        </a>
+    
+      
+        <a href="https://telegram.me/share?text=How to Use Systemd for Docker Compose - Asif Mohammad Mollah&url=https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" data-toggle="tooltip" data-placement="top"
+          title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fa-fw fab fa-telegram"></i>
+        </a>
+    
+
+    <i class="fa-fw fas fa-link small" onclick="copyLink()"
+        data-toggle="tooltip" data-placement="top" title="Copy link"></i>
+
+  </span>
+</div>
+
+
+        </div><!-- .post-tail-bottom -->
+
+      </div><!-- div.post-tail -->
+
+    </div> <!-- .post -->
+
+
+  </div> <!-- #post-wrapper -->
+
+  
+
+  
 
   <!--
   The Pannel on right side (Desktop views)
@@ -1689,13 +1913,531 @@
   </div> <!-- .access -->
 
   
+    <div id="toc-wrapper" class="pl-0 pr-4 mb-5">
+      <span class="pl-3 pt-2 mb-2">Contents</span>
+      <nav id="toc" data-toggle="toc"></nav>
+    </div>
+  
 
 </div> <!-- #panel-wrapper -->
 
 
+</div> <!-- .row -->
+
+<div class="row">
+  <div class="col-12 col-lg-11 col-xl-8">
+    <div id="post-extend-wrapper" class="pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
+
+    <!--
+ Recommend the other 3 posts according to the tags and categories of the current post,
+ if the number is not enough, use the other latest posts to supplement.
+
+ v2.0
+ https://github.com/cotes2020/jekyll-theme-chirpy
+ © 2019 Cotes Chung
+ Published under the MIT License
+-->
+
+<!-- The total size of related posts  -->
+
+
+<!-- An random integer that bigger than 0  -->
+
+
+<!-- Equals to TAG_SCORE / {max_categories_hierarchy}  -->
+
+
+
+
+
+
+
+
+  
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+
+
+
+
+<!-- Fill with the other newlest posts  -->
+
+
+
+
+
+
+  <div id="related-posts" class="mt-5 mb-2 mb-sm-4">
+    <h3 class="pt-2 mt-1 mb-4 ml-1" data-toc-skip>Further Reading</h3>
+    <div class="card-deck mb-4">
+    
+      
+      
+      <div class="card">
+        <a href="/posts/install-docker-on-ubuntu-server/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Dec 16, 2017
+  
+
+  <i class="unloaded">2017-12-16T11:57:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install docker on Ubuntu Server</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Installation
+
+
+  Update apt package
+
+
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+
+
+  Add Docker’s official GPG key:
+
+
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https:...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/luks-is-a-best-disk-encryption-in-linux/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Jul 27
+  
+
+  <i class="unloaded">2025-07-27T11:01:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>LUKS is a Best Disk Encryption in Linux</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted par...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
+        <a href="/posts/install-kubernetes-using-minikube/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Nov 23, 2024
+  
+
+  <i class="unloaded">2024-11-23T19:34:00+05:30</i>
+
+</span>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Install kubernetes cluster using Minikube</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments.
+
+Key Features
+
+
+  Local Kubernetes Clus...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+    </div> <!-- .card-deck -->
+  </div> <!-- #related-posts -->
+
+
+
+    <!--
+  Navigation buttons at the bottom of the post.
+
+  v2.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+
+<div class="post-navigation d-flex justify-content-between">
+  
+  <a href="/posts/luks-is-a-best-disk-encryption-in-linux/" class="btn btn-outline-primary">
+    <p>LUKS is a Best Disk Encryption in Linux</p>
+  </a>
+  
+
+  
+  <span class="btn btn-outline-primary disabled">
+    <p>-</p>
+  </span>
+  
+
 </div>
 
+    
 
+    </div> <!-- #post-extend-wrapper -->
+
+  </div> <!-- .col-* -->
+
+</div> <!-- .row -->
+
+<!-- image lazy load: https://github.com/ApoorvSaxena/lozad.js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+<script type="text/javascript">
+  const imgs = document.querySelectorAll('#post-wrapper img');
+  const observer = lozad(imgs);
+  observer.observe();
+</script>
 
 
 
