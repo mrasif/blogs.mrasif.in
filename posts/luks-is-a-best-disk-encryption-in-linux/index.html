@@ -579,7 +579,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1186 words">6 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1255 words">6 min</span>
 
 
           <!-- page views -->
@@ -597,13 +597,16 @@
 
 <h2 id="key-concepts">Key Concepts</h2>
 <ul>
-  <li><strong>LUKS (Linux Unified Key Setup)</strong>: A standard for full-disk encryption in Linux.</li>
-  <li><strong>Encryption</strong>: The process of converting data into a form that cannot be understood without a decryption key.</li>
-  <li><strong>Decryption</strong>: The process of converting encrypted data back into its original form using a decryption key.</li>
-  <li><strong>Key Management</strong>: The process of securely storing and managing encryption keys.</li>
-  <li><strong>Partition</strong>: A section of a hard drive or other storage device that can be formatted and used independently.</li>
-  <li><strong>Mount</strong>: The process of attaching a file system to a directory in the file system hierarchy.</li>
-  <li><strong>File System</strong>: A method of organizing data on a storage device.</li>
+  <li><strong>LUKS (Linux Unified Key Setup)</strong>: A disk encryption specification that provides a standard on-disk format for data encryption.</li>
+  <li><strong>Encryption</strong>: The process of converting data into an unreadable format, which can only be accessed with a decryption key or passphrase.</li>
+  <li><strong>cryptsetup</strong>: The command-line tool used to manage LUKS encrypted volumes.</li>
+  <li><strong>Mapper Device</strong>: A virtual device created by LUKS that provides access to the decrypted volume (e.g., <code class="language-plaintext highlighter-rouge">/dev/mapper/vault1</code>).</li>
+  <li><strong>Key File</strong>: A file containing the encryption key, used instead of a passphrase.</li>
+  <li><strong>Passphrase</strong>: A secret password used to unlock the encrypted volume.</li>
+  <li><strong>fstab</strong>: A system configuration file that defines how file systems are mounted at boot time.</li>
+  <li><strong>crypttab</strong>: A system configuration file specifically for defining LUKS encrypted volumes to be unlocked at boot time (Used with <code class="language-plaintext highlighter-rouge">fstab</code>).</li>
+  <li><strong>systemd</strong>: A system and service manager for Linux operating systems, used here to automate the unlocking and mounting of LUKS volumes.</li>
+  <li><strong>UUID (Universally Unique Identifier)</strong>: A unique identifier for a partition or disk, ensuring consistent mounting regardless of device name changes. This documentation uses <code class="language-plaintext highlighter-rouge">/dev/disk/by-id/</code> instead.</li>
 </ul>
 
 <h2 id="lets-begin">Let’s Begin</h2>

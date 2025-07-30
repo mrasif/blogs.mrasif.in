@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-31T01:04:51+05:30</updated>
+  <updated>2025-07-31T01:13:08+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -35,8 +35,8 @@ Purpose of this blog post is to explain the importance of LUKS encryption in Lin
 
 Key Concepts
 
-  LUKS (Linux Unified Key Setup): A standard for full-disk encryption in Linux.
-  Encryption: The process of converting data into a form that cannot be understood without a de...
+  LUKS (Linux Unified Key Setup): A disk encryption specification that provides a standard on-disk format for data encryption.
+  Encryption: The process of converting data int...
     </summary>
   </entry>
   <entry>
