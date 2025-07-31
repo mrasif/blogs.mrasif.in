@@ -27,7 +27,7 @@
 
 
 
-    "snippet": "Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.Key Concepts  LUKS (Linux Unified Key Setup): A disk encryption specification that provides a..."
+    "snippet": "Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.Importance of LUKS EncryptionLUKS encryption is crucial for securing sensitive data on Linux ..."
   },
   
   {
