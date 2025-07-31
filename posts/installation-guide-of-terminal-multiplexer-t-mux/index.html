@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"It is a T-mux user guide. T-mux and VIM works awesome for development.","url":"https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/","@type":"BlogPosting","headline":"Installation guide of terminal multiplexer T-MUX","dateModified":"2025-07-31T01:28:07+05:30","datePublished":"2024-07-16T15:07:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"It is a T-mux user guide. T-mux and VIM works awesome for development.","url":"https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/","@type":"BlogPosting","headline":"Installation guide of terminal multiplexer T-MUX","dateModified":"2025-07-31T11:56:06+05:30","datePublished":"2024-07-16T15:07:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -581,17 +581,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jul 30, 2025, 11:58 PM +0400"
+    title="Thu, Jul 31, 2025, 10:26 AM +0400"
   >
 
   
   
 
   
-    Jul 30
+    Jul 31
   
 
-  <i class="unloaded">2025-07-31T01:28:07+05:30</i>
+  <i class="unloaded">2025-07-31T11:56:06+05:30</i>
 
 </span>
           </span>
@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="463 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="473 words">2 min</span>
 
 
           <!-- page views -->
@@ -758,15 +758,19 @@ run <span class="s1">'~/.tmux/plugins/tpm/tpm'</span>
 10
 11
 12
+13
+14
 </pre></td><td class="rouge-code"><pre><span class="c"># Create directory if not exists</span>
 <span class="nb">mkdir</span> <span class="nt">-p</span> /opt/scripts
 <span class="nb">sudo chown</span> <span class="nt">-R</span> <span class="nv">$USER</span>:<span class="nv">$USER</span> /opt/scripts
 
 <span class="c"># Download Scripts to directory</span>
+curl <span class="nt">-sL</span> https://blogs.mrasif.in/sh/tmux_utils.sh <span class="nt">-o</span> /opt/scripts/tmux_utils.sh
 curl <span class="nt">-sL</span> https://blogs.mrasif.in/sh/ram_info.sh <span class="nt">-o</span> /opt/scripts/ram_info.sh
 curl <span class="nt">-sL</span> https://blogs.mrasif.in/sh/cpu_info.sh <span class="nt">-o</span> /opt/scripts/cpu_info.sh
 
 <span class="c"># Make scripts executable</span>
+<span class="nb">chmod</span> +x /opt/scripts/tmux_utils.sh
 <span class="nb">chmod</span> +x /opt/scripts/ram_info.sh
 <span class="nb">chmod</span> +x /opt/scripts/cpu_info.sh
 
