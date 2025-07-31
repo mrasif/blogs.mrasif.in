@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-07-31T01:29:01+05:30</updated>
+  <updated>2025-07-31T11:39:17+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -37,8 +37,8 @@ Systemd is a system and service manager for Linux operating systems. It is desig
     </summary>
   </entry>
   <entry>
-    <title>LUKS is a Best Disk Encryption in Linux</title>
-    <link href="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" rel="alternate" type="text/html" title="LUKS is a Best Disk Encryption in Linux" />
+    <title>Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux</title>
+    <link href="https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/" rel="alternate" type="text/html" title="Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux" />
     <published>2025-07-27T11:01:00+05:30</published>
     <updated>2025-07-31T01:28:07+05:30</updated>
     <id>https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/</id>

@@ -16,7 +16,7 @@
   },
   
   {
-    "title": "LUKS is a Best Disk Encryption in Linux",
+    "title": "Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux",
     "url": "/posts/luks-is-a-best-disk-encryption-in-linux/",
     "categories": "DevOps, Linux, Security",
     "tags": "luks, encryption, linux, security",
