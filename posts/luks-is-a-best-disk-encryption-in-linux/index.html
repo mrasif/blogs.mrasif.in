@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.","url":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/","@type":"BlogPosting","headline":"Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux","dateModified":"2025-07-31T11:56:06+05:30","datePublished":"2025-07-27T11:01:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition.","url":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/","@type":"BlogPosting","headline":"Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux","dateModified":"2025-08-05T01:43:44+05:30","datePublished":"2025-07-27T11:01:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -581,17 +581,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Jul 31, 2025, 10:26 AM +0400"
+    title="Tue, Aug  5, 2025, 12:13 AM +0400"
   >
 
   
   
 
   
-    Jul 31
+    Aug  5
   
 
-  <i class="unloaded">2025-07-31T11:56:06+05:30</i>
+  <i class="unloaded">2025-08-05T01:43:44+05:30</i>
 
 </span>
           </span>
@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1311 words">7 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1470 words">8 min</span>
 
 
           <!-- page views -->
@@ -831,11 +831,61 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
 </pre></td></tr></tbody></table></code></div>    </div>
     <p>This script will be reused if you have multiple disks.</p>
   </li>
-  <li>Give executable permission to the script:
-    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo chmod</span> +x /usr/local/bin/luks-mount.sh
-</pre></td></tr></tbody></table></code></div>    </div>
+  <li>Create a file <code class="language-plaintext highlighter-rouge">/usr/local/bin/luks-umount.sh</code> with the following content:
+```sh
+#!/bin/sh
+    <h1 id="env-will-be-set-by-systemd">Env will be set by systemd</h1>
+    <h1 id="system-define-variables">System define variables</h1>
+    <p>DISK_PATH=”/dev/disk/by-id/${DRIVE_ID}”</p>
   </li>
+</ul>
+
+<h1 id="check-if-disk-exists">Check if disk exists</h1>
+<p>if [ ! -e “$DISK_PATH” ]; then
+    echo “⚠️  Drive ${DRIVE_ID} not present (may already be removed or unmounted).”
+fi</p>
+<h1 id="unmount-if-mounted">Unmount if mounted</h1>
+<p>if mountpoint -q “$MOUNT_POINT”; then
+    echo “📤 Unmounting $MOUNT_POINT…”
+    sudo umount “$MOUNT_POINT”
+    if [ $? -ne 0 ]; then
+        echo “❌ Failed to unmount $MOUNT_POINT”
+        exit 1
+    fi
+    echo “✅ Unmounted $MOUNT_POINT”
+else
+    echo “ℹ️  $MOUNT_POINT is not mounted.”
+fi</p>
+<h1 id="close-the-encrypted-volume-if-mapped">Close the encrypted volume if mapped</h1>
+<p>if [ -e “/dev/mapper/$MAPPER_NAME” ]; then
+    echo “🔒 Closing encrypted volume $MAPPER_NAME…”
+    sudo cryptsetup luksClose “$MAPPER_NAME”
+    if [ $? -ne 0 ]; then
+        echo “❌ Failed to close volume $MAPPER_NAME”
+        exit 2
+    fi
+    echo “✅ Volume $MAPPER_NAME closed.”
+    echo “🧹 Deleting mount point $MOUNT_POINT…”
+    sudo rmdir “$MOUNT_POINT”
+    echo “🧹 Mount point $MOUNT_POINT deleted.”
+else
+    echo “ℹ️  Volume $MAPPER_NAME is not open.”
+fi</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td><td class="rouge-code"><pre>This script will be reused if you have multiple disks.
+
+- Give executable permission to the script:
+```sh
+sudo chmod +x /usr/local/bin/luks-mount.sh
+sudo chmod +x /usr/local/bin/luks-umount.sh
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
   <li>Create a env file <code class="language-plaintext highlighter-rouge">/etc/vault1.env</code> with the following content:
     <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -864,6 +914,7 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
 9
 10
 11
+12
 </pre></td><td class="rouge-code"><pre><span class="o">[</span>Unit]
 <span class="nv">Description</span><span class="o">=</span>Unlock and mount LUKS volume vault1
 <span class="nv">After</span><span class="o">=</span>cryptsetup-pre.target local-fs.target
@@ -872,6 +923,7 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
 <span class="nv">Type</span><span class="o">=</span>oneshot
 <span class="nv">EnvironmentFile</span><span class="o">=</span>/etc/vault1.env
 <span class="nv">ExecStart</span><span class="o">=</span>/usr/local/bin/luks-mount.sh
+<span class="nv">ExecStop</span><span class="o">=</span>/usr/local/bin/luks-umount.sh
 <span class="nv">RemainAfterExit</span><span class="o">=</span><span class="nb">true</span>
 <span class="o">[</span>Install]
 <span class="nv">WantedBy</span><span class="o">=</span>multi-user.target
@@ -890,19 +942,13 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
 </pre></td></tr></tbody></table></code></div>    </div>
   </li>
   <li>
-    <p>No script required to unmount because once system gets shutdown, it will automatically unmount the volume.</p>
+    <p>Unmount can be done automatically when the system shuts down.</p>
   </li>
   <li>If you want to manually take out your disk, you can use the following command:
     <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
-4
-5
-6
-</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>umount /mnt/vault1
-<span class="nb">sudo </span>cryptsetup close vault1
-<span class="nb">sudo </span>eject /dev/disk/by-id/ata-VBOX_HARDDISK_VB5e1011c9-a737040b
-<span class="nb">sudo </span>systemctl stop mount-vault1.service
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>systemctl stop mount-vault1.service
 <span class="nb">sudo </span>systemctl disable mount-vault1.service
 <span class="nb">sudo </span>systemctl daemon-reload
 </pre></td></tr></tbody></table></code></div>    </div>
@@ -1066,12 +1112,12 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
         
         
         
-        <li><a href="/posts/installation-guide-of-terminal-multiplexer-t-mux/">Installation guide of terminal multiplexer T-MUX</a></li>
+        <li><a href="/posts/luks-is-a-best-disk-encryption-in-linux/">Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux</a></li>
       
         
         
         
-        <li><a href="/posts/luks-is-a-best-disk-encryption-in-linux/">Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux</a></li>
+        <li><a href="/posts/installation-guide-of-terminal-multiplexer-t-mux/">Installation guide of terminal multiplexer T-MUX</a></li>
       
         
         
