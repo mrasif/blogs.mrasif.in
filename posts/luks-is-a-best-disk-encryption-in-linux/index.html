@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1470 words">8 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1503 words">8 min</span>
 
 
           <!-- page views -->
@@ -832,60 +832,86 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
     <p>This script will be reused if you have multiple disks.</p>
   </li>
   <li>Create a file <code class="language-plaintext highlighter-rouge">/usr/local/bin/luks-umount.sh</code> with the following content:
-```sh
-#!/bin/sh
-    <h1 id="env-will-be-set-by-systemd">Env will be set by systemd</h1>
-    <h1 id="system-define-variables">System define variables</h1>
-    <p>DISK_PATH=”/dev/disk/by-id/${DRIVE_ID}”</p>
-  </li>
-</ul>
-
-<h1 id="check-if-disk-exists">Check if disk exists</h1>
-<p>if [ ! -e “$DISK_PATH” ]; then
-    echo “⚠️  Drive ${DRIVE_ID} not present (may already be removed or unmounted).”
-fi</p>
-<h1 id="unmount-if-mounted">Unmount if mounted</h1>
-<p>if mountpoint -q “$MOUNT_POINT”; then
-    echo “📤 Unmounting $MOUNT_POINT…”
-    sudo umount “$MOUNT_POINT”
-    if [ $? -ne 0 ]; then
-        echo “❌ Failed to unmount $MOUNT_POINT”
-        exit 1
-    fi
-    echo “✅ Unmounted $MOUNT_POINT”
-else
-    echo “ℹ️  $MOUNT_POINT is not mounted.”
-fi</p>
-<h1 id="close-the-encrypted-volume-if-mapped">Close the encrypted volume if mapped</h1>
-<p>if [ -e “/dev/mapper/$MAPPER_NAME” ]; then
-    echo “🔒 Closing encrypted volume $MAPPER_NAME…”
-    sudo cryptsetup luksClose “$MAPPER_NAME”
-    if [ $? -ne 0 ]; then
-        echo “❌ Failed to close volume $MAPPER_NAME”
-        exit 2
-    fi
-    echo “✅ Volume $MAPPER_NAME closed.”
-    echo “🧹 Deleting mount point $MOUNT_POINT…”
-    sudo rmdir “$MOUNT_POINT”
-    echo “🧹 Mount point $MOUNT_POINT deleted.”
-else
-    echo “ℹ️  Volume $MAPPER_NAME is not open.”
-fi</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
 5
 6
-</pre></td><td class="rouge-code"><pre>This script will be reused if you have multiple disks.
-
-- Give executable permission to the script:
-```sh
-sudo chmod +x /usr/local/bin/luks-mount.sh
-sudo chmod +x /usr/local/bin/luks-umount.sh
-</pre></td></tr></tbody></table></code></div></div>
-
-<ul>
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+</pre></td><td class="rouge-code"><pre><span class="c">#!/bin/sh</span>
+<span class="c"># Env will be set by systemd</span>
+<span class="c"># System define variables</span>
+<span class="nv">DISK_PATH</span><span class="o">=</span><span class="s2">"/dev/disk/by-id/</span><span class="k">${</span><span class="nv">DRIVE_ID</span><span class="k">}</span><span class="s2">"</span>
+<span class="c"># Check if disk exists</span>
+<span class="k">if</span> <span class="o">[</span> <span class="o">!</span> <span class="nt">-e</span> <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"⚠️  Drive </span><span class="k">${</span><span class="nv">DRIVE_ID</span><span class="k">}</span><span class="s2"> not present (may already be removed or unmounted)."</span>
+<span class="k">fi</span>
+<span class="c"># Unmount if mounted</span>
+<span class="k">if </span>mountpoint <span class="nt">-q</span> <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"📤 Unmounting </span><span class="nv">$MOUNT_POINT</span><span class="s2">..."</span>
+  <span class="nb">sudo </span>umount <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+      </span><span class="nb">echo</span> <span class="s2">"❌ Failed to unmount </span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+      <span class="nb">exit </span>1
+  <span class="k">fi
+  </span><span class="nb">echo</span> <span class="s2">"✅ Unmounted </span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"ℹ️  </span><span class="nv">$MOUNT_POINT</span><span class="s2"> is not mounted."</span>
+<span class="k">fi</span>
+<span class="c"># Close the encrypted volume if mapped</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-e</span> <span class="s2">"/dev/mapper/</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+  </span><span class="nb">echo</span> <span class="s2">"🔒 Closing encrypted volume </span><span class="nv">$MAPPER_NAME</span><span class="s2">..."</span>
+  <span class="nb">sudo </span>cryptsetup luksClose <span class="s2">"</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
+  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+      </span><span class="nb">echo</span> <span class="s2">"❌ Failed to close volume </span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
+      <span class="nb">exit </span>2
+  <span class="k">fi
+  </span><span class="nb">echo</span> <span class="s2">"✅ Volume </span><span class="nv">$MAPPER_NAME</span><span class="s2"> closed."</span>
+  <span class="nb">echo</span> <span class="s2">"🧹 Deleting mount point </span><span class="nv">$MOUNT_POINT</span><span class="s2">..."</span>
+  <span class="nb">sudo rmdir</span> <span class="s2">"</span><span class="nv">$MOUNT_POINT</span><span class="s2">"</span>
+  <span class="nb">echo</span> <span class="s2">"🧹 Mount point </span><span class="nv">$MOUNT_POINT</span><span class="s2"> deleted."</span>
+<span class="k">else
+  </span><span class="nb">echo</span> <span class="s2">"ℹ️  Volume </span><span class="nv">$MAPPER_NAME</span><span class="s2"> is not open."</span>
+<span class="k">fi</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+    <p>This script will be reused if you have multiple disks.</p>
+  </li>
+  <li>Give executable permission to the script:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo chmod</span> +x /usr/local/bin/luks-mount.sh
+<span class="nb">sudo chmod</span> +x /usr/local/bin/luks-umount.sh
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
   <li>Create a env file <code class="language-plaintext highlighter-rouge">/etc/vault1.env</code> with the following content:
     <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
