@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1503 words">8 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1542 words">8 min</span>
 
 
           <!-- page views -->
@@ -799,6 +799,12 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
 27
 28
 29
+30
+31
+32
+33
+34
+35
 </pre></td><td class="rouge-code"><pre><span class="c">#!/bin/sh</span>
 <span class="c"># Env will be set by systemd</span>
 <span class="c"># System define variables</span>
@@ -813,8 +819,14 @@ lrwxrwxrwx 1 root root  9 Jul 30 18:51 scsi-SATA_VBOX_HARDDISK_VB5e1011c9-a73704
   </span><span class="nb">echo</span> <span class="s2">"🔓 Volume '</span><span class="nv">$MAPPER_NAME</span><span class="s2">' is already unlocked."</span>
 <span class="k">else
   </span><span class="nb">echo</span> <span class="s2">"🔐 Unlocking encrypted volume..."</span>
-  <span class="nb">echo</span> <span class="nv">$PASSPHRASE</span> | <span class="nb">sudo </span>cryptsetup luksOpen <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
-  <span class="k">if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
+  <span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$KEY_FILE_PATH</span><span class="s2">"</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> <span class="o">[</span> <span class="nt">-f</span> <span class="s2">"</span><span class="nv">$KEY_FILE_PATH</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+      </span><span class="nb">echo</span> <span class="s2">"🔑 Using key file to unlock..."</span>
+  	<span class="nb">sudo </span>cryptsetup luksOpen <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span> <span class="nt">--key-file</span> <span class="s2">"</span><span class="nv">$KEY_FILE_PATH</span><span class="s2">"</span>
+   <span class="k">else
+  	</span><span class="nb">echo</span> <span class="s2">"📝 Using passphrase to unlock..."</span>
+   	<span class="nb">echo</span> <span class="s2">"</span><span class="nv">$PASSPHRASE</span><span class="s2">"</span> | <span class="nb">sudo </span>cryptsetup luksOpen <span class="s2">"</span><span class="nv">$DISK_PATH</span><span class="s2">"</span> <span class="s2">"</span><span class="nv">$MAPPER_NAME</span><span class="s2">"</span>
+  <span class="k">fi
+  if</span> <span class="o">[</span> <span class="nv">$?</span> <span class="nt">-ne</span> 0 <span class="o">]</span><span class="p">;</span> <span class="k">then
       </span><span class="nb">echo</span> <span class="s2">"❌ Failed to unlock the volume."</span>
       <span class="nb">exit </span>2
   <span class="k">fi
