@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to provide a simple and effective way to enable login alert to remote server using SSH and console login.","url":"https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/","@type":"BlogPosting","headline":"Amazing way to enable login alert to remote server","dateModified":"2025-08-11T21:15:40+05:30","datePublished":"2025-08-11T21:15:40+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to provide a simple and effective way to enable login alert to remote server using SSH and console login.","url":"https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/","@type":"BlogPosting","headline":"Amazing way to enable login alert to remote server","dateModified":"2025-08-12T12:53:27+05:30","datePublished":"2025-08-11T21:15:40+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -567,6 +567,35 @@
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+
+  v2.4.1
+  https://github.com/cotes2020/jekyll-theme-chirpy
+  © 2020 Cotes Chung
+  MIT License
+-->
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Tue, Aug 12, 2025, 11:23 AM +0400"
+  >
+
+  
+  
+
+  
+    Aug 12
+  
+
+  <i class="unloaded">2025-08-12T12:53:27+05:30</i>
+
+</span>
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -579,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="261 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="350 words">1 min</span>
 
 
           <!-- page views -->
@@ -690,6 +719,43 @@ chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="n
 <ul>
   <li>Login to the server using SSH or console</li>
   <li>Check the notification on the configured platform</li>
+</ul>
+
+<h3 id="7-bonus-tips">7. Bonus Tips</h3>
+<p>If you don’t want to configure glowbally, you want to use only for your user then you can use shell entrypoint to configure alert.</p>
+
+<ul>
+  <li>Create <code class="language-plaintext highlighter-rouge">.login-alert.env</code> file in your home directory
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+</pre></td><td class="rouge-code"><pre><span class="nv">PROVIDER</span><span class="o">=</span>&lt;provider-name&gt;
+<span class="nv">TOKEN</span><span class="o">=</span>&lt;token&gt;
+<span class="nv">CHANNEL_ID</span><span class="o">=</span>&lt;channel-id&gt;
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Edit <code class="language-plaintext highlighter-rouge">.bashrc</code> or <code class="language-plaintext highlighter-rouge">.zshrc</code> based on your shell
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+</pre></td><td class="rouge-code"><pre><span class="nb">export</span> <span class="si">$(</span><span class="nb">cat</span> .login-alert.env | xargs<span class="si">)</span>
+<span class="k">if</span> <span class="o">[</span> <span class="nt">-n</span> <span class="s2">"</span><span class="nv">$SSH_CLIENT</span><span class="s2">"</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+</span><span class="nv">TEXT</span><span class="o">=</span><span class="s2">"SSH Login detected"</span>
+<span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$TEXT</span><span class="se">\n</span><span class="s2">============================="</span>
+<span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$TEXT</span><span class="se">\n</span><span class="s2">Date: </span><span class="si">$(</span><span class="nb">date</span><span class="si">)</span><span class="s2">"</span>
+<span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$TEXT</span><span class="se">\n</span><span class="s2">User: </span><span class="k">${</span><span class="nv">USER</span><span class="k">}</span><span class="s2">@</span><span class="si">$(</span><span class="nb">hostname</span> <span class="nt">-f</span><span class="si">)</span><span class="s2">"</span>
+<span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$TEXT</span><span class="se">\n</span><span class="s2">From </span><span class="si">$(</span><span class="nb">echo</span> <span class="nv">$SSH_CLIENT</span>|awk <span class="s1">'{print $1}'</span><span class="si">)</span><span class="s2">"</span>
+chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="nv">$TEXT</span><span class="s2">"</span>
+<span class="k">fi</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>You are done!</li>
 </ul>
 
         
@@ -821,6 +887,11 @@ chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="n
         
         
         
+        <li><a href="/posts/amazing-way-to-enable-login-alert-to-remote-server/">Amazing way to enable login alert to remote server</a></li>
+      
+        
+        
+        
         <li><a href="/posts/luks-is-a-best-disk-encryption-in-linux/">Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux</a></li>
       
         
@@ -837,11 +908,6 @@ chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="n
         
         
         <li><a href="/posts/enable-2fa-on-ssh-login-with-totp-verification/">Enable 2FA on SSH Login with TOTP verification using Google Authenticator</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/gpg-key-installation-or-setup-guide/">GPG key installation or setup guide</a></li>
       
 
       </ul>
