@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="350 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="358 words">1 min</span>
 
 
           <!-- page views -->
@@ -652,8 +652,9 @@ This env will be varied based on the provider. Kindly check the documentation fo
 </pre></td></tr></tbody></table></code></div></div>
 
 <h3 id="3-create-login-alert">3. Create login alert</h3>
-<p>Create a login alert script file <code class="language-plaintext highlighter-rouge">/usr/local/bin/login-alert.sh</code> with the following content:</p>
-<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+<ul>
+  <li>Create a login alert script file <code class="language-plaintext highlighter-rouge">/usr/local/bin/login-alert.sh</code> with the following content:
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
 3
 4
@@ -683,7 +684,14 @@ This env will be varied based on the provider. Kindly check the documentation fo
 <span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$TEXT</span><span class="se">\n</span><span class="s2">From </span><span class="k">${</span><span class="nv">IP_ADDR</span><span class="k">}</span><span class="s2">"</span>
 <span class="c"># Send Notification</span>
 chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="nv">$TEXT</span><span class="s2">"</span>
-</pre></td></tr></tbody></table></code></div></div>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Make it executable
+    <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo chmod</span> +x /usr/local/bin/login-alert.sh
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
 
 <h3 id="4-configure-pam-for-remote-login">4. Configure PAM for Remote Login</h3>
 <ul>
