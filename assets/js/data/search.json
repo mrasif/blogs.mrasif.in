@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Amazing way to enable login alert to remote server",
+    "url": "/posts/amazing-way-to-enable-login-alert-to-remote-server/",
+    "categories": "DevOps, Linux, Security",
+    "tags": "ssh, linux, security",
+    "date": "2025-08-11 21:15:40 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this article is to provide a simple and effective way to enable login alert to remote server using SSH and console login.Here we will use a simple script to send alert to multiple platforms using opensource tools chatzLets do it step by step:1. Install chatzCheck in the project reposit..."
+  },
+  
+  {
     "title": "How to Use Systemd for Docker Compose",
     "url": "/posts/how-to-use-systemd-for-docker-compose/",
     "categories": "DevOps, Linux",

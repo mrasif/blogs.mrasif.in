@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-08-05T13:06:30+05:30</updated>
+  <updated>2025-08-12T12:46:50+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -13,6 +13,36 @@
   <rights> © 2025 Asif Mohammad Mollah </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>Amazing way to enable login alert to remote server</title>
+    <link href="https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/" rel="alternate" type="text/html" title="Amazing way to enable login alert to remote server" />
+    <published>2025-08-11T21:15:40+05:30</published>
+    <updated>2025-08-11T21:15:40+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/</id>
+    <content src="https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Linux" />
+    <category term="Security" />
+    <summary>
+
+
+
+
+Purpose of this article is to provide a simple and effective way to enable login alert to remote server using SSH and console login.
+
+Here we will use a simple script to send alert to multiple platforms using opensource tools chatz
+
+Lets do it step by step:
+
+1. Install chatz
+Check in the project repository and take the latest release tag.
+TAG=&amp;lt;tag-name&amp;gt;
+curl -sL "https://github.com/tech-t...
+    </summary>
+  </entry>
   <entry>
     <title>How to Use Systemd for Docker Compose</title>
     <link href="https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/" rel="alternate" type="text/html" title="How to Use Systemd for Docker Compose" />
@@ -127,33 +157,6 @@ Common Built-in Variables
     
       $0
       Entire current lin...
-    </summary>
-  </entry>
-  <entry>
-    <title>Immich server deployment on kubernetes with NFS</title>
-    <link href="https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/" rel="alternate" type="text/html" title="Immich server deployment on kubernetes with NFS" />
-    <published>2025-06-19T10:51:00+05:30</published>
-    <updated>2025-06-19T10:51:00+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/</id>
-    <content src="https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <category term="Kubernetes" />
-    <summary>
-
-
-
-
-In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services.
-
-
-
-Lets Setup NFS first:
-
-  Mount your Hard Drive to OMV, then create or use existing volume for sharing. If you want to learn how to setup NFS from scratch on Ubuntu server then read this article.
-  Create share folder i...
     </summary>
   </entry>
 </feed>
