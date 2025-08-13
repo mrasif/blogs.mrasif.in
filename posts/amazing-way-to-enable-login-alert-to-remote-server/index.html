@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="434 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="436 words">2 min</span>
 
 
           <!-- page views -->
@@ -728,12 +728,12 @@ This env will be varied based on the provider. Kindly check the documentation fo
 <span class="c"># Send Notification</span>
 <span class="k">case</span> <span class="s2">"</span><span class="nv">$PAM_TYPE</span><span class="s2">"</span> <span class="k">in
   </span>open_session<span class="p">)</span>
-      <span class="nv">SUBJECT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$LOGIN_TYPE</span><span class="s2"> Login Detected"</span>
+      <span class="nv">SUBJECT</span><span class="o">=</span><span class="s2">"🔓 </span><span class="nv">$LOGIN_TYPE</span><span class="s2"> Login Detected"</span>
       <span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$DECOR</span><span class="se">\n</span><span class="nv">$SUBJECT$TEXT</span><span class="se">\n</span><span class="s2">"</span>
       chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="nv">$TEXT</span><span class="s2">"</span>
       <span class="p">;;</span>
   close_session<span class="p">)</span>
-      <span class="nv">SUBJECT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$LOGIN_TYPE</span><span class="s2"> Logout Detected"</span>
+      <span class="nv">SUBJECT</span><span class="o">=</span><span class="s2">"🔒 </span><span class="nv">$LOGIN_TYPE</span><span class="s2"> Logout Detected"</span>
       <span class="nv">TEXT</span><span class="o">=</span><span class="s2">"</span><span class="nv">$DECOR</span><span class="se">\n</span><span class="nv">$SUBJECT$TEXT</span><span class="se">\n</span><span class="s2">"</span>
       chatz <span class="nt">--from-env</span> <span class="s2">"</span><span class="nv">$TEXT</span><span class="s2">"</span>
       <span class="p">;;</span>
