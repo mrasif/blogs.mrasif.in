@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-12-19T22:45:23+05:30</updated>
+  <updated>2025-12-20T03:22:05+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -17,7 +17,7 @@
     <title>Installation of i3 Window Manager with XRDP</title>
     <link href="https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/" rel="alternate" type="text/html" title="Installation of i3 Window Manager with XRDP" />
     <published>2025-12-19T21:10:10+05:30</published>
-    <updated>2025-12-19T22:44:37+05:30</updated>
+    <updated>2025-12-20T03:21:14+05:30</updated>
     <id>https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/</id>
     <content src="https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/" />
     <author>
@@ -30,7 +30,7 @@
 
 
 
-Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps.
+Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts.
 
 Lets do it step by step:
 
@@ -40,22 +40,10 @@ Lets do it step by step:
 
 
 sudo adduser &amp;lt;username&amp;gt;
-sudo usermod -aG sudo &amp;lt;username&amp;gt;
 
 
 
-  Switch User
-
-
-sudo su &amp;lt;username&amp;gt;
-
-
-
-  Install Packages
-
-
-sudo apt-get update
-sudo apt install -y i3 feh xterm lxappearance dbus-x11 xrdp arc-theme papirus-icon-them...
+  Give sudo permission if you want to install packages through newly created user...
     </summary>
   </entry>
   <entry>

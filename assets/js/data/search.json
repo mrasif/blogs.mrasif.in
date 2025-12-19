@@ -12,7 +12,7 @@
 
 
 
-    "snippet": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps.Lets do it step by step:1. Package Install  Add Usersudo adduser &amp;lt;username&amp;gt;sudo usermod -aG sudo &amp;lt;username&amp;gt;  Switch Usersudo su &amp;lt;username&amp;gt;  Install Packagessudo ap..."
+    "snippet": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts.Lets do it step by step:1. Package Install  Add Usersudo adduser &amp;lt;us..."
   },
   
   {

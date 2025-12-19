@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2025-12-19T22:45:23+05:30",
+  "updated_at": "2025-12-20T03:22:05+05:30",
   "posts": [
     {
       "id": "/posts/installation-of-i3-window-manager-with-xrdp",
@@ -13,7 +13,7 @@
       "categories": ["DevOps", "Linux"],
       "tags": ["xrdp", "linux"],
       "updated_at": "2025-12-19T21:10:10+05:30",
-      "summary": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps."
+      "summary": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts."
     },
     {
       "id": "/posts/amazing-way-to-enable-login-alert-to-remote-server",

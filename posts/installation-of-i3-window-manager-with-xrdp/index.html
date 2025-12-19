@@ -24,8 +24,8 @@
 <meta property="og:title" content="Installation of i3 Window Manager with XRDP" />
 <meta name="author" content="Asif Mohammad Mollah" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps." />
-<meta property="og:description" content="Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps." />
+<meta name="description" content="Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts." />
+<meta property="og:description" content="Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts." />
 <link rel="canonical" href="https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/" />
 <meta property="og:url" content="https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/" />
 <meta property="og:site_name" content="Asif Mohammad Mollah" />
@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps.","url":"https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/","@type":"BlogPosting","headline":"Installation of i3 Window Manager with XRDP","dateModified":"2025-12-19T22:44:37+05:30","datePublished":"2025-12-19T21:10:10+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts.","url":"https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/","@type":"BlogPosting","headline":"Installation of i3 Window Manager with XRDP","dateModified":"2025-12-20T03:21:14+05:30","datePublished":"2025-12-19T21:10:10+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -581,17 +581,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Fri, Dec 19, 2025,  9:14 PM +0400"
+    title="Sat, Dec 20, 2025,  1:51 AM +0400"
   >
 
   
   
 
   
-    Dec 19
+    Dec 20
   
 
-  <i class="unloaded">2025-12-19T22:44:37+05:30</i>
+  <i class="unloaded">2025-12-20T03:21:14+05:30</i>
 
 </span>
           </span>
@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1463 words">8 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1510 words">8 min</span>
 
 
           <!-- page views -->
@@ -622,7 +622,7 @@
 
         <!-- Using lozad. See: <https://github.com/ApoorvSaxena/lozad.js#usage> -->
         
-          <p>Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps.</p>
+          <p>Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts.</p>
 
 <h2 id="lets-do-it-step-by-step">Lets do it step by step:</h2>
 
@@ -632,9 +632,15 @@
 </ul>
 
 <div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
-2
 </pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>adduser &lt;username&gt;
-<span class="nb">sudo </span>usermod <span class="nt">-aG</span> <span class="nb">sudo</span> &lt;username&gt;
+</pre></td></tr></tbody></table></code></div></div>
+
+<ul>
+  <li>Give sudo permission if you want to install packages through newly created user. Otherwise, you can skip this step and use root user for installation.</li>
+</ul>
+
+<div class="language-sh highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>usermod <span class="nt">-aG</span> <span class="nb">sudo</span> &lt;username&gt;
 </pre></td></tr></tbody></table></code></div></div>
 
 <ul>
