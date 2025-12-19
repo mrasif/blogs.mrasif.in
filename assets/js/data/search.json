@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Installation of i3 Window Manager with XRDP",
+    "url": "/posts/installation-of-i3-window-manager-with-xrdp/",
+    "categories": "DevOps, Linux",
+    "tags": "xrdp, linux",
+    "date": "2025-12-19 21:10:10 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps.Lets do it step by step:1. Package Install  Add Usersudo adduser &amp;lt;username&amp;gt;sudo usermod -aG sudo &amp;lt;username&amp;gt;  Switch Usersudo su &amp;lt;username&amp;gt;  Install Packagessudo ap..."
+  },
+  
+  {
     "title": "Amazing way to enable login alert to remote server",
     "url": "/posts/amazing-way-to-enable-login-alert-to-remote-server/",
     "categories": "DevOps, Linux, Security",
