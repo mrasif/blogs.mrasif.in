@@ -2,7 +2,7 @@
   <id>https://blogs.mrasif.in</id>
   <title>Asif Mohammad Mollah</title>
   <subtitle>Sr. Software Engineer, Indian Author</subtitle>
-  <updated>2025-12-20T16:22:28+05:30</updated>
+  <updated>2026-01-07T20:43:49+05:30</updated>
   <author>
     <name>Asif Mohammad Mollah</name>
     <uri>https://blogs.mrasif.in</uri>
@@ -10,9 +10,36 @@
   <link href="/feed.xml" rel="self" type="application/atom+xml" />
   <link href="https://blogs.mrasif.in" rel="alternate" type="text/html" />
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
-  <rights> © 2025 Asif Mohammad Mollah </rights>
+  <rights> © 2026 Asif Mohammad Mollah </rights>
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
+  <entry>
+    <title>Enable 2FA on Ubuntu Desktop Login with TOTP verification using Google Authenticator</title>
+    <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ubuntu-desktop-login-with-totp/" rel="alternate" type="text/html" title="Enable 2FA on Ubuntu Desktop Login with TOTP verification using Google Authenticator" />
+    <published>2026-01-07T18:45:00+05:30</published>
+    <updated>2026-01-07T18:45:00+05:30</updated>
+    <id>https://blogs.mrasif.in/posts/enable-2fa-on-ubuntu-desktop-login-with-totp/</id>
+    <content src="https://blogs.mrasif.in/posts/enable-2fa-on-ubuntu-desktop-login-with-totp/" />
+    <author>
+      <name>Asif Mohammad Mollah</name>
+    </author>
+    <category term="DevOps" />
+    <category term="Linux" />
+    <category term="Security" />
+    <summary>
+
+
+
+
+Purpose of this document is to enable two-factor authentication (2FA) on Ubuntu Desktop Login using Time-based One-Time Password (TOTP) verification with Google Authenticator.
+
+Why do we need 2FA?
+To enhance security by requiring an additional layer of authentication beyond just a password. This helps prevent unauthorized access even if a password is compromised.
+
+How to enable 2FA?
+1. Install ...
+    </summary>
+  </entry>
   <entry>
     <title>Installation of i3 Window Manager with XRDP</title>
     <link href="https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/" rel="alternate" type="text/html" title="Installation of i3 Window Manager with XRDP" />
@@ -121,32 +148,6 @@ Purpose of this article is to explain the importance of LUKS encryption in Linux
 
 Importance of LUKS Encryption
 LUKS encryption is crucial for securing sensitive data on Linux systems. It provides an additional layer of protection against unauthorized access, data breaches...
-    </summary>
-  </entry>
-  <entry>
-    <title>Enable 2FA on SSH Login with TOTP verification using Google Authenticator</title>
-    <link href="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" rel="alternate" type="text/html" title="Enable 2FA on SSH Login with TOTP verification using Google Authenticator" />
-    <published>2025-07-18T23:45:00+05:30</published>
-    <updated>2025-07-23T13:55:08+05:30</updated>
-    <id>https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/</id>
-    <content src="https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/" />
-    <author>
-      <name>Asif Mohammad Mollah</name>
-    </author>
-    <category term="DevOps" />
-    <category term="Linux" />
-    <category term="Security" />
-    <summary>
-
-
-
-
-Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator.
-
-Why do we need 2FA?
-To enhance security by requiring an additional layer of authentication beyond just a password. This helps prevent unauthorized access even if a password is compromised.
-
-Note: Here we will use ssh key based auth...
     </summary>
   </entry>
 </feed>

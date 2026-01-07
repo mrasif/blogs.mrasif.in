@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Enable 2FA on Ubuntu Desktop Login with TOTP verification using Google Authenticator",
+    "url": "/posts/enable-2fa-on-ubuntu-desktop-login-with-totp/",
+    "categories": "DevOps, Linux, Security",
+    "tags": "ssh, 2FA, Google Authenticator, TOTP",
+    "date": "2026-01-07 18:45:00 +0530",
+    
+
+
+
+
+
+    "snippet": "Purpose of this document is to enable two-factor authentication (2FA) on Ubuntu Desktop Login using Time-based One-Time Password (TOTP) verification with Google Authenticator.Why do we need 2FA?To enhance security by requiring an additional layer of authentication beyond just a password. This hel..."
+  },
+  
+  {
     "title": "Installation of i3 Window Manager with XRDP",
     "url": "/posts/installation-of-i3-window-manager-with-xrdp/",
     "categories": "DevOps, Linux",
