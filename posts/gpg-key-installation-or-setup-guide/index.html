@@ -37,7 +37,7 @@
 <meta name="twitter:creator" content="@Asif Mohammad Mollah" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.","url":"https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/","@type":"BlogPosting","headline":"GPG key installation or setup guide","dateModified":"2025-07-23T11:42:54+05:30","datePublished":"2021-02-06T14:50:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/"},"@context":"https://schema.org"}</script>
+{"author":{"@type":"Person","name":"Asif Mohammad Mollah"},"description":"Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server.","url":"https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/","@type":"BlogPosting","headline":"GPG key installation or setup guide","dateModified":"2026-01-08T13:09:04+05:30","datePublished":"2021-02-06T14:50:00+05:30","mainEntityOfPage":{"@type":"WebPage","@id":"https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -581,17 +581,17 @@
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Jul 23, 2025, 10:12 AM +0400"
+    title="Thu, Jan  8, 2026,  7:39 AM +0000"
   >
 
   
   
 
   
-    Jul 23, 2025
+    Jan  8
   
 
-  <i class="unloaded">2025-07-23T11:42:54+05:30</i>
+  <i class="unloaded">2026-01-08T13:09:04+05:30</i>
 
 </span>
           </span>
@@ -608,7 +608,7 @@
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="500 words">2 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="559 words">3 min</span>
 
 
           <!-- page views -->
@@ -824,7 +824,38 @@ gpg <span class="nt">-c</span> &lt;file&gt;
   </li>
 </ul>
 
-<h3 id="2-share-gpg-public-key">2. Share <code class="language-plaintext highlighter-rouge">gpg</code> public key:</h3>
+<h3 id="2-force-gpg-prompt-on-terminal-ubuntu">2. Force gpg prompt on terminal (Ubuntu)</h3>
+
+<ul>
+  <li>Install <code class="language-plaintext highlighter-rouge">pinentry-curses</code>:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td><td class="rouge-code"><pre><span class="nb">sudo </span>apt <span class="nb">install </span>pinentry-tty <span class="nt">-y</span>
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Create or edit <code class="language-plaintext highlighter-rouge">~/.gnupg/gpg-agent.conf</code> file and add following line:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>pinentry-program /usr/bin/pinentry-tty
+allow-loopback-pinentry
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Configure GPG to allow terminal input, create or edit <code class="language-plaintext highlighter-rouge">~/.gnupg/gpg.conf</code> file and add following lines:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>use-agent
+pinentry-mode loopback
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+  <li>Restart gpg-agent:
+    <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="rouge-code"><pre>gpgconf <span class="nt">--kill</span> gpg-agent
+gpgconf <span class="nt">--launch</span> gpg-agent
+</pre></td></tr></tbody></table></code></div>    </div>
+  </li>
+</ul>
+
+<h3 id="3-share-gpg-public-key">3. Share <code class="language-plaintext highlighter-rouge">gpg</code> public key:</h3>
 
 <ul>
   <li>Share public key using key server:
@@ -836,7 +867,7 @@ gpg <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class=
   </li>
 </ul>
 
-<h3 id="3-search--import-gpg-public-key">3. Search &amp; Import <code class="language-plaintext highlighter-rouge">gpg</code> public key:</h3>
+<h3 id="4-search--import-gpg-public-key">4. Search &amp; Import <code class="language-plaintext highlighter-rouge">gpg</code> public key:</h3>
 
 <ul>
   <li>Search public key using key server:
@@ -862,7 +893,7 @@ gpg <span class="nt">--keyserver</span> hkps://keyserver.ubuntu.com <span class=
   </li>
 </ul>
 
-<h3 id="4-save-to-smartcard">4. Save to SmartCard:</h3>
+<h3 id="5-save-to-smartcard">5. Save to SmartCard:</h3>
 
 <ul>
   <li>See SmartCard details:
@@ -1023,6 +1054,11 @@ save
         
         
         
+        <li><a href="/posts/gpg-key-installation-or-setup-guide/">GPG key installation or setup guide</a></li>
+      
+        
+        
+        
         <li><a href="/posts/install-golang-on-ubuntu-server/">Install Golang on Ubuntu Server</a></li>
       
         
@@ -1039,11 +1075,6 @@ save
         
         
         <li><a href="/posts/luks-is-a-best-disk-encryption-in-linux/">Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/installation-guide-of-terminal-multiplexer-t-mux/">Installation guide of terminal multiplexer T-MUX</a></li>
       
 
       </ul>
