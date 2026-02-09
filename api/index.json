@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-01-20T17:38:13+05:30",
+  "updated_at": "2026-02-09T11:09:02+05:30",
   "posts": [
+    {
+      "id": "/posts/guidelines-for-logging-and-tracing",
+      "title": "Guidelines for logging and tracing",
+      "url": "https://blogs.mrasif.in/posts/guidelines-for-logging-and-tracing/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevSecOps", "Security"],
+      "tags": ["DevSecOps", "Logging", "Tracing"],
+      "updated_at": "2026-02-09T09:30:00+05:30",
+      "summary": "Purpose of this document is to Logging and Tracing Guidelines while developing application to avoid false alarm and do best practices."
+    },
     {
       "id": "/posts/enable-2fa-on-ubuntu-desktop-login-with-totp",
       "title": "Enable 2FA on Ubuntu Desktop Login with TOTP verification using Google Authenticator",
