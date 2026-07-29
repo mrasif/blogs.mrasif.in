@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-04-21T15:07:55+05:30",
+  "updated_at": "2026-07-29T13:33:37+05:30",
   "posts": [
+    {
+      "id": "/posts/create-a-fresh-golang-project-using-gozen",
+      "title": "Create a fresh golang project using gozen",
+      "url": "https://blogs.mrasif.in/posts/create-a-fresh-golang-project-using-gozen/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["Golang", "Development"],
+      "tags": ["Golang", "Gozen", "MVC"],
+      "updated_at": "2026-07-29T11:30:00+05:30",
+      "summary": "Building modern web services and APIs in Go (Golang) often requires writing a repetitive amount of boilerplate code—setting up HTTP/REST routing, gRPC proto definitions, configuration management, directory layouts, and Docker environments."
+    },
     {
       "id": "/posts/on-prem-k8s-cluster-networking",
       "title": "On-premise kubernetes cluster networking",
