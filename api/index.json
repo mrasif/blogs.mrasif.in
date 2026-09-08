@@ -3,8 +3,18 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-07-29T13:33:37+05:30",
+  "updated_at": "2026-09-08T13:39:47+05:30",
   "posts": [
+    {
+      "id": "/posts/inntelligent-way-create-tunnel",
+      "title": "Intelligent way to create SSH tunnels using Telepath",
+      "url": "https://blogs.mrasif.in/posts/inntelligent-way-create-tunnel/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["tunnel", "ssh", "networking"],
+      "updated_at": "2026-09-08T10:50:00+05:30",
+      "summary": "Telepath is a modern, intelligent CLI tool for seamless and secure port forwarding.Designed with versatility and ease of use in mind, Telepath enables developers and system administrators to create complex forwarding paths across multiple hosts effortlessly.Whether you’re working with password-based or keyfile authentication, single or multiple jump hosts, Telepath has..."
+    },
     {
       "id": "/posts/create-a-fresh-golang-project-using-gozen",
       "title": "Create a fresh golang project using gozen",
