@@ -3,12 +3,22 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-09-09T12:20:18+05:30",
+  "updated_at": "2026-09-09T18:46:28+05:30",
   "posts": [
     {
-      "id": "/posts/inntelligent-way-create-tunnel",
+      "id": "/posts/fail2ban-secure-your-server",
+      "title": "Secure Your Server with Fail2Ban",
+      "url": "https://blogs.mrasif.in/posts/fail2ban-secure-your-server/",
+      "author": "Asif Mohammad Mollah",
+      "categories": ["DevOps"],
+      "tags": ["fail2ban", "ssh", "security"],
+      "updated_at": "2026-09-09T17:00:00+05:30",
+      "summary": "Fail2Ban Setup on Ubuntu"
+    },
+    {
+      "id": "/posts/intelligent-way-create-tunnel",
       "title": "Intelligent way to create SSH tunnels using Telepath",
-      "url": "https://blogs.mrasif.in/posts/inntelligent-way-create-tunnel/",
+      "url": "https://blogs.mrasif.in/posts/intelligent-way-create-tunnel/",
       "author": "Asif Mohammad Mollah",
       "categories": ["DevOps"],
       "tags": ["tunnel", "ssh", "networking"],
