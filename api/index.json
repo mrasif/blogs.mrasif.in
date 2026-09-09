@@ -3,11 +3,11 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-09-09T18:46:28+05:30",
+  "updated_at": "2026-09-09T18:49:07+05:30",
   "posts": [
     {
       "id": "/posts/fail2ban-secure-your-server",
-      "title": "Secure Your Server with Fail2Ban",
+      "title": "Secure your server with fail2Ban",
       "url": "https://blogs.mrasif.in/posts/fail2ban-secure-your-server/",
       "author": "Asif Mohammad Mollah",
       "categories": ["DevOps"],
