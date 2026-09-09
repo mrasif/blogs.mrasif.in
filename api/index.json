@@ -3,7 +3,7 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-09-09T18:49:07+05:30",
+  "updated_at": "2026-09-09T18:50:46+05:30",
   "posts": [
     {
       "id": "/posts/fail2ban-secure-your-server",
@@ -13,7 +13,7 @@
       "categories": ["DevOps"],
       "tags": ["fail2ban", "ssh", "security"],
       "updated_at": "2026-09-09T17:00:00+05:30",
-      "summary": "Fail2Ban Setup on Ubuntu"
+      "summary": "Fail2Ban is a security tool that monitors system logs for repeated failed authentication attempts and temporarily blocks the IP addresses responsible."
     },
     {
       "id": "/posts/intelligent-way-create-tunnel",
