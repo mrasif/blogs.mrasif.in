@@ -3,14 +3,14 @@
   "title": "Asif Mohammad Mollah",
   "description": "Sr. Software Engineer, Indian Author",
   "author": "Asif Mohammad Mollah",
-  "updated_at": "2026-09-09T18:50:46+05:30",
+  "updated_at": "2026-09-10T14:53:25+05:30",
   "posts": [
     {
       "id": "/posts/fail2ban-secure-your-server",
       "title": "Secure your server with fail2Ban",
       "url": "https://blogs.mrasif.in/posts/fail2ban-secure-your-server/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "linux", "security"],
       "tags": ["fail2ban", "ssh", "security"],
       "updated_at": "2026-09-09T17:00:00+05:30",
       "summary": "Fail2Ban is a security tool that monitors system logs for repeated failed authentication attempts and temporarily blocks the IP addresses responsible."
@@ -20,7 +20,7 @@
       "title": "Intelligent way to create SSH tunnels using Telepath",
       "url": "https://blogs.mrasif.in/posts/intelligent-way-create-tunnel/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "networking"],
       "tags": ["tunnel", "ssh", "networking"],
       "updated_at": "2026-09-08T10:50:00+05:30",
       "summary": "Telepath is a modern, intelligent CLI tool for seamless and secure port forwarding.Designed with versatility and ease of use in mind, Telepath enables developers and system administrators to create complex forwarding paths across multiple hosts effortlessly.Whether you’re working with password-based or keyfile authentication, single or multiple jump hosts, Telepath has..."
@@ -30,8 +30,8 @@
       "title": "Create a fresh golang project using gozen",
       "url": "https://blogs.mrasif.in/posts/create-a-fresh-golang-project-using-gozen/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["Golang", "Development"],
-      "tags": ["Golang", "Gozen", "MVC"],
+      "categories": ["golang", "development"],
+      "tags": ["golang", "gozen", "mvc", "microservices", "rest", "grpc"],
       "updated_at": "2026-07-29T11:30:00+05:30",
       "summary": "Building modern web services and APIs in Go (Golang) often requires writing a repetitive amount of boilerplate code—setting up HTTP/REST routing, gRPC proto definitions, configuration management, directory layouts, and Docker environments."
     },
@@ -40,8 +40,8 @@
       "title": "On-premise kubernetes cluster networking",
       "url": "https://blogs.mrasif.in/posts/on-prem-k8s-cluster-networking/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Security"],
-      "tags": ["DevOps", "Networking", "Kubernetes"],
+      "categories": ["devops", "security"],
+      "tags": ["devops", "networking", "kubernetes"],
       "updated_at": "2026-02-14T23:30:00+05:30",
       "summary": "Purpose of this article is to achive DNS connectivity with on-premise kubernetes cluster which doesn’t have Public IP/Gateway directly."
     },
@@ -50,8 +50,8 @@
       "title": "Guidelines for logging and tracing",
       "url": "https://blogs.mrasif.in/posts/guidelines-for-logging-and-tracing/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevSecOps", "Security"],
-      "tags": ["DevSecOps", "Logging", "Tracing"],
+      "categories": ["devsecops", "security"],
+      "tags": ["devsecops", "logging", "tracing"],
       "updated_at": "2026-02-09T09:30:00+05:30",
       "summary": "Purpose of this document is to Logging and Tracing Guidelines while developing application to avoid false alarm and do best practices."
     },
@@ -60,8 +60,8 @@
       "title": "Enable 2FA on Ubuntu Desktop Login with TOTP verification using Google Authenticator",
       "url": "https://blogs.mrasif.in/posts/enable-2fa-on-ubuntu-desktop-login-with-totp/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux", "Security"],
-      "tags": ["ssh", "2FA", "Google Authenticator", "TOTP"],
+      "categories": ["devops", "linux", "security"],
+      "tags": ["ssh", "2fa", "google authenticator", "totp", "security"],
       "updated_at": "2026-01-07T18:45:00+05:30",
       "summary": "Purpose of this document is to enable two-factor authentication (2FA) on Ubuntu Desktop Login using Time-based One-Time Password (TOTP) verification with Google Authenticator."
     },
@@ -70,7 +70,7 @@
       "title": "Installation of i3 Window Manager with XRDP",
       "url": "https://blogs.mrasif.in/posts/installation-of-i3-window-manager-with-xrdp/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux"],
+      "categories": ["devops", "linux"],
       "tags": ["xrdp", "linux"],
       "updated_at": "2025-12-19T21:10:10+05:30",
       "summary": "Purpose of this article is to setup i3 window manager with xRDP protocol using simple steps. In the following guide, we will be using Ubuntu server Operating System and all the configuration will be based on user accounts."
@@ -80,7 +80,7 @@
       "title": "Amazing way to enable login alert to remote server",
       "url": "https://blogs.mrasif.in/posts/amazing-way-to-enable-login-alert-to-remote-server/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux", "Security"],
+      "categories": ["devops", "linux", "security"],
       "tags": ["ssh", "linux", "security"],
       "updated_at": "2025-08-11T21:15:40+05:30",
       "summary": "Purpose of this article is to provide a simple and effective way to enable login alert to remote server using SSH and console login."
@@ -90,7 +90,7 @@
       "title": "How to Use Systemd for Docker Compose",
       "url": "https://blogs.mrasif.in/posts/how-to-use-systemd-for-docker-compose/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux"],
+      "categories": ["devops", "linux"],
       "tags": ["systemd", "linux", "docker"],
       "updated_at": "2025-07-30T22:10:00+05:30",
       "summary": "Purpose of this article to demonstrate how to use systemd for Docker Compose."
@@ -100,7 +100,7 @@
       "title": "Linux Unified Key Setup (LUKS) is a Best Disk Encryption in Linux",
       "url": "https://blogs.mrasif.in/posts/luks-is-a-best-disk-encryption-in-linux/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux", "Security"],
+      "categories": ["devops", "linux", "security"],
       "tags": ["luks", "encryption", "linux", "security"],
       "updated_at": "2025-07-27T11:01:00+05:30",
       "summary": "Purpose of this article is to explain the importance of LUKS encryption in Linux and how to use it. In this article, we will setup LUKS encryption in Linux and automatically mount the encrypted partition."
@@ -110,8 +110,8 @@
       "title": "Enable 2FA on SSH Login with TOTP verification using Google Authenticator",
       "url": "https://blogs.mrasif.in/posts/enable-2fa-on-ssh-login-with-totp-verification/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux", "Security"],
-      "tags": ["ssh", "2FA", "Google Authenticator", "TOTP"],
+      "categories": ["devops", "linux", "security"],
+      "tags": ["ssh", "2fa", "google authenticator", "totp", "security"],
       "updated_at": "2025-07-18T23:45:00+05:30",
       "summary": "Purpose of this document is to enable two-factor authentication (2FA) on SSH login using Time-based One-Time Password (TOTP) verification with Google Authenticator."
     },
@@ -120,8 +120,8 @@
       "title": "AWK Cheatsheet with Examples",
       "url": "https://blogs.mrasif.in/posts/awk-cheatsheet-with-example/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["Linux"],
-      "tags": ["DevOps", "shell", "awk"],
+      "categories": ["linux"],
+      "tags": ["devops", "shell", "awk"],
       "updated_at": "2025-07-17T14:55:00+05:30",
       "summary": "AWK is a powerful pattern scanning and processing command. It is especially useful for text and data extraction, manipulation, and reporting."
     },
@@ -130,7 +130,7 @@
       "title": "Immich server deployment on kubernetes with NFS",
       "url": "https://blogs.mrasif.in/posts/immich-server-deployment-on-kubernetes-with-nfs/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Kubernetes"],
+      "categories": ["devops", "kubernetes"],
       "tags": ["immich", "photo", "video", "self-hosted", "installation"],
       "updated_at": "2025-06-19T10:51:00+05:30",
       "summary": "In this documentation we have use NFS for volumes for container. We used OpenMediaVault to create NFS. We have used Kubernetes internal dns for communication between services."
@@ -140,7 +140,7 @@
       "title": "Install kubernetes cluster using Minikube",
       "url": "https://blogs.mrasif.in/posts/install-kubernetes-using-minikube/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Kubernetes"],
+      "categories": ["dvops", "kubernetes"],
       "tags": ["ubuntu", "linux", "kubernetes", "installation"],
       "updated_at": "2024-11-23T19:34:00+05:30",
       "summary": "Minikube is a tool that enables developers to run a local Kubernetes cluster for testing and development. It’s lightweight and supports various environments."
@@ -150,7 +150,7 @@
       "title": "Install self-hosted Photo and Video server with Immich",
       "url": "https://blogs.mrasif.in/posts/install-self-hosted-photo-video-server-immich/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Docker"],
+      "categories": ["devops", "docker"],
       "tags": ["immich", "photo", "video", "self-hosted", "installation"],
       "updated_at": "2024-07-20T10:57:00+05:30",
       "summary": "Immich is a self-hosted photo and video management solution. Easily back up, organize, and manage your photos on your own server."
@@ -160,7 +160,7 @@
       "title": "NeoVIM installation and setup guide",
       "url": "https://blogs.mrasif.in/posts/neovim-installation-and-setup-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops"],
       "tags": ["neovim", "vim", "installation"],
       "updated_at": "2024-07-16T15:21:00+05:30",
       "summary": "Neo Vim is a new generation VIM editor. It has beautiful UI."
@@ -170,7 +170,7 @@
       "title": "Step by step PostgreSQL setup guide",
       "url": "https://blogs.mrasif.in/posts/step-by-step-postgresql-setup-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops"],
       "tags": ["ubuntu", "postgres", "installation"],
       "updated_at": "2024-07-16T15:16:00+05:30",
       "summary": "Purpose of this guide is to provide a step-by-step guide for setting up PostgreSQL and manage databases."
@@ -180,7 +180,7 @@
       "title": "Installation guide of terminal multiplexer T-MUX",
       "url": "https://blogs.mrasif.in/posts/installation-guide-of-terminal-multiplexer-t-mux/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops"],
       "tags": ["ubuntu", "t-mux", "installation"],
       "updated_at": "2024-07-16T15:07:00+05:30",
       "summary": "It is a T-mux user guide. T-mux and VIM works awesome for development."
@@ -190,7 +190,7 @@
       "title": "Install Golang on Ubuntu Server",
       "url": "https://blogs.mrasif.in/posts/install-golang-on-ubuntu-server/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "linux"],
       "tags": ["ubuntu", "golang", "installation"],
       "updated_at": "2024-07-16T14:47:00+05:30",
       "summary": "Purpose of this documentation is to install Golang on Ubuntu Server. Follow these instructions step by step."
@@ -200,8 +200,8 @@
       "title": "Deploy your self-hosted github action runner",
       "url": "https://blogs.mrasif.in/posts/setup-self-hosted-github-actions-runners/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Docker"],
-      "tags": ["github", "CI/CD", "systemd", "installation"],
+      "categories": ["devops", "docker"],
+      "tags": ["github", "ci/cd", "systemd", "installation"],
       "updated_at": "2024-07-14T11:49:00+05:30",
       "summary": "PrerequisitesPurpose of this documentation to setup self-hosted github action runner and use it for continuous integration and deployment."
     },
@@ -210,7 +210,7 @@
       "title": "Make your own self-hosted docs server using Bookstack",
       "url": "https://blogs.mrasif.in/posts/bookstack-installation-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Docker"],
+      "categories": ["devops", "docker"],
       "tags": ["docker", "documentation", "installation"],
       "updated_at": "2024-06-15T06:11:00+05:30",
       "summary": "BookStack is a simple, self-hosted, easy-to-use platform for organizing and storing documentation. It’s a web application that makes it easy to create, store, and share your documents, knowledge base, and other files."
@@ -220,8 +220,8 @@
       "title": "Setup Network File System (NFS) on ubuntu linux",
       "url": "https://blogs.mrasif.in/posts/setup-network-file-system-nfs-on-ubuntu-linux/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
-      "tags": ["ubuntu", "NFS", "installation"],
+      "categories": ["devops", "linux"],
+      "tags": ["ubuntu", "nfs", "installation"],
       "updated_at": "2023-11-02T14:56:00+05:30",
       "summary": "NFS, an acronym for Network File System, facilitates file sharing and access across a network. Here’s a guide for setting up NFS on both the server and client sides:"
     },
@@ -230,7 +230,7 @@
       "title": "Deploy your own media streaming server with Jellyfin",
       "url": "https://blogs.mrasif.in/posts/jellyfin-media-streaming-server-setup/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "linux"],
       "tags": ["ubuntu", "jellyfin", "installation"],
       "updated_at": "2022-08-21T14:58:00+05:30",
       "summary": "Jellyfin media streaming server installation guide for Raspberry PI"
@@ -240,7 +240,7 @@
       "title": "GPG key installation or setup guide",
       "url": "https://blogs.mrasif.in/posts/gpg-key-installation-or-setup-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "linux"],
       "tags": ["ubuntu", "gpg", "installation"],
       "updated_at": "2021-02-06T14:50:00+05:30",
       "summary": "Purpose of this guide is to provide a step-by-step guide on how to install and setup GPG key on Ubuntu Server."
@@ -250,7 +250,7 @@
       "title": "Golang debugging guide using dlv debugger",
       "url": "https://blogs.mrasif.in/posts/golang-debug-guide-using-dlv/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops"],
       "tags": ["ubuntu", "golang", "installation"],
       "updated_at": "2020-07-02T15:11:00+05:30",
       "summary": "Purpose of this documentation is to provide a comprehensive guide on how to debug Golang applications using the Delve debugger (dlv). This guide covers installation, setting up a remote debugger, and local debugging."
@@ -260,8 +260,8 @@
       "title": "VS Code Server installation guide",
       "url": "https://blogs.mrasif.in/posts/code-server-installation-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
-      "tags": ["VSCode", "linux", "installation"],
+      "categories": ["devops"],
+      "tags": ["vscode", "linux", "installation"],
       "updated_at": "2020-03-01T10:42:00+05:30",
       "summary": "Purpose of this guide is to provide a step-by-step installation process for Visual Studio Code server on Linux systems. This guide will help you set up VS Code server for remote development in web interface."
     },
@@ -270,7 +270,7 @@
       "title": "SendMail setup on ubuntu server",
       "url": "https://blogs.mrasif.in/posts/sendmail-setup-on-ubuntu-server/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps"],
+      "categories": ["devops", "linux"],
       "tags": ["smtp", "sendmail", "linux", "installation"],
       "updated_at": "2019-04-08T21:45:00+05:30",
       "summary": "Send mail is a cli application for sending email using smtp server."
@@ -280,7 +280,7 @@
       "title": "Securing Nginx with IP Whitelist, Rate Limit and Basic Auth",
       "url": "https://blogs.mrasif.in/posts/securing-nginx-with-ip-whitelist-rate-limit-and-basic-auth/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Security"],
+      "categories": ["devops", "security"],
       "tags": ["ubuntu", "linux", "nginx"],
       "updated_at": "2018-01-03T20:31:00+05:30",
       "summary": "Nginx is a robust web server and reverse proxy that also functions as a powerful access control gateway. When exposing sensitive areas like admin dashboards, internal APIs, or dev environments, it’s vital to apply layered security."
@@ -290,7 +290,7 @@
       "title": "Install docker on Ubuntu Server",
       "url": "https://blogs.mrasif.in/posts/install-docker-on-ubuntu-server/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Docker"],
+      "categories": ["devops", "docker"],
       "tags": ["ubuntu", "linux", "docker", "installation"],
       "updated_at": "2017-12-16T11:57:00+05:30",
       "summary": "Installation"
@@ -300,8 +300,8 @@
       "title": "Mastering in curl Installation and Practical User Guide",
       "url": "https://blogs.mrasif.in/posts/mastering-in-curl-installation-and-practical-user-guide/",
       "author": "Asif Mohammad Mollah",
-      "categories": ["DevOps", "Linux"],
-      "tags": ["DevOps", "curl", "HTTP", "jq", "SSL"],
+      "categories": ["devops", "linux"],
+      "tags": ["devops", "curl", "http", "jq", "ssl", "api", "linux"],
       "updated_at": "2017-04-13T21:16:00+05:30",
       "summary": "curl is a command-line tool and library for transferring data with URLs. It’s widely used by developers, sysadmins, and automation scripts for making HTTP requests, testing APIs, downloading files, and more. This article guides you through installing curl and demonstrates practical usage, including downloading files, inspecting HTTP headers, SSL verification,..."
     }
